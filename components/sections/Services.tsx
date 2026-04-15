@@ -73,6 +73,7 @@ function ServiceCard({ id, label, title, headline, description, benefits, color,
   return (
     <div 
       ref={container} 
+      data-theme-color={color}
       className="h-screen flex items-start justify-center sticky top-0"
     >
       <motion.div

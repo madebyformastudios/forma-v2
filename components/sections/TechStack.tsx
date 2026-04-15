@@ -38,7 +38,11 @@ const techStack = [
 
 export default function TechStack() {
   return (
-    <section className="relative py-24 bg-sand/30">
+    <section 
+      id="tech"
+      data-theme-color="#F2EFE9"
+      className="relative py-24 bg-sand/30"
+    >
       <div className="max-w-7xl mx-auto px-6 lg:px-12">
         <div className="max-w-4xl mb-16">
           <span className="text-xs font-sans font-black uppercase tracking-[0.3em] text-accent mb-4 block">

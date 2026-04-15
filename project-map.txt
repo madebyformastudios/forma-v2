@@ -1,0 +1,42 @@
+.
+├── app
+│   ├── globals.css
+│   ├── layout.tsx
+│   ├── page.tsx
+│   ├── privacy
+│   │   └── page.tsx
+│   ├── robots.ts
+│   └── sitemap.ts
+├── components
+│   ├── layout
+│   │   ├── Footer.tsx
+│   │   └── Navbar.tsx
+│   ├── sections
+│   │   ├── Contact.tsx
+│   │   ├── FAQ.tsx
+│   │   ├── Hero.tsx
+│   │   ├── Process.tsx
+│   │   ├── Projects.tsx
+│   │   ├── Services.tsx
+│   │   ├── TechStack.tsx
+│   │   └── Ticker.tsx
+│   └── ui
+│       └── Button.tsx
+├── dev.log
+├── GEMINI.md
+├── next-env.d.ts
+├── package-lock.json
+├── package.json
+├── postcss.config.js
+├── project-map.txt
+├── projects
+│   ├── lumina-app.mdx
+│   ├── oasis-wellness.mdx
+│   ├── studio-zee.mdx
+│   ├── van-helteren.mdx
+│   └── vesta-homes.mdx
+├── README.md
+├── tsconfig.json
+└── tsconfig.tsbuildinfo
+
+8 directories, 32 files

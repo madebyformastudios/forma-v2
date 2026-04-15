@@ -84,7 +84,11 @@ export default function Projects() {
   };
 
   return (
-    <section id="projects" className="relative py-32 overflow-hidden">
+    <section 
+      id="projects" 
+      data-theme-color="#F2EFE9"
+      className="relative py-32 overflow-hidden"
+    >
       <div className="max-w-7xl mx-auto px-6 lg:px-12 mb-20">
         <div className="max-w-4xl">
           <span className="text-xs font-sans font-black uppercase tracking-[0.3em] text-accent mb-4 block">

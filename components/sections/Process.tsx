@@ -105,7 +105,11 @@ export default function Process() {
   }, []);
 
   return (
-    <section id="process" className="relative pt-24 pb-32 bg-sand/30">
+    <section 
+      id="process" 
+      data-theme-color="#F2EFE9"
+      className="relative pt-24 pb-32 bg-sand/30"
+    >
       <div className="max-w-7xl mx-auto px-6 lg:px-12 w-full relative z-10">
         {/* DESKTOP LAYOUT (Hidden on mobile) */}
         <div className="hidden lg:grid grid-cols-2 gap-12 lg:gap-16 items-center">

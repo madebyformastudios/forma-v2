@@ -1,8 +1,9 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Plus_Jakarta_Sans, Inter } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
+import ThemeColorManager from "@/components/layout/ThemeColorManager";
 
 const plusJakartaSans = Plus_Jakarta_Sans({
   subsets: ["latin"],
@@ -28,6 +29,10 @@ export const metadata: Metadata = {
     locale: "nl_NL",
     type: "website",
   },
+};
+
+export const viewport: Viewport = {
+  themeColor: "#F2EFE9", // Default sand color
 };
 
 export default function RootLayout({
@@ -60,6 +65,7 @@ export default function RootLayout({
         />
       </head>
       <body className="font-body antialiased bg-sand text-ink selection:bg-accent selection:text-white">
+        <ThemeColorManager />
         <Navbar />
         {children}
         <Footer />

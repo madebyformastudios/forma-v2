@@ -30,7 +30,11 @@ export default function Contact() {
   };
 
   return (
-    <section id="contact" className="relative min-h-screen flex items-center py-16 md:py-20 border-t border-dashed border-ink/20">
+    <section 
+      id="contact" 
+      data-theme-color="#F2EFE9"
+      className="relative min-h-screen flex items-center py-16 md:py-20 border-t border-dashed border-ink/20"
+    >
       <div className="max-w-7xl mx-auto px-6 lg:px-12 w-full">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
           

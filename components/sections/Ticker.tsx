@@ -17,7 +17,10 @@ export default function Ticker() {
   const tickerItems = [...items, ...items, ...items];
 
   return (
-    <section className="relative z-10 h-16 md:h-20 bg-ink border-y border-ink/10 flex items-center overflow-hidden">
+    <section 
+      data-theme-color="#121212"
+      className="relative z-10 h-16 md:h-20 bg-ink border-y border-ink/10 flex items-center overflow-hidden"
+    >
       <motion.div 
         className="flex whitespace-nowrap"
         animate={{

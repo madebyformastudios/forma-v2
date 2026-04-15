@@ -40,7 +40,11 @@ export default function FAQ() {
   const [clickedIndex, setClickedIndex] = useState<number | null>(null);
 
   return (
-    <section id="faq" className="relative py-32 overflow-hidden">
+    <section 
+      id="faq" 
+      data-theme-color="#F2EFE9"
+      className="relative py-32 overflow-hidden"
+    >
       <div className="max-w-7xl mx-auto px-6 lg:px-12">
         <div className="max-w-4xl mb-20">
           <span className="text-xs font-sans font-black uppercase tracking-[0.3em] text-accent mb-4 block">

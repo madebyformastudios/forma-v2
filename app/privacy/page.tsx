@@ -4,7 +4,10 @@ import { motion } from 'framer-motion';
 
 export default function PrivacyPage() {
   return (
-    <main className="min-h-screen bg-sand pt-40 pb-24">
+    <main 
+      data-theme-color="#F2EFE9"
+      className="min-h-screen bg-sand pt-40 pb-24"
+    >
       <div className="max-w-4xl mx-auto px-6 lg:px-12">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
