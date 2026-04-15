@@ -4,32 +4,68 @@ import { useEffect } from 'react';
 
 export default function ThemeColorManager() {
   useEffect(() => {
-    const metaThemeColor = document.querySelector('meta[name="theme-color"]');
-    
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting && entry.intersectionRatio > 0.1) {
-            const color = (entry.target as HTMLElement).dataset.themeColor;
-            if (color && metaThemeColor) {
-              metaThemeColor.setAttribute('content', color);
-            }
-          }
-        });
-      },
-      {
-        // Observe changes relative to the top of the viewport
-        rootMargin: '-10% 0px -80% 0px',
-        threshold: [0, 0.1, 0.5, 1.0],
+    const updateThemeColor = (color: string) => {
+      let meta = document.querySelector('meta[name="theme-color"]');
+      if (!meta) {
+        meta = document.createElement('meta');
+        meta.setAttribute('name', 'theme-color');
+        document.head.appendChild(meta);
       }
-    );
-
-    const sections = document.querySelectorAll('[data-theme-color]');
-    sections.forEach((section) => observer.observe(section));
-
-    return () => {
-      sections.forEach((section) => observer.unobserve(section));
+      
+      if (meta.getAttribute('content') !== color) {
+        meta.setAttribute('content', color);
+        // Also update apple-mobile-web-app-status-bar-style if needed
+        // for older iOS versions, though theme-color is preferred now
+      }
     };
+
+    const sections = Array.from(document.querySelectorAll('[data-theme-color]'));
+    
+    if (sections.length === 0) return;
+
+    const observerOptions = {
+      rootMargin: '0px 0px -90% 0px', // Detect when element enters the top 10% of viewport
+      threshold: [0, 0.01, 0.1]
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+      // Find all intersecting elements
+      const intersecting = entries
+        .filter(entry => entry.isIntersecting)
+        .sort((a, b) => a.boundingClientRect.top - b.boundingClientRect.top);
+
+      if (intersecting.length > 0) {
+        // Use the one closest to the top of the viewport
+        const target = intersecting[0].target as HTMLElement;
+        const color = target.dataset.themeColor;
+        if (color) updateThemeColor(color);
+      } else {
+        // Fallback: find which section is currently at the top if none are "intersecting" 
+        // in the narrow 10% band (could happen with fast scrolling)
+        const scrollPos = window.scrollY + 50;
+        let currentSection = sections[0] as HTMLElement;
+        
+        for (const section of sections) {
+          const element = section as HTMLElement;
+          if (element.offsetTop <= scrollPos) {
+            currentSection = element;
+          } else {
+            break;
+          }
+        }
+        
+        const color = currentSection.dataset.themeColor;
+        if (color) updateThemeColor(color);
+      }
+    }, observerOptions);
+
+    sections.forEach(section => observer.observe(section));
+
+    // Initial check
+    const initialColor = (sections[0] as HTMLElement).dataset.themeColor;
+    if (initialColor) updateThemeColor(initialColor);
+
+    return () => observer.disconnect();
   }, []);
 
   return null;
