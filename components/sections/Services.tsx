@@ -149,7 +149,7 @@ export default function Services() {
         </div>
       </div>
 
-      <div className="px-6">
+      <div className="px-6 relative">
         {services.map((service, index) => (
           <ServiceCard key={service.id} {...service} index={index} />
         ))}

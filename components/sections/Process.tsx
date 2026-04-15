@@ -222,7 +222,7 @@ export default function Process() {
         </div>
 
         {/* MOBILE LAYOUT (Hidden on desktop) */}
-        <div className="lg:hidden py-10" ref={containerRef}>
+        <div className="lg:hidden py-10 relative" ref={containerRef}>
           <div className="mb-12">
             <span className="text-[10px] font-sans font-black uppercase tracking-[0.4em] text-accent mb-4 block">
               ONZE METHODE
