@@ -6,7 +6,7 @@ export default function PrivacyPage() {
   return (
     <main 
       data-theme-color="#F2EFE9"
-      className="min-h-screen bg-sand pt-40 pb-24"
+      className="min-h-screen bg-sand pt-40 pb-24 overflow-x-hidden"
     >
       <div className="max-w-4xl mx-auto px-6 lg:px-12">
         <motion.div

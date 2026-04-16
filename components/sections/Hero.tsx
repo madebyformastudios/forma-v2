@@ -47,7 +47,7 @@ export default function Hero() {
               WIJ BOUWEN WEBSITES VOOR
             </span>
             
-            <div className="h-[1.2em] text-[11vw] sm:text-[10vw] md:text-[9vw] relative w-screen flex justify-center items-center overflow-hidden">
+            <div className="h-[1.2em] text-[11vw] sm:text-[10vw] md:text-[9vw] relative w-full flex justify-center items-center overflow-hidden">
               <AnimatePresence mode="wait" initial={false}>
                 <motion.span
                   key={words[index]}

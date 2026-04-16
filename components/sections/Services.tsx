@@ -138,7 +138,7 @@ function ServiceCard({ id, label, title, headline, description, benefits, color,
 
 export default function Services() {
   return (
-    <section id="services" className="relative pt-40 pb-32">
+    <section id="services" className="relative pt-40 pb-32 overflow-hidden">
       <div className="max-w-7xl mx-auto px-6 lg:px-12 mb-12">
         <div className="max-w-4xl">
           <span className="text-xs font-sans font-black uppercase tracking-[0.3em] text-accent mb-4 block">

@@ -18,6 +18,9 @@
 }
 
 @layer base {
+  html, body {
+    @apply overflow-x-hidden max-w-full;
+  }
   body {
     @apply bg-sand text-ink antialiased font-body relative min-h-screen;
   }
