@@ -3,11 +3,11 @@ import fs from 'fs'
 import path from 'path'
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = 'https://forma-agency.nl'
+  const baseUrl = 'https://madebyforma.nl'
 
   // Get project slugs from MDX files
   const projectsDirectory = path.join(process.cwd(), 'projects')
-  const projectFiles = fs.readdirSync(projectsDirectory)
+  const projectFiles = fs.existsSync(projectsDirectory) ? fs.readdirSync(projectsDirectory) : []
   
   const projectUrls = projectFiles
     .filter((file) => file.endsWith('.mdx'))

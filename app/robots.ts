@@ -1,11 +1,14 @@
 import { MetadataRoute } from 'next'
 
 export default function robots(): MetadataRoute.Robots {
+  const baseUrl = 'https://madebyforma.nl'
+  
   return {
     rules: {
       userAgent: '*',
       allow: '/',
+      disallow: ['/admin', '/api', '/private'],
     },
-    sitemap: 'https://forma-agency.nl/sitemap.xml',
+    sitemap: `${baseUrl}/sitemap.xml`,
   }
 }

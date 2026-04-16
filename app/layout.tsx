@@ -19,15 +19,39 @@ const inter = Inter({
 
 export const metadata: Metadata = {
   title: {
-    default: "FORMA | Premium Webdesign & App Ontwikkeling in Zeeland",
-    template: "%s | FORMA",
+    default: "FORMA | Premium Webdesign & Development Zeeland",
+    template: "FORMA | %s - Webdesign & Development Zeeland",
   },
-  description: "Wij bouwen razendsnelle, opvallende websites en applicaties. Geen standaard templates, maar high-performance tech en uniek maatwerk design vanuit Middelburg.",
+  description: "FORMA is hét bureau voor high-end Next.js websites in Zeeland. Wij helpen MKB-ondernemers in Middelburg en omstreken aan bizarre snelheid en meer omzet.",
+  metadataBase: new URL("https://madebyforma.nl"),
+  alternates: {
+    canonical: "/",
+  },
   openGraph: {
-    title: "FORMA | Premium Webdesign & App Ontwikkeling in Zeeland",
-    description: "Wij bouwen razendsnelle, opvallende websites en applicaties. Geen standaard templates, maar high-performance tech en uniek maatwerk design vanuit Middelburg.",
+    title: "FORMA | Premium Webdesign & Development Zeeland",
+    description: "FORMA is hét bureau voor high-end Next.js websites in Zeeland. Wij helpen MKB-ondernemers in Middelburg en omstreken aan bizarre snelheid en meer omzet.",
+    url: "https://madebyforma.nl",
+    siteName: "FORMA",
     locale: "nl_NL",
     type: "website",
+    images: [
+      {
+        url: "/og-image.jpg",
+        width: 1200,
+        height: 630,
+        alt: "FORMA - Premium Webdesign & Development Zeeland",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "FORMA | Premium Webdesign & Development Zeeland",
+    description: "FORMA is hét bureau voor high-end Next.js websites in Zeeland. Wij helpen MKB-ondernemers in Middelburg en omstreken aan bizarre snelheid en meer omzet.",
+    images: ["/og-image.jpg"],
+  },
+  robots: {
+    index: true,
+    follow: true,
   },
 };
 
@@ -44,16 +68,17 @@ export default function RootLayout({
     "@context": "https://schema.org",
     "@type": "ProfessionalService",
     "name": "FORMA",
-    "image": "/og-image.jpg", // Placeholder if not exists
+    "image": "https://madebyforma.nl/og-image.jpg",
     "address": {
       "@type": "PostalAddress",
       "addressLocality": "Middelburg",
       "addressRegion": "Zeeland",
       "addressCountry": "Nederland"
     },
-    "description": "Wij bouwen razendsnelle, opvallende websites en applicaties. Geen standaard templates, maar high-performance tech en uniek maatwerk design vanuit Middelburg.",
-    "serviceType": ["Webdesign", "App Ontwikkeling", "SEO Optimalisatie"],
-    "url": "https://forma-agency.nl" // Placeholder domain
+    "areaServed": "Zeeland",
+    "description": "FORMA is hét bureau voor high-end Next.js websites in Zeeland. Wij helpen MKB-ondernemers in Middelburg en omstreken aan bizarre snelheid en meer omzet.",
+    "serviceType": ["Web Design", "Web Development", "SEO"],
+    "url": "https://madebyforma.nl"
   };
 
   return (
