@@ -10,40 +10,40 @@ const services = [
     label: "De \"Binnenkomer\"",
     title: "Webdesign & Branding",
     headline: "Websites die voor je werken, niet andersom.",
-    description: "Een mooie site is leuk, maar een site die klanten oplevert is beter. Wij bouwen digitale visitekaartjes die direct vertrouwen uitstralen. Geen standaard templates, maar een uniek design dat precies past bij jouw zaak.",
+    description: "Wij bouwen unieke, razendsnelle digitale visitekaartjes die direct vertrouwen uitstralen en klanten opleveren.",
     benefits: [
       "Uniek UI/UX Design",
-      "Logo & Identiteit check",
-      "Razendsnelle laadtijden (Next.js)",
-      "Mobiel-eerst benadering"
+      "Logo & Identiteit",
+      "Razendsnel (Next.js)",
+      "Mobiel-eerst design"
     ],
     color: "#B6CBB7" // Sage
   },
   {
     id: "02",
     label: "De \"Efficiëntie-slag\"",
-    title: "App Development & Automatisering",
-    headline: "Slimme software voor jouw dagelijkse chaos.",
-    description: "Heb je een proces dat nu nog met pen, papier of een rommelige Excel gaat? Wij bouwen maatwerk apps die jouw werk makkelijker maken. Van urenregistratie voor bouwbedrijven tot boekingssystemen voor de lokale kapper.",
+    title: "App & Automatisering",
+    headline: "Slimme software voor jouw chaos.",
+    description: "Wij bouwen maatwerk apps die jouw werk makkelijker maken. Van urenregistratie tot slimme boekingssystemen.",
     benefits: [
       "Maatwerk Dashboards",
-      "Koppelingen met je huidige systemen",
-      "Gebruiksvriendelijke interfaces",
-      "Schaalbare technologie"
+      "Systeem-koppelingen",
+      "User-friendly design",
+      "Schaalbare tech"
     ],
     color: "#F2EFE9" // Sand
   },
   {
     id: "03",
     label: "De \"Toekomstbestendige\" Groei",
-    title: "SEO & AI-Vindbaarheid (GEO)",
-    headline: "Gevonden worden, nu en in het AI-tijdperk.",
-    description: "De manier waarop mensen zoeken verandert. Naast de bekende Google-lijstjes, kijken we nu naar GEO (Generative Engine Optimization). Wij zorgen dat jouw zaak niet alleen bovenaan de zoekresultaten staat, maar ook de bron is die AI-modellen zoals ChatGPT en Google Gemini aanbevelen.",
+    title: "SEO & AI (GEO)",
+    headline: "Gevonden worden door mens en AI.",
+    description: "Wij zorgen dat jouw zaak bovenaan staat in Google en wordt aanbevolen door AI zoals ChatGPT.",
     benefits: [
-      "GEO-Ready Content: Jouw expertise voor AI-zoekmachines",
-      "Lokale SEO: Dominantie in jouw regio",
-      "Autoriteit-bouw: Jouw naam als merk dat wordt vertrouwt",
-      "Performance Tracking: Helder inzicht in je verkeer"
+      "GEO: AI-Optimalisatie",
+      "Lokale SEO Dominantie",
+      "Autoriteit & Trust",
+      "Heldere rapportages"
     ],
     color: "#E5B7A9" // Clay
   }
@@ -73,9 +73,9 @@ function ServiceCard({ id, label, title, headline, description, benefits, color,
   return (
     <div 
       ref={container} 
-      className={`h-screen flex items-start justify-center sticky service-card-sticky-${index}`}
+      className={`h-[90vh] sm:h-screen flex items-start justify-center sticky service-card-sticky-${index}`}
       style={{
-        top: `calc(80px + ${index * 20}px)`,
+        top: `calc(70px + ${index * 15}px)`,
       }}
     >
       <motion.div
@@ -84,7 +84,7 @@ function ServiceCard({ id, label, title, headline, description, benefits, color,
           scale,
           backgroundColor: color,
         }}
-        className="relative w-full max-w-7xl h-[85vh] sm:h-[75vh] md:h-[70vh] rounded-[32px] md:rounded-[40px] border-2 border-ink shadow-[6px_6px_0px_0px_#121212] md:shadow-[8px_8px_0px_0px_#121212] overflow-hidden flex flex-col md:flex-row opacity-100"
+        className="relative w-full max-w-7xl h-[75vh] sm:h-[75vh] md:h-[70vh] rounded-[32px] md:rounded-[40px] border-2 border-ink shadow-[6px_6px_0px_0px_#121212] md:shadow-[8px_8px_0px_0px_#121212] overflow-hidden flex flex-col md:flex-row opacity-100"
       >
         <style jsx>{`
           @media (min-width: 768px) {
@@ -94,13 +94,15 @@ function ServiceCard({ id, label, title, headline, description, benefits, color,
           }
         `}</style>
         {/* Left Side: Title & Index */}
-        <div className="h-1/3 md:h-auto md:w-1/2 p-6 md:p-16 flex flex-col justify-between border-b-2 md:border-b-0 md:border-r-2 border-ink bg-white/5 shrink-0">
+        <div className="h-[30%] md:h-auto md:w-1/2 p-6 md:p-16 flex flex-col justify-between border-b-2 md:border-b-0 md:border-r-2 border-ink bg-white/5 shrink-0">
           <div>
-            <span className="text-2xl md:text-6xl font-sans font-black text-ink/10 block mb-1 md:mb-4">{id}</span>
-            <span className="hidden sm:inline-block px-3 py-1 rounded-full border border-ink/20 text-[10px] md:text-xs font-sans font-bold uppercase tracking-widest text-ink/60 mb-2 md:mb-6">
-              {label}
-            </span>
-            <h2 className="text-2xl sm:text-3xl md:text-6xl font-sans font-black tracking-tighter leading-[1.1] uppercase text-ink">
+            <div className="flex items-center justify-between md:block">
+              <span className="text-2xl md:text-6xl font-sans font-black text-ink/10 block md:mb-4">{id}</span>
+              <span className="inline-block px-3 py-1 rounded-full border border-ink/20 text-[10px] md:text-xs font-sans font-bold uppercase tracking-widest text-ink/60 md:mb-6">
+                {label}
+              </span>
+            </div>
+            <h2 className="text-2xl sm:text-3xl md:text-6xl font-sans font-black tracking-tighter leading-[1.1] uppercase text-ink mt-2 md:mt-0">
               {title}
             </h2>
           </div>
@@ -108,24 +110,24 @@ function ServiceCard({ id, label, title, headline, description, benefits, color,
 
         {/* Right Side: Content & Benefits */}
         <div className="flex-1 md:w-1/2 p-6 md:p-16 flex flex-col justify-center bg-white/10 overflow-y-auto no-scrollbar">
-          <h3 className="text-lg md:text-3xl font-sans font-black tracking-tight text-ink mb-3 md:mb-6">
+          <h3 className="text-xl md:text-3xl font-sans font-black tracking-tight text-ink mb-3 md:mb-6">
             {headline}
           </h3>
-          <p className="text-xs sm:text-sm md:text-lg font-body text-ink/80 leading-relaxed mb-4 md:mb-10 line-clamp-4 sm:line-clamp-none">
+          <p className="text-sm sm:text-base md:text-lg font-body text-ink/80 leading-relaxed mb-6 md:mb-10">
             {description.split(/(GEO)/g).map((part, i) => 
               part === "GEO" ? <span key={i} className="text-[#F97316] font-bold">GEO</span> : part
             )}
           </p>
           
-          <div className="space-y-2 md:space-y-4">
-            <span className="text-[9px] md:text-xs font-sans font-black uppercase tracking-[0.2em] text-ink/40 mb-1 md:mb-4 block">Wat je krijgt</span>
-            <ul className="grid grid-cols-1 gap-1.5 md:gap-4">
+          <div className="space-y-3 md:space-y-4">
+            <span className="text-[10px] md:text-xs font-sans font-black uppercase tracking-[0.2em] text-ink/40 mb-2 md:mb-4 block">Wat je krijgt</span>
+            <ul className="grid grid-cols-1 gap-2 md:gap-4">
               {benefits.map((benefit) => (
-                <li key={benefit} className="flex items-center space-x-2 md:space-x-4 text-[10px] sm:text-xs md:text-base font-body font-bold text-ink">
-                  <div className="flex-shrink-0 w-4 h-4 md:w-6 md:h-6 rounded-md md:rounded-lg bg-ink flex items-center justify-center">
-                    <Check size={10} className="text-[#F97316] md:w-3 md:h-3" strokeWidth={3} />
+                <li key={benefit} className="flex items-center space-x-3 md:space-x-4 text-xs md:text-base font-body font-bold text-ink">
+                  <div className="flex-shrink-0 w-5 h-5 md:w-6 md:h-6 rounded-lg bg-ink flex items-center justify-center">
+                    <Check size={12} className="text-[#F97316] md:w-3 md:h-3" strokeWidth={3} />
                   </div>
-                  <span className="line-clamp-1 md:line-clamp-none">{benefit}</span>
+                  <span>{benefit}</span>
                 </li>
               ))}
             </ul>
@@ -138,7 +140,7 @@ function ServiceCard({ id, label, title, headline, description, benefits, color,
 
 export default function Services() {
   return (
-    <section id="services" className="relative pt-40 pb-32">
+    <section id="services" className="relative pt-24 md:pt-40 pb-12 md:pb-32">
       <div className="max-w-7xl mx-auto px-6 lg:px-12 mb-12">
         <div className="max-w-4xl">
           <span className="text-xs font-sans font-black uppercase tracking-[0.3em] text-accent mb-4 block">
@@ -157,7 +159,7 @@ export default function Services() {
       </div>
       
       {/* Spacer to ensure the last card can be scrolled past */}
-      <div className="h-[20vh]" />
+      <div className="h-[10vh] md:h-[20vh]" />
     </section>
   );
 }

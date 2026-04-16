@@ -39,6 +39,18 @@ export default function FAQ() {
   const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
   const [clickedIndex, setClickedIndex] = useState<number | null>(null);
 
+  const handleMouseEnter = (index: number) => {
+    if (window.matchMedia('(hover: hover)').matches) {
+      setHoveredIndex(index);
+    }
+  };
+
+  const handleMouseLeave = () => {
+    if (window.matchMedia('(hover: hover)').matches) {
+      setHoveredIndex(null);
+    }
+  };
+
   return (
     <section 
       id="faq" 
@@ -64,8 +76,8 @@ export default function FAQ() {
             return (
               <div 
                 key={index}
-                onMouseEnter={() => setHoveredIndex(index)}
-                onMouseLeave={() => setHoveredIndex(null)}
+                onMouseEnter={() => handleMouseEnter(index)}
+                onMouseLeave={handleMouseLeave}
                 className={`border-b border-ink/10 transition-colors duration-500 ${isOpen ? 'bg-sand' : 'bg-transparent'}`}
               >
                 <button
