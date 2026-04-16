@@ -73,23 +73,23 @@ function ServiceCard({ id, label, title, headline, description, benefits, color,
   return (
     <div 
       ref={container} 
-      data-theme-color={color}
-      className="h-screen flex items-start justify-center sticky top-0"
+      className={`h-screen flex items-start justify-center sticky service-card-sticky-${index}`}
+      style={{
+        top: `calc(80px + ${index * 20}px)`,
+      }}
     >
       <motion.div
+        data-theme-color={color}
         style={{ 
           scale,
           backgroundColor: color,
         }}
-        className={`relative w-full max-w-7xl h-[85vh] sm:h-[75vh] md:h-[70vh] rounded-[32px] md:rounded-[40px] border-2 border-ink shadow-[6px_6px_0px_0px_#121212] md:shadow-[8px_8px_0px_0px_#121212] overflow-hidden flex flex-col md:flex-row opacity-100 sticky-card-offset-${index}`}
+        className="relative w-full max-w-7xl h-[85vh] sm:h-[75vh] md:h-[70vh] rounded-[32px] md:rounded-[40px] border-2 border-ink shadow-[6px_6px_0px_0px_#121212] md:shadow-[8px_8px_0px_0px_#121212] overflow-hidden flex flex-col md:flex-row opacity-100"
       >
         <style jsx>{`
-          .sticky-card-offset-${index} {
-            top: ${80 + (index * 15)}px;
-          }
           @media (min-width: 768px) {
-            .sticky-card-offset-${index} {
-              top: ${120 + (index * 40)}px;
+            .service-card-sticky-${index} {
+              top: calc(120px + ${index * 40}px) !important;
             }
           }
         `}</style>
