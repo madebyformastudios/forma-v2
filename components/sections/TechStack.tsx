@@ -53,7 +53,7 @@ export default function TechStack() {
           </h2>
         </div>
 
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 md:gap-6">
           {techStack.map((tech, index) => (
             <motion.div
               key={tech.name}
@@ -65,7 +65,7 @@ export default function TechStack() {
                 y: -8,
                 boxShadow: "8px 8px 0px 0px #121212"
               }}
-              className="aspect-square bg-white border-2 border-ink rounded-[24px] p-6 flex flex-col items-center justify-center text-center transition-all shadow-[4px_4px_0px_0px_#121212] cursor-default group"
+              className="aspect-square bg-white border-2 border-ink rounded-[20px] md:rounded-[24px] p-4 md:p-6 flex flex-col items-center justify-center text-center transition-all shadow-[4px_4px_0px_0px_#121212] cursor-default group"
             >
               <div className="text-ink group-hover:text-accent group-hover:scale-110 transition-all duration-300 mb-4">
                 {tech.icon}

@@ -81,11 +81,11 @@ function ServiceCard({ id, label, title, headline, description, benefits, color,
           scale,
           backgroundColor: color,
         }}
-        className={`relative w-full max-w-7xl h-[75vh] md:h-[70vh] rounded-[32px] md:rounded-[40px] border-2 border-ink shadow-[6px_6px_0px_0px_#121212] md:shadow-[8px_8px_0px_0px_#121212] overflow-hidden flex flex-col md:flex-row opacity-100 sticky-card-offset-${index}`}
+        className={`relative w-full max-w-7xl h-[85vh] sm:h-[75vh] md:h-[70vh] rounded-[32px] md:rounded-[40px] border-2 border-ink shadow-[6px_6px_0px_0px_#121212] md:shadow-[8px_8px_0px_0px_#121212] overflow-hidden flex flex-col md:flex-row opacity-100 sticky-card-offset-${index}`}
       >
         <style jsx>{`
           .sticky-card-offset-${index} {
-            top: ${120 + (index * 20)}px;
+            top: ${80 + (index * 15)}px;
           }
           @media (min-width: 768px) {
             .sticky-card-offset-${index} {
@@ -94,38 +94,38 @@ function ServiceCard({ id, label, title, headline, description, benefits, color,
           }
         `}</style>
         {/* Left Side: Title & Index */}
-        <div className="md:w-1/2 p-6 md:p-16 flex flex-col justify-between border-b-2 md:border-b-0 md:border-r-2 border-ink bg-white/5 shrink-0">
+        <div className="h-1/3 md:h-auto md:w-1/2 p-6 md:p-16 flex flex-col justify-between border-b-2 md:border-b-0 md:border-r-2 border-ink bg-white/5 shrink-0">
           <div>
-            <span className="text-2xl md:text-6xl font-sans font-black text-ink/10 block mb-2 md:mb-4">{id}</span>
-            <span className="inline-block px-3 py-1 rounded-full border border-ink/20 text-[10px] md:text-xs font-sans font-bold uppercase tracking-widest text-ink/60 mb-4 md:mb-6">
+            <span className="text-2xl md:text-6xl font-sans font-black text-ink/10 block mb-1 md:mb-4">{id}</span>
+            <span className="hidden sm:inline-block px-3 py-1 rounded-full border border-ink/20 text-[10px] md:text-xs font-sans font-bold uppercase tracking-widest text-ink/60 mb-2 md:mb-6">
               {label}
             </span>
-            <h2 className="text-3xl md:text-6xl font-sans font-black tracking-tighter leading-[1.1] uppercase text-ink">
+            <h2 className="text-2xl sm:text-3xl md:text-6xl font-sans font-black tracking-tighter leading-[1.1] uppercase text-ink">
               {title}
             </h2>
           </div>
         </div>
 
         {/* Right Side: Content & Benefits */}
-        <div className="md:w-1/2 p-6 md:p-16 flex flex-col justify-center bg-white/10">
-          <h3 className="text-xl md:text-3xl font-sans font-black tracking-tight text-ink mb-4 md:mb-6">
+        <div className="flex-1 md:w-1/2 p-6 md:p-16 flex flex-col justify-center bg-white/10 overflow-y-auto no-scrollbar">
+          <h3 className="text-lg md:text-3xl font-sans font-black tracking-tight text-ink mb-3 md:mb-6">
             {headline}
           </h3>
-          <p className="text-sm md:text-lg font-body text-ink/80 leading-relaxed mb-6 md:mb-10">
+          <p className="text-xs sm:text-sm md:text-lg font-body text-ink/80 leading-relaxed mb-4 md:mb-10 line-clamp-4 sm:line-clamp-none">
             {description.split(/(GEO)/g).map((part, i) => 
               part === "GEO" ? <span key={i} className="text-[#F97316] font-bold">GEO</span> : part
             )}
           </p>
           
-          <div className="space-y-3 md:space-y-4">
-            <span className="text-[10px] md:text-xs font-sans font-black uppercase tracking-[0.2em] text-ink/40 mb-2 md:mb-4 block">Wat je krijgt</span>
-            <ul className="grid grid-cols-1 gap-2 md:gap-4">
+          <div className="space-y-2 md:space-y-4">
+            <span className="text-[9px] md:text-xs font-sans font-black uppercase tracking-[0.2em] text-ink/40 mb-1 md:mb-4 block">Wat je krijgt</span>
+            <ul className="grid grid-cols-1 gap-1.5 md:gap-4">
               {benefits.map((benefit) => (
-                <li key={benefit} className="flex items-center space-x-3 md:space-x-4 text-xs md:text-base font-body font-bold text-ink">
-                  <div className="flex-shrink-0 w-5 h-5 md:w-6 md:h-6 rounded-lg bg-ink flex items-center justify-center">
-                    <Check size={12} className="text-[#F97316]" strokeWidth={3} />
+                <li key={benefit} className="flex items-center space-x-2 md:space-x-4 text-[10px] sm:text-xs md:text-base font-body font-bold text-ink">
+                  <div className="flex-shrink-0 w-4 h-4 md:w-6 md:h-6 rounded-md md:rounded-lg bg-ink flex items-center justify-center">
+                    <Check size={10} className="text-[#F97316] md:w-3 md:h-3" strokeWidth={3} />
                   </div>
-                  <span>{benefit}</span>
+                  <span className="line-clamp-1 md:line-clamp-none">{benefit}</span>
                 </li>
               ))}
             </ul>
@@ -138,7 +138,7 @@ function ServiceCard({ id, label, title, headline, description, benefits, color,
 
 export default function Services() {
   return (
-    <section id="services" className="relative pt-40 pb-32 overflow-hidden">
+    <section id="services" className="relative pt-40 pb-32">
       <div className="max-w-7xl mx-auto px-6 lg:px-12 mb-12">
         <div className="max-w-4xl">
           <span className="text-xs font-sans font-black uppercase tracking-[0.3em] text-accent mb-4 block">

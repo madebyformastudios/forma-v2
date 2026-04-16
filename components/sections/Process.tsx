@@ -55,10 +55,10 @@ function MobileStep({ step, index, isActive }: { step: typeof steps[0], index: n
         }}
         className="space-y-3"
       >
-        <h3 className="text-2xl font-sans font-black uppercase tracking-tight text-ink">
+        <h3 className="text-xl font-sans font-black uppercase tracking-tight text-ink">
           {step.title}
         </h3>
-        <p className="text-lg text-ink/60 font-body leading-relaxed">
+        <p className="text-base text-ink/60 font-body leading-relaxed">
           {step.description}
         </p>
       </motion.div>
