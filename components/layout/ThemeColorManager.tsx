@@ -5,20 +5,20 @@ import { useEffect } from 'react';
 export default function ThemeColorManager() {
   useEffect(() => {
     const updateThemeColor = (color: string) => {
-      // Update all existing theme-color tags (Next.js might render multiple for light/dark mode)
+      // Force iOS Safari to re-evaluate by removing existing tags and adding a fresh one
       const themeMetaTags = document.querySelectorAll('meta[name="theme-color"]');
-      if (themeMetaTags.length > 0) {
-        themeMetaTags.forEach((meta) => {
-          meta.setAttribute('content', color);
-        });
-      } else {
-        const meta = document.createElement('meta');
-        meta.setAttribute('name', 'theme-color');
-        meta.setAttribute('content', color);
-        document.head.appendChild(meta);
-      }
+      themeMetaTags.forEach((meta) => meta.remove());
 
-      // Explicitly for iOS Safari
+      const meta = document.createElement('meta');
+      meta.setAttribute('name', 'theme-color');
+      meta.setAttribute('content', color);
+      document.head.appendChild(meta);
+
+      // Also set body background color to match, as iOS Safari often uses the background 
+      // color of the body/html for the safe area / overscroll area
+      document.body.style.backgroundColor = color;
+
+      // Explicitly for iOS Safari (Standalone mode)
       let appleMeta = document.querySelector('meta[name="apple-mobile-web-app-status-bar-style"]');
       if (!appleMeta) {
         appleMeta = document.createElement('meta');
