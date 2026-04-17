@@ -2,6 +2,7 @@
 
 import { motion } from 'framer-motion';
 import { Check, Mail } from 'lucide-react';
+import Link from 'next/link';
 import Button from '@/components/ui/Button';
 
 export default function FoundingPartner() {
@@ -49,7 +50,7 @@ export default function FoundingPartner() {
                 </div>
                 <div className="bg-white border-2 border-ink px-4 py-2 rounded-xl h-fit">
                   <p className="text-sm font-sans font-bold uppercase text-ink">
-                    Alleen voor de eerste <span className="text-accent">3</span> Zeeuwse ondernemers!
+                    Alleen voor de eerste <span className="text-accent">3</span> ondernemers!
                   </p>
                 </div>
               </div>
@@ -92,14 +93,14 @@ export default function FoundingPartner() {
               </div>
 
               <div className="space-y-4">
-                <a href={mailtoLink} className="block w-full md:w-fit">
+                <Link href="#contact" className="block w-full md:w-fit">
                   <Button className="w-full md:px-12 py-6 text-sm md:text-base flex items-center justify-center space-x-3">
                     <span>Claim jouw plek</span>
                     <Mail size={20} className="fill-ink" />
                   </Button>
-                </a>
+                </Link>
                 <p className="text-xs md:text-sm font-sans font-bold text-ink/40 uppercase tracking-widest">
-                  Of stuur direct een mail naar: <span className="text-ink/60">{email}</span>
+                  Of stuur direct een mail naar: <a href={mailtoLink} className="text-ink/60 hover:text-accent transition-colors underline decoration-dotted underline-offset-4">{email}</a>
                 </p>
               </div>
             </div>
