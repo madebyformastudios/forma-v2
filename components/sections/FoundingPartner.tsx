@@ -85,8 +85,8 @@ export default function FoundingPartner() {
                   }}
                   className="px-4 py-2 bg-white border-2 border-ink rounded-full flex items-center space-x-2"
                 >
-                  <div className="w-2 h-2 rounded-full bg-accent animate-pulse" />
-                  <span className="text-xs font-sans font-black uppercase tracking-widest text-ink">
+                  <div className="w-2 h-2 rounded-full bg-accent animate-pulse shrink-0" />
+                  <span className="text-[10px] sm:text-xs font-sans font-black uppercase tracking-widest text-ink whitespace-nowrap">
                     Beschikbare plekken: 3 van 3
                   </span>
                 </motion.div>
