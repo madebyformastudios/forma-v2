@@ -58,6 +58,10 @@ export const metadata: Metadata = {
   },
 };
 
+export const viewport: Viewport = {
+  themeColor: "#B6CBB7", // Default to Sage for the Hero section on load
+};
+
 export default function RootLayout({
   children,
 }: {
