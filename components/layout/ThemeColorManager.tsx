@@ -4,7 +4,17 @@ import { useEffect } from 'react';
 
 export default function ThemeColorManager() {
   useEffect(() => {
+    // Detect iOS devices
+    const isIOS = 
+      typeof window !== 'undefined' && 
+      (/iPad|iPhone|iPod/.test(navigator.userAgent) || (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1));
+
     const updateThemeColor = (color: string) => {
+      // By NOT manipulating the theme-color meta tag on iOS, we allow Safari's native 
+      // auto-detection algorithm to sample the background color of the topmost element 
+      // directly from the scrolling sections, which works flawlessly.
+      if (isIOS) return;
+
       // Update all existing theme-color tags (Next.js might render multiple for light/dark mode)
       const themeMetaTags = document.querySelectorAll('meta[name="theme-color"]');
       if (themeMetaTags.length > 0) {
@@ -16,23 +26,6 @@ export default function ThemeColorManager() {
         meta.setAttribute('name', 'theme-color');
         meta.setAttribute('content', color);
         document.head.appendChild(meta);
-      }
-
-      // Explicitly for iOS Safari
-      let appleMeta = document.querySelector('meta[name="apple-mobile-web-app-status-bar-style"]');
-      if (!appleMeta) {
-        appleMeta = document.createElement('meta');
-        appleMeta.setAttribute('name', 'apple-mobile-web-app-status-bar-style');
-        appleMeta.setAttribute('content', 'default');
-        document.head.appendChild(appleMeta);
-      }
-
-      let appleCapable = document.querySelector('meta[name="apple-mobile-web-app-capable"]');
-      if (!appleCapable) {
-        appleCapable = document.createElement('meta');
-        appleCapable.setAttribute('name', 'apple-mobile-web-app-capable');
-        appleCapable.setAttribute('content', 'yes');
-        document.head.appendChild(appleCapable);
       }
     };
 
