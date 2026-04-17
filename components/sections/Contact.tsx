@@ -60,7 +60,7 @@ export default function Contact() {
                 <div className="shrink-0 w-10 h-10 rounded-full border-2 border-ink flex items-center justify-center bg-white group-hover:bg-accent group-hover:text-white transition-all shadow-[2px_2px_0px_0px_#121212]">
                   <Mail size={18} />
                 </div>
-                <span className="text-lg md:text-2xl font-sans font-black text-ink group-hover:text-accent transition-colors break-all">
+                <span className="text-sm sm:text-lg md:text-2xl font-sans font-black text-ink group-hover:text-accent transition-colors">
                   madebyformastudios@gmail.com
                 </span>
               </a>
@@ -68,7 +68,7 @@ export default function Contact() {
                 <div className="shrink-0 w-10 h-10 rounded-full border-2 border-ink flex items-center justify-center bg-white shadow-[2px_2px_0px_0px_#121212]">
                   <MapPin size={18} />
                 </div>
-                <span className="text-lg md:text-2xl font-sans font-black text-ink">
+                <span className="text-sm sm:text-lg md:text-2xl font-sans font-black text-ink">
                   Middelburg, Zeeland
                 </span>
               </div>
