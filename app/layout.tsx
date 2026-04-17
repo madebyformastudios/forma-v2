@@ -27,6 +27,9 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "/",
   },
+  verification: {
+    google: "TGK-dEIPovps_mTX7E8eUrBVlhs3lB4KzMAb2j40Tb8",
+  },
   openGraph: {
     title: "FORMA | Premium Webdesign & Development Zeeland",
     description: "FORMA is hét bureau voor high-end Next.js websites in Zeeland. Wij helpen MKB-ondernemers in Middelburg en omstreken aan bizarre snelheid en meer omzet.",
