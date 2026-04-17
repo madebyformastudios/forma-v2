@@ -13,7 +13,7 @@ export default function FoundingPartner() {
     "1 Jaar Premium Hosting & Onderhoud (Gratis)"
   ];
 
-  const email = "madebyformastudios@gmail.com";
+  const email = "info@madebyforma.nl";
   const subject = "Interesse in Founding Partner Pakket - MadeByForma";
   const mailtoLink = `mailto:${email}?subject=${encodeURIComponent(subject)}`;
 

@@ -56,7 +56,7 @@ export default function PrivacyPage() {
             <section className="space-y-4">
               <h2 className="text-2xl font-sans font-black uppercase tracking-tight text-ink">3. Jouw Data, Jouw Recht</h2>
               <p className="text-lg text-ink/70 font-body leading-relaxed">
-                Je hebt altijd het recht om te vragen welke gegevens we van jou hebben. Wil je dat we jouw e-mailadres uit onze inbox verwijderen? Eén berichtje naar <a href="mailto:madebyformastudios@gmail.com" className="text-accent underline font-bold">madebyformastudios@gmail.com</a> en we fixen het direct.
+                Je hebt altijd het recht om te vragen welke gegevens we van jou hebben. Wil je dat we jouw e-mailadres uit onze inbox verwijderen? Eén berichtje naar <a href="mailto:info@madebyforma.nl" className="text-accent underline font-bold">info@madebyforma.nl</a> en we fixen het direct.
               </p>
             </section>
 

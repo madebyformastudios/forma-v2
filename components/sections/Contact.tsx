@@ -54,14 +54,14 @@ export default function Contact() {
 
             <div className="space-y-4 pt-8 border-t border-ink/10">
               <a 
-                href="mailto:madebyformastudios@gmail.com" 
+                href="mailto:info@madebyforma.nl" 
                 className="flex items-center space-x-4 group"
               >
                 <div className="shrink-0 w-10 h-10 rounded-full border-2 border-ink flex items-center justify-center bg-white group-hover:bg-accent group-hover:text-white transition-all shadow-[2px_2px_0px_0px_#121212]">
                   <Mail size={18} />
                 </div>
                 <span className="text-sm sm:text-lg md:text-2xl font-sans font-black text-ink group-hover:text-accent transition-colors">
-                  madebyformastudios@gmail.com
+                  info@madebyforma.nl
                 </span>
               </a>
               <div className="flex items-center space-x-4">
