@@ -16,7 +16,7 @@ const steps = [
   {
     id: "02",
     title: "Design",
-    description: "Sticker-style Ontwerp. Een uniek, high-end ontwerp dat opvalt en jouw merkidentiteit versterkt.",
+    description: "High-End UI/UX. Een strak, modern en bliksemsnel ontwerp dat jouw merkidentiteit versterkt en direct vertrouwen wekt.",
     mainIcon: <Pencil size={80} />,
     rotation: 90
   },
