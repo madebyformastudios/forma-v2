@@ -29,7 +29,7 @@ export default function Hero() {
     <section 
       id="hero"
       data-theme-color="#B6CBB7"
-      className="relative min-h-screen flex flex-col items-center bg-sage overflow-hidden mt-0"
+      className="relative w-full min-h-screen flex flex-col items-center bg-sage overflow-hidden mt-0"
     >
       {/* Top Spacer */}
       <div className="w-full h-24 md:h-32 shrink-0" />
