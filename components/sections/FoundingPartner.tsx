@@ -1,5 +1,6 @@
 'use client';
 
+import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { Check, Zap, Sparkles, Timer } from 'lucide-react';
 import Button from '@/components/ui/Button';
@@ -86,13 +87,14 @@ export default function FoundingPartner() {
                 </div>
 
                 <div className="pt-4">
-                  <Button 
-                    href="#contact" 
-                    className="w-full py-6 text-sm md:text-base flex items-center justify-center space-x-3 group/btn"
-                  >
-                    <span>Claim your Spot</span>
-                    <Zap size={18} className="fill-white group-hover:scale-125 transition-transform" />
-                  </Button>
+                  <Link href="#contact" className="block w-full">
+                    <Button 
+                      className="w-full py-6 text-sm md:text-base flex items-center justify-center space-x-3 group/btn"
+                    >
+                      <span>Claim your Spot</span>
+                      <Zap size={18} className="fill-white group-hover:scale-125 transition-transform" />
+                    </Button>
+                  </Link>
                 </div>
                 
                 <p className="text-[10px] text-white/30 font-sans font-bold uppercase tracking-widest">
