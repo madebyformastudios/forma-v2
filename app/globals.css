@@ -45,6 +45,21 @@
   h1, h2, h3, h4, h5, h6 {
     @apply font-sans font-black tracking-tighter uppercase;
   }
+
+  @keyframes gradient-x {
+    0%, 100% {
+      background-size: 200% 200%;
+      background-position: left center;
+    }
+    50% {
+      background-size: 200% 200%;
+      background-position: right center;
+    }
+  }
+
+  .animate-gradient-x {
+    animation: gradient-x 15s ease infinite;
+  }
 }
 
 /* Hide scrollbar for Chrome, Safari and Opera */
