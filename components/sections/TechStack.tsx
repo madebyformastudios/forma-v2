@@ -60,14 +60,25 @@ export default function TechStack() {
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ delay: index * 0.1 }}
+              transition={{ 
+                type: "spring",
+                stiffness: 260,
+                damping: 20,
+                delay: index * 0.1 
+              }}
               whileHover={{ 
                 y: -8,
-                boxShadow: "8px 8px 0px 0px #121212"
+                boxShadow: "8px 8px 0px 0px #121212",
+                transition: { type: "spring", stiffness: 400, damping: 10 }
               }}
-              className="aspect-square bg-white border-2 border-ink rounded-[20px] md:rounded-[24px] p-4 md:p-6 flex flex-col items-center justify-center text-center transition-all shadow-[4px_4px_0px_0px_#121212] cursor-default group"
+              whileTap={{ 
+                scale: 0.95,
+                y: 0,
+                boxShadow: "2px 2px 0px 0px #121212"
+              }}
+              className="aspect-square bg-white border-2 border-ink rounded-[20px] md:rounded-[24px] p-4 md:p-6 flex flex-col items-center justify-center text-center cursor-default group will-change-transform shadow-[4px_4px_0px_0px_#121212]"
             >
-              <div className="text-ink group-hover:text-accent group-hover:scale-110 transition-all duration-300 mb-4">
+              <div className="text-ink group-hover:text-accent group-hover:scale-110 transition-transform duration-300 mb-4">
                 {tech.icon}
               </div>
               <h3 className="font-sans font-black text-sm md:text-base uppercase tracking-tight text-ink mb-1">
