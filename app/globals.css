@@ -18,6 +18,10 @@
 }
 
 @layer base {
+  html, body {
+    overflow-x: clip;
+    max-width: 100%;
+  }
   body {
     @apply bg-sand text-ink antialiased font-body relative min-h-screen;
   }
