@@ -7,15 +7,15 @@ import { Plus } from 'lucide-react';
 const faqs = [
   {
     question: "Wat kost dat nou, zo'n FORMA-site?",
-    answer: "Ik hou van duidelijke taal. Voor de bouw van een professionele website (Web building) werk ik met vaste prijzen die passen bij de startende of lokale ondernemer. De meeste projecten vallen tussen de €750 en €1.950. Hiervoor krijg je een razendsnelle, moderne site die ook op mobiel perfect werkt. Zo weet je vooraf precies waar je aan toe bent."
+    answer: "Ik hou van duidelijke taal. Voor de bouw van een professionele website werk ik met vaste prijzen die passen bij de startende of lokale ondernemer. De meeste projecten vallen tussen de €750 en €1.950. Hiervoor krijg je een razendsnelle, moderne site die ook op mobiel perfect werkt. Zo weet je vooraf precies waar je aan toe bent."
   },
   {
     question: "Hoe zit het met ingewikkelde functies of apps?",
-    answer: "Zoek je meer dan alleen een website? Denk aan een eigen klantenportaal, een offertesysteem of een maatwerk app voor je personeel? Dat noemen we Maatwerk. Omdat dit per bedrijf enorm verschilt, gaat dit altijd op aanvraag. We bespreken je wensen en ik maak een offerte op maat die precies aansluit bij jouw proces."
+    answer: "Zoek je meer dan alleen een website? Denk aan een eigen klantenportaal, een offertesysteem of een maatwerk app voor jouw personeel? Dat noemen we Maatwerk. Omdat dit per bedrijf enorm verschilt, gaat dit altijd op aanvraag. We bespreken jouw wensen en ik maak een offerte op maat die precies aansluit bij jouw processen."
   },
   {
     question: "Kan ik het niet gewoon zelf doen met Wix of Squarespace?",
-    answer: "Zeker weten, dat kan. Maar als je een vakman bent, ga je ook niet zelf je boekhoudsoftware programmeren, toch? Het verschil zit 'm in de snelheid en de uitstraling. Een DHZ-site oogt vaak net niet professioneel en is vaak traag. Mijn sites zijn gebouwd met Next.js; dat vindt Google heerlijk en zorgt ervoor dat jij er direct \"duurder\" uitziet dan de concurrent."
+    answer: "Zeker weten, dat kan. Maar als je een vakman bent, ga je ook niet zelf jouw boekhoudsoftware programmeren, toch? Het verschil zit 'm in de snelheid en de uitstraling. Een DHZ-site oogt vaak net niet professioneel en is vaak traag. Mijn sites zijn gebouwd met Next.js; dat vindt Google heerlijk en zorgt ervoor dat jij er direct \"duurder\" uitziet dan de concurrent."
   },
   {
     question: "Hoe snel staat mijn nieuwe site online?",
@@ -23,7 +23,7 @@ const faqs = [
   },
   {
     question: "Heb ik er na de oplevering nog omkijken naar?",
-    answer: "Alleen als je dat zelf wilt. Ik bied service-abonnementen aan waarbij ik de techniek, hosting en kleine updates regel. Zo kun jij doen waar je goed in bent (ondernemen) en zorg ik dat je digitale voordeur er strak bij blijft staan. Je zit nergens aan vast, maar het gemak is groot."
+    answer: "Alleen als je dat zelf wilt. Ik bied service-abonnementen aan waarbij ik de techniek, hosting en kleine updates regel. Zo kun jij doen waar je goed in bent (ondernemen) en zorg ik dat jouw digitale voordeur er strak bij blijft staan. Je zit nergens aan vast, maar het gemak is groot."
   },
   {
     question: "Wat als mijn bedrijf over twee jaar veel groter is?",

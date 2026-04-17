@@ -26,7 +26,7 @@ export default function Contact() {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     console.log('Form submitted:', { ...formState, selectedServices });
-    alert('Bedankt! We nemen binnen 24 uur contact met je op om die koffie te plannen.');
+    alert('Bedankt! We nemen binnen 24 uur contact met je op om een kennismaking in te plannen.');
   };
 
   return (
@@ -48,7 +48,7 @@ export default function Contact() {
                 KLAAR OM DE <br /> <span className="text-accent italic">STANDAARD</span> TE ZETTEN?
               </h2>
               <p className="text-lg md:text-xl text-ink/60 font-body leading-relaxed">
-                Een digitale fundering leg je niet zomaar. Het is de start van iets groters. Laten we samen bouwen aan een platform dat echt voor je werkt.
+                Een digitale fundering bouw je niet zomaar. Het is de start van iets groters. Laten we samen werken aan een platform dat écht voor jouw onderneming werkt.
               </p>
             </div>
 
@@ -117,7 +117,7 @@ export default function Contact() {
                   <input 
                     type="text" 
                     required
-                    placeholder="Hoe heet je?"
+                    placeholder="Wat is jouw naam?"
                     className="w-full bg-transparent border-b-2 border-ink pb-2 text-lg md:text-xl font-sans font-bold placeholder:text-ink/20 focus:outline-none focus:border-accent transition-colors"
                     value={formState.name}
                     onChange={(e) => setFormState({...formState, name: e.target.value})}
@@ -129,7 +129,7 @@ export default function Contact() {
                   <input 
                     type="email" 
                     required
-                    placeholder="Wat is je e-mail?"
+                    placeholder="Wat is jouw e-mailadres?"
                     className="w-full bg-transparent border-b-2 border-ink pb-2 text-lg md:text-xl font-sans font-bold placeholder:text-ink/20 focus:outline-none focus:border-accent transition-colors"
                     value={formState.email}
                     onChange={(e) => setFormState({...formState, email: e.target.value})}
@@ -141,7 +141,7 @@ export default function Contact() {
                   <textarea 
                     required
                     rows={2}
-                    placeholder="Vertel ons over je ambities..."
+                    placeholder="Vertel ons over jouw ambities..."
                     className="w-full bg-transparent border-b-2 border-ink pb-2 text-lg md:text-xl font-sans font-bold placeholder:text-ink/20 focus:outline-none focus:border-accent transition-colors resize-none"
                     value={formState.message}
                     onChange={(e) => setFormState({...formState, message: e.target.value})}
@@ -149,7 +149,7 @@ export default function Contact() {
                 </div>
 
                 <Button className="w-full py-5 md:py-6 text-base md:text-lg shadow-[6px_6px_0px_0px_#121212] hover:shadow-[3px_3px_0px_0px_#121212] active:shadow-none">
-                  VERSTUUR JE AANVRAAG
+                  VERSTUUR JOUW AANVRAAG
                 </Button>
               </form>
             </div>

@@ -9,7 +9,7 @@ const services = [
     id: "01",
     label: "De \"Binnenkomer\"",
     title: "Webdesign & Branding",
-    headline: "Websites die voor je werken, niet andersom.",
+    headline: "Websites die voor jou werken, niet andersom.",
     description: "Wij bouwen unieke, razendsnelle digitale visitekaartjes die direct vertrouwen uitstralen en klanten opleveren.",
     benefits: [
       "Uniek UI/UX Design",
@@ -23,12 +23,12 @@ const services = [
     id: "02",
     label: "De \"Efficiëntie-slag\"",
     title: "App & Automatisering",
-    headline: "Slimme software voor jouw chaos.",
+    headline: "Slimme software voor jouw processen.",
     description: "Wij bouwen maatwerk apps die jouw werk makkelijker maken. Van urenregistratie tot slimme boekingssystemen.",
     benefits: [
       "Maatwerk Dashboards",
-      "Systeem-koppelingen",
-      "User-friendly design",
+      "Systeemkoppelingen",
+      "Gebruiksvriendelijk design",
       "Schaalbare tech"
     ],
     color: "#F2EFE9" // Sand
@@ -38,11 +38,11 @@ const services = [
     label: "De \"Toekomstbestendige\" Groei",
     title: "SEO & AI (GEO)",
     headline: "Gevonden worden door mens en AI.",
-    description: "Wij zorgen dat jouw zaak bovenaan staat in Google en wordt aanbevolen door AI zoals ChatGPT.",
+    description: "Wij zorgen dat jouw onderneming bovenaan staat in Google en wordt aanbevolen door AI zoals ChatGPT.",
     benefits: [
       "GEO: AI-Optimalisatie",
       "Lokale SEO Dominantie",
-      "Autoriteit & Trust",
+      "Autoriteit & Vertrouwen",
       "Heldere rapportages"
     ],
     color: "#E5B7A9" // Clay

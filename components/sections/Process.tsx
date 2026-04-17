@@ -9,7 +9,7 @@ const steps = [
   {
     id: "01",
     title: "Strategie",
-    description: "Koffie & Koers. We duiken in jouw business en bepalen de route die resultaat oplevert.",
+    description: "Koffie & Koers. We duiken in jouw onderneming en bepalen de route die resultaat oplevert.",
     mainIcon: <Coffee size={80} />,
     rotation: 0
   },

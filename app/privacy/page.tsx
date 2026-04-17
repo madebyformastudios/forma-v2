@@ -24,7 +24,7 @@ export default function PrivacyPage() {
               <span className="text-accent italic">(DE "GEEN GEZEIK" POLICY)</span>
             </h1>
             <p className="text-xl md:text-2xl text-ink/60 font-body leading-relaxed border-l-4 border-accent pl-8 py-2">
-              Bij FORMA houden we van heldere lijnen en transparante code. Dat trekken we door naar je privacy. Geen juridisch doolhof van 30 pagina's, maar gewoon eerlijk vertellen wat we met je gegevens doen.
+              Bij FORMA houden we van heldere lijnen en transparante code. Dat trekken we door naar jouw privacy. Geen juridisch doolhof van 30 pagina's, maar gewoon eerlijk vertellen wat we met jouw gegevens doen.
             </p>
           </div>
 
@@ -32,7 +32,7 @@ export default function PrivacyPage() {
             <section className="space-y-4">
               <h2 className="text-2xl font-sans font-black uppercase tracking-tight text-ink">1. Contact & Koffie</h2>
               <p className="text-lg text-ink/70 font-body leading-relaxed">
-                Als je ons contactformulier invult, vragen we om je naam, e-mail en je projectdetails. Deze gegevens gebruiken we puur om contact met je op te nemen voor die eerste bak koffie en om een gericht voorstel te doen. We slaan deze gegevens niet op in een vage marketingdatabase en we verkopen ze al helemaal niet door.
+                Als je ons contactformulier invult, vragen we om jouw naam, e-mail en projectdetails. Deze gegevens gebruiken we puur om contact met je op te nemen voor die eerste bak koffie en om een gericht voorstel te doen. We slaan deze gegevens niet op in een vage marketingdatabase en we verkopen ze helemaal niet door.
               </p>
             </section>
 
@@ -48,7 +48,7 @@ export default function PrivacyPage() {
                 </li>
                 <li className="bg-white/50 p-6 rounded-2xl border-2 border-ink shadow-[4px_4px_0px_0px_#121212]">
                   <strong className="block text-ink uppercase text-sm mb-2">Analytisch:</strong>
-                  <span className="text-ink/70">We gebruiken geanonimiseerde tools (zoals Vercel Analytics) om te zien hoe bezoekers door de site navigeren. We zien dat er iemand kijkt, niet wie er kijkt. Geen irritante tracking-pixels die je advertenties laten zien op basis van je bezoek hier.</span>
+                  <span className="text-ink/70">We gebruiken geanonimiseerde tools (zoals Vercel Analytics) om te zien hoe bezoekers door de site navigeren. We zien dat er iemand kijkt, niet wie er kijkt. Geen irritante tracking-pixels die advertenties laten zien op basis van jouw bezoek hier.</span>
                 </li>
               </ul>
             </section>
@@ -56,14 +56,14 @@ export default function PrivacyPage() {
             <section className="space-y-4">
               <h2 className="text-2xl font-sans font-black uppercase tracking-tight text-ink">3. Jouw Data, Jouw Recht</h2>
               <p className="text-lg text-ink/70 font-body leading-relaxed">
-                Je hebt te allen tijde het recht om te vragen welke gegevens we van je hebben. Wil je dat we je e-mail uit onze inbox verwijderen? Eén berichtje naar <a href="mailto:madebyformastudios@gmail.com" className="text-accent underline font-bold">madebyformastudios@gmail.com</a> en we fixen het direct.
+                Je hebt altijd het recht om te vragen welke gegevens we van jou hebben. Wil je dat we jouw e-mailadres uit onze inbox verwijderen? Eén berichtje naar <a href="mailto:madebyformastudios@gmail.com" className="text-accent underline font-bold">madebyformastudios@gmail.com</a> en we fixen het direct.
               </p>
             </section>
 
             <section className="space-y-4">
               <h2 className="text-2xl font-sans font-black uppercase tracking-tight text-ink">4. Beveiliging</h2>
               <p className="text-lg text-ink/70 font-body leading-relaxed">
-                Jouw gegevens worden verstuurd over een beveiligde SSL-verbinding (het slotje in je browser) en komen terecht in een streng beveiligde omgeving. Wij bouwen met de standaarden van morgen, en daar hoort top-beveiliging bij.
+                Jouw gegevens worden verstuurd over een beveiligde SSL-verbinding (het slotje in de browser) en komen terecht in een streng beveiligde omgeving. Wij bouwen met de standaarden van morgen, en daar hoort top-beveiliging bij.
               </p>
             </section>
           </div>
