@@ -5,17 +5,34 @@ import { useEffect } from 'react';
 export default function ThemeColorManager() {
   useEffect(() => {
     const updateThemeColor = (color: string) => {
-      let meta = document.querySelector('meta[name="theme-color"]');
-      if (!meta) {
-        meta = document.createElement('meta');
+      // Update all existing theme-color tags (Next.js might render multiple for light/dark mode)
+      const themeMetaTags = document.querySelectorAll('meta[name="theme-color"]');
+      if (themeMetaTags.length > 0) {
+        themeMetaTags.forEach((meta) => {
+          meta.setAttribute('content', color);
+        });
+      } else {
+        const meta = document.createElement('meta');
         meta.setAttribute('name', 'theme-color');
+        meta.setAttribute('content', color);
         document.head.appendChild(meta);
       }
-      
-      if (meta.getAttribute('content') !== color) {
-        meta.setAttribute('content', color);
-        // Also update apple-mobile-web-app-status-bar-style if needed
-        // for older iOS versions, though theme-color is preferred now
+
+      // Explicitly for iOS Safari
+      let appleMeta = document.querySelector('meta[name="apple-mobile-web-app-status-bar-style"]');
+      if (!appleMeta) {
+        appleMeta = document.createElement('meta');
+        appleMeta.setAttribute('name', 'apple-mobile-web-app-status-bar-style');
+        appleMeta.setAttribute('content', 'default');
+        document.head.appendChild(appleMeta);
+      }
+
+      let appleCapable = document.querySelector('meta[name="apple-mobile-web-app-capable"]');
+      if (!appleCapable) {
+        appleCapable = document.createElement('meta');
+        appleCapable.setAttribute('name', 'apple-mobile-web-app-capable');
+        appleCapable.setAttribute('content', 'yes');
+        document.head.appendChild(appleCapable);
       }
     };
 
