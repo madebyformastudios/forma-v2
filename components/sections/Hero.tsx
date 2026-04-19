@@ -3,6 +3,7 @@
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { ChevronDown } from 'lucide-react';
+import Link from 'next/link';
 import Button from '@/components/ui/Button';
 
 const words = [
@@ -79,9 +80,11 @@ export default function Hero() {
           </motion.p>
 
           <div className="flex justify-center px-6">
-            <Button className="px-10 py-5 md:px-14 md:py-7 text-sm md:text-lg">
-              START JE PROJECT
-            </Button>
+            <Link href="#contact" className="inline-block">
+              <Button className="px-10 py-5 md:px-14 md:py-7 text-sm md:text-lg">
+                START JE PROJECT
+              </Button>
+            </Link>
           </div>
         </motion.div>
       </div>

@@ -3,6 +3,7 @@
 import { useState, useRef, useEffect } from 'react';
 import { motion, AnimatePresence, useInView, useScroll, useSpring, useTransform } from 'framer-motion';
 import { Coffee, Pencil, Code, Rocket } from 'lucide-react';
+import Link from 'next/link';
 import Button from '@/components/ui/Button';
 
 const steps = [
@@ -149,9 +150,11 @@ export default function Process() {
                   </p>
 
                   <div className="pt-4">
-                    <Button className="px-8 py-4 text-xs md:text-sm">
-                      PLAN EEN KENNISMAKING
-                    </Button>
+                    <Link href="#contact" className="inline-block">
+                      <Button className="px-8 py-4 text-xs md:text-sm">
+                        PLAN EEN KENNISMAKING
+                      </Button>
+                    </Link>
                   </div>
                 </motion.div>
               </AnimatePresence>
@@ -258,9 +261,11 @@ export default function Process() {
           </div>
 
           <div className="mt-12 pt-10 border-t-2 border-ink/5">
-            <Button className="w-full py-5 text-sm">
-              START JOUW PROJECT
-            </Button>
+            <Link href="#contact" className="block w-full">
+              <Button className="w-full py-5 text-sm">
+                START JOUW PROJECT
+              </Button>
+            </Link>
           </div>
         </div>
 
