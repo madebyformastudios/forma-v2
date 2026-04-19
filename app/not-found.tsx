@@ -25,7 +25,7 @@ export default function NotFound() {
             <span className="text-accent italic">AFSLAG.</span>
           </h1>
           <p className="text-lg md:text-2xl text-ink/60 font-body leading-relaxed max-w-lg mx-auto">
-            Deze pagina bestaat (niet meer). Laten we je snel weer op het juiste pad brengen.
+            Deze pagina bestaat niet (meer). Laten we je snel weer op het juiste pad brengen.
           </p>
           
           <div className="pt-8">

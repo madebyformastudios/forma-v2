@@ -75,7 +75,7 @@ export default function Hero() {
             transition={{ delay: 0.4, duration: 1 }}
             className="max-w-3xl mx-auto text-lg md:text-2xl text-ink/70 font-body leading-relaxed mt-12 mb-12 px-6"
           >
-            Professioneel webdesign voor ondernemers in Zeeland. <br className="hidden md:block" />
+            Maatwerk websites voor ambitieuze ondernemers. <br className="hidden md:block" />
             Geen vage praat, gewoon resultaat.
           </motion.p>
 
