@@ -102,17 +102,17 @@ function ServiceCard({ id, label, title, headline, description, benefits, color,
                 {label}
               </span>
             </div>
-            <h2 className="text-2xl sm:text-3xl md:text-6xl font-sans font-black tracking-tighter leading-[1.1] uppercase text-ink mt-2 md:mt-0">
+            <h3 className="text-2xl sm:text-3xl md:text-6xl font-sans font-black tracking-tighter leading-[1.1] uppercase text-ink mt-2 md:mt-0">
               {title}
-            </h2>
+            </h3>
           </div>
         </div>
 
         {/* Right Side: Content & Benefits */}
         <div className="flex-1 md:w-1/2 p-6 md:p-16 flex flex-col justify-center bg-white/10 overflow-y-auto no-scrollbar">
-          <h3 className="text-xl md:text-3xl font-sans font-black tracking-tight text-ink mb-3 md:mb-6">
+          <h4 className="text-xl md:text-3xl font-sans font-black tracking-tight text-ink mb-3 md:mb-6">
             {headline}
-          </h3>
+          </h4>
           <p className="text-sm sm:text-base md:text-lg font-body text-ink/80 leading-relaxed mb-6 md:mb-10">
             {description.split(/(GEO)/g).map((part, i) => 
               part === "GEO" ? <span key={i} className="text-[#F97316] font-bold">GEO</span> : part
