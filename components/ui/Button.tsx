@@ -14,6 +14,7 @@ interface ButtonProps {
   variant?: "primary" | "outline";
   className?: string;
   onClick?: () => void;
+  disabled?: boolean;
 }
 
 export default function Button({
@@ -21,6 +22,7 @@ export default function Button({
   variant = "primary",
   className,
   onClick,
+  disabled,
 }: ButtonProps) {
   const variants = {
     primary: "bg-accent text-ink border-2 border-ink shadow-[4px_4px_0px_0px_#121212]",
@@ -41,6 +43,7 @@ export default function Button({
         scale: 0.98 
       }}
       onClick={onClick}
+      disabled={disabled}
       className={cn(
         "px-8 py-3 font-sans font-black uppercase text-xs tracking-widest transition-all duration-75",
         variants[variant],
