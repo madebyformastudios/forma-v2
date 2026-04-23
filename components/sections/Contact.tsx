@@ -14,19 +14,33 @@ export default function Contact() {
     email: '',
     message: ''
   });
+  const [status, setStatus] = useState<'idle' | 'loading' | 'success' | 'error'>('idle');
 
   const toggleService = (service: string) => {
-    setSelectedServices(prev => 
-      prev.includes(service) 
-        ? prev.filter(s => s !== service) 
+    setSelectedServices(prev =>
+      prev.includes(service)
+        ? prev.filter(s => s !== service)
         : [...prev, service]
     );
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    console.log('Form submitted:', { ...formState, selectedServices });
-    alert('Bedankt! We nemen binnen 24 uur contact met je op om een kennismaking in te plannen.');
+    setStatus('loading');
+
+    const res = await fetch('/api/contact', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ ...formState, services: selectedServices }),
+    });
+
+    if (res.ok) {
+      setStatus('success');
+      setFormState({ name: '', email: '', message: '' });
+      setSelectedServices([]);
+    } else {
+      setStatus('error');
+    }
   };
 
   return (
@@ -148,8 +162,21 @@ export default function Contact() {
                   />
                 </div>
 
-                <Button className="w-full py-5 md:py-6 text-base md:text-lg shadow-[6px_6px_0px_0px_#121212] hover:shadow-[3px_3px_0px_0px_#121212] active:shadow-none">
-                  VERSTUUR JOUW AANVRAAG
+                {status === 'success' && (
+                  <p className="text-center text-sm font-sans font-black uppercase tracking-widest text-accent">
+                    Bedankt! We nemen binnen 24 uur contact met je op.
+                  </p>
+                )}
+                {status === 'error' && (
+                  <p className="text-center text-sm font-sans font-black uppercase tracking-widest text-red-500">
+                    Er ging iets mis. Probeer het opnieuw.
+                  </p>
+                )}
+                <Button
+                  disabled={status === 'loading' || status === 'success'}
+                  className="w-full py-5 md:py-6 text-base md:text-lg shadow-[6px_6px_0px_0px_#121212] hover:shadow-[3px_3px_0px_0px_#121212] active:shadow-none disabled:opacity-50 disabled:cursor-not-allowed"
+                >
+                  {status === 'loading' ? 'VERZENDEN...' : 'VERSTUUR JOUW AANVRAAG'}
                 </Button>
               </form>
             </div>
