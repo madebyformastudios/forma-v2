@@ -109,7 +109,7 @@ function ServiceCard({ id, label, title, headline, description, benefits, color,
         </div>
 
         {/* Right Side: Content & Benefits */}
-        <div className="flex-1 md:w-1/2 p-6 md:p-16 flex flex-col justify-center bg-white/10 overflow-y-auto no-scrollbar">
+        <div className="flex-1 md:w-1/2 p-6 md:p-16 flex flex-col justify-center bg-white/10 overflow-hidden">
           <h4 className="text-xl md:text-3xl font-sans font-black tracking-tight text-ink mb-3 md:mb-6">
             {headline}
           </h4>
