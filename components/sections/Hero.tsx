@@ -13,7 +13,8 @@ const words = [
   "Bouwbedrijven",
   "Rijscholen",
   "E-commerce",
-  "Horeca"
+  "Horeca",
+  "Elektriciens"
 ];
 
 export default function Hero() {
