@@ -146,7 +146,7 @@ export default function Services() {
           <span className="text-xs font-sans font-black uppercase tracking-[0.3em] text-accent mb-4 block">
             WAT WE DOEN
           </span>
-          <h2 className="text-5xl md:text-8xl font-sans font-black tracking-tighter uppercase text-ink leading-[0.85]">
+          <h2 className="text-4xl md:text-8xl font-sans font-black tracking-tighter uppercase text-ink leading-[0.85]">
             DIGITALE <br /> <span className="text-accent italic">VAKMANSCHAP.</span>
           </h2>
         </div>
