@@ -8,13 +8,15 @@ import Button from '@/components/ui/Button';
 
 const words = [
   "Loodgieters",
-  "Startups",
   "Kappers",
   "Bouwbedrijven",
   "Rijscholen",
-  "E-commerce",
   "Horeca",
-  "Elektriciens"
+  "Elektriciens",
+  "Tandartsen",
+  "Makelaars",
+  "Fysiotherapeuten",
+  "Schildersbedrijven",
 ];
 
 export default function Hero() {
