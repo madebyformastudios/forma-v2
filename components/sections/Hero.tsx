@@ -51,20 +51,21 @@ export default function Hero() {
               WIJ BOUWEN WEBSITES VOOR
             </span>
             
-            <div className="h-[1.2em] text-[7vw] sm:text-[7vw] md:text-[6vw] lg:text-[5vw] relative w-full flex justify-center items-center overflow-hidden">
+            <div className="h-[1.2em] text-[8vw] sm:text-[8vw] md:text-[7vw] lg:text-[6vw] relative w-full overflow-hidden">
               <AnimatePresence mode="wait" initial={false}>
                 <motion.span
                   key={words[index]}
-                  initial={{ y: "100%", x: "-50%", opacity: 0 }}
-                  animate={{ y: 0, x: "-50%", opacity: 1 }}
-                  exit={{ y: "-100%", x: "-50%", opacity: 0 }}
+                  initial={{ y: "100%", opacity: 0 }}
+                  animate={{ y: 0, opacity: 1 }}
+                  exit={{ y: "-100%", opacity: 0 }}
                   transition={{
                     type: "spring",
                     stiffness: 150,
                     damping: 25,
                     duration: 0.6
                   }}
-                  className="text-ink uppercase absolute whitespace-nowrap leading-none px-4 left-1/2"
+                  style={{ left: "50%", translateX: "-50%" }}
+                  className="text-ink uppercase absolute whitespace-nowrap leading-none px-4"
                 >
                   {words[index]}<span className="text-accent italic">.</span>
                 </motion.span>
