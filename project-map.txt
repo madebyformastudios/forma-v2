@@ -29,14 +29,8 @@
 ├── package.json
 ├── postcss.config.js
 ├── project-map.txt
-├── projects
-│   ├── lumina-app.mdx
-│   ├── oasis-wellness.mdx
-│   ├── studio-zee.mdx
-│   ├── van-helteren.mdx
-│   └── vesta-homes.mdx
 ├── README.md
 ├── tsconfig.json
 └── tsconfig.tsbuildinfo
 
-8 directories, 32 files
+7 directories, 27 files
