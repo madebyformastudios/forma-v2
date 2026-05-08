@@ -7,10 +7,10 @@ import Button from '@/components/ui/Button';
 
 export default function FoundingPartner() {
   const benefits = [
-    "Hoge Snelheid Next.js Website",
-    "Lokale SEO Setup (Focus op Zeeland)",
-    "Professionele Copywriting ondersteuning",
-    "1 Jaar Premium Hosting & Onderhoud (Gratis)"
+    "Een snelle, professionele website",
+    "Vindbaar op Google in jouw regio",
+    "Wij helpen met het schrijven van de teksten",
+    "1 jaar hosting en onderhoud gratis (normaal €30 per maand)"
   ];
 
   const email = "info@madebyforma.nl";

@@ -19,10 +19,10 @@ const inter = Inter({
 
 export const metadata: Metadata = {
   title: {
-    default: "FORMA | Premium Webdesign & Development Zeeland",
-    template: "FORMA | %s - Webdesign & Development Zeeland",
+    default: "FORMA | Websites voor MKB Zeeland — Snel, Mooi, Geen Gedoe",
+    template: "FORMA | Websites voor MKB Zeeland",
   },
-  description: "FORMA is hét bureau voor high-end Next.js websites in Zeeland. Wij helpen MKB-ondernemers in Middelburg en omstreken aan bizarre snelheid en meer omzet.",
+  description: "Wij bouwen snelle, mooie websites voor ondernemers in Zeeland. Geen vage praat, vaste prijs, binnen 3 weken online. Vraag een gesprek aan.",
   metadataBase: new URL("https://madebyforma.nl"),
   alternates: {
     canonical: "/",
@@ -31,8 +31,8 @@ export const metadata: Metadata = {
     google: "TGK-dEIPovps_mTX7E8eUrBVlhs3lB4KzMAb2j40Tb8",
   },
   openGraph: {
-    title: "FORMA | Premium Webdesign & Development Zeeland",
-    description: "FORMA is hét bureau voor high-end Next.js websites in Zeeland. Wij helpen MKB-ondernemers in Middelburg en omstreken aan bizarre snelheid en meer omzet.",
+    title: "FORMA | Websites voor MKB Zeeland — Snel, Mooi, Geen Gedoe",
+    description: "Wij bouwen snelle, mooie websites voor ondernemers in Zeeland. Geen vage praat, vaste prijs, binnen 3 weken online. Vraag een gesprek aan.",
     url: "https://madebyforma.nl",
     siteName: "FORMA",
     locale: "nl_NL",
@@ -48,8 +48,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "FORMA | Premium Webdesign & Development Zeeland",
-    description: "FORMA is hét bureau voor high-end Next.js websites in Zeeland. Wij helpen MKB-ondernemers in Middelburg en omstreken aan bizarre snelheid en meer omzet.",
+    title: "FORMA | Websites voor MKB Zeeland — Snel, Mooi, Geen Gedoe",
+    description: "Wij bouwen snelle, mooie websites voor ondernemers in Zeeland. Geen vage praat, vaste prijs, binnen 3 weken online. Vraag een gesprek aan.",
     images: ["/og-image.jpg"],
   },
   robots: {
@@ -79,7 +79,7 @@ export default function RootLayout({
       "addressCountry": "Nederland"
     },
     "areaServed": "Zeeland",
-    "description": "FORMA is hét bureau voor high-end Next.js websites in Zeeland. Wij helpen MKB-ondernemers in Middelburg en omstreken aan bizarre snelheid en meer omzet.",
+    "description": "Wij bouwen snelle, mooie websites voor ondernemers in Zeeland. Geen vage praat, vaste prijs, binnen 3 weken online. Vraag een gesprek aan.",
     "serviceType": ["Web Design", "Web Development", "SEO"],
     "url": "https://madebyforma.nl"
   };

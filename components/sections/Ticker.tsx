@@ -3,12 +3,12 @@
 import { motion } from 'framer-motion';
 
 const items = [
-  "SNELHEID",
+  "SNEL ONLINE",
   "MAATWERK",
-  "GEEN JARGON",
+  "GEEN GEDOE",
   "ZEEUWSE NUCHTERHEID",
-  "NEXT.JS EXPERTISE",
-  "DESIGN DRIVEN",
+  "DUIDELIJKE TAAL",
+  "EIGEN TEKSTEN AANPASSEN",
   "MKB FOCUS",
 ];
 

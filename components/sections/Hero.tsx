@@ -76,8 +76,8 @@ export default function Hero() {
             transition={{ delay: 0.4, duration: 1 }}
             className="max-w-3xl mx-auto text-lg md:text-2xl text-ink/70 font-body leading-relaxed mt-12 mb-12 px-6"
           >
-            Maatwerk websites voor ambitieuze ondernemers. <br className="hidden md:block" />
-            Geen vage praat, gewoon resultaat.
+            Razendsnelle websites die nieuwe klanten opleveren. <br className="hidden md:block" />
+            Voor MKB'ers in Zeeland die af willen van hun trage WordPress-site.
           </motion.p>
 
           <div className="flex justify-center px-6">

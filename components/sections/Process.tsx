@@ -10,28 +10,28 @@ const steps = [
   {
     id: "01",
     title: "Strategie",
-    description: "Koffie & Koers. We duiken in jouw onderneming en bepalen de route die resultaat oplevert.",
+    description: "Koffie & Koers. We gaan zitten, drinken een bak koffie en duiken in jouw bedrijf. Wat doe je, wie zijn je klanten, en wat moet die website opleveren? Daarna weten we precies waar we aan gaan bouwen.",
     mainIcon: <Coffee size={80} />,
     rotation: 0
   },
   {
     id: "02",
-    title: "Design",
-    description: "High-End UI/UX. Een strak, modern en bliksemsnel ontwerp dat jouw merkidentiteit versterkt en direct vertrouwen wekt.",
+    title: "Ontwerp",
+    description: "Eerst tekenen, dan bouwen. Je krijgt een ontwerp te zien voordat we ook maar één regel code schrijven. Aanpassen kan, dat hoort erbij. Pas als jij blij bent, gaan we door.",
     mainIcon: <Pencil size={80} />,
     rotation: 90
   },
   {
     id: "03",
-    title: "Build",
-    description: "High-Performance Tech. Razendsnelle ontwikkeling met Next.js 15 voor een onverwoestbaar platform.",
+    title: "Bouwen",
+    description: "We zetten het in elkaar. Snel, stabiel, en zo gemaakt dat je later zelf teksten en foto's kunt aanpassen zonder ons te bellen.",
     mainIcon: <Code size={80} />,
     rotation: 180
   },
   {
     id: "04",
-    title: "Launch",
-    description: "Livegang & Groei. Optimale vindbaarheid in Google en AI-zoekmachines (GEO).",
+    title: "Live",
+    description: "Site online, klanten erop. We zetten 'm live, zorgen dat Google hem vindt, en leggen je uit hoe je zelf het stuur in handen houdt. En als er iets is, staan we klaar.",
     mainIcon: <Rocket size={80} />,
     rotation: 270
   }

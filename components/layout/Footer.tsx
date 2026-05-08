@@ -40,7 +40,7 @@ export default function Footer() {
             </div>
             <div className="space-y-2">
               <p className="text-xl font-sans font-black uppercase">Middelburg, Zeeland</p>
-              <p className="text-white/40 font-body">Nederland — Global Service</p>
+              <p className="text-white/40 font-body">Werkend voor heel Nederland</p>
             </div>
           </div>
 
@@ -79,7 +79,7 @@ export default function Footer() {
           {/* Column 3: Contact Context */}
           <div className="lg:flex lg:justify-end">
             <div className="bg-white/5 border border-white/10 p-8 rounded-3xl space-y-4 max-w-sm h-fit">
-              <p className="text-lg font-sans font-black uppercase leading-tight">Laten we samen die digitale standaard zetten.</p>
+              <p className="text-lg font-sans font-black uppercase leading-tight">Laten we beginnen</p>
               <Link href="#contact" className="inline-block text-accent font-sans font-black uppercase text-xs tracking-widest border-b-2 border-accent pb-1">
                 Start je aanvraag →
               </Link>
@@ -91,10 +91,10 @@ export default function Footer() {
         <div className="flex flex-col md:flex-row justify-between items-center pt-8 border-t border-white/5 gap-8">
           <div className="flex items-center space-x-6">
             <p className="text-[10px] font-sans font-bold uppercase tracking-widest text-white/30">
-              © 2026 FORMA — Built with Next.js & Passion
+              © 2026 FORMA — GEBOUWD MET NEXT.JS EN PASSIE
             </p>
             <div className="px-3 py-1 bg-accent text-white rounded-lg text-[10px] font-sans font-black uppercase tracking-tighter rotate-3 shadow-[2px_2px_0px_0px_#ffffff]">
-              Made in Zeeland
+              gemaakt in zeeland
             </div>
           </div>
 

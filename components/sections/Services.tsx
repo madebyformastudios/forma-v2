@@ -9,41 +9,41 @@ const services = [
     id: "01",
     label: "De \"Binnenkomer\"",
     title: "Webdesign & Branding",
-    headline: "Websites die voor jou werken, niet andersom.",
-    description: "Wij bouwen unieke, razendsnelle digitale visitekaartjes die direct vertrouwen uitstralen en klanten opleveren.",
+    headline: "Een website die voor jou werkt, niet andersom.",
+    description: "Een website die er strak uitziet, snel laadt, en bezoekers omtovert tot klanten. Geen template van de plank. Wij bouwen iets dat past bij jouw bedrijf.",
     benefits: [
-      "Uniek UI/UX Design",
-      "Logo & Identiteit",
-      "Razendsnel (Next.js)",
-      "Mobiel-eerst design"
+      "Ontwerp dat past bij jouw bedrijf",
+      "Laadt in minder dan 2 seconden",
+      "Werkt perfect op mobiel",
+      "Logo en huisstijl (optioneel)"
     ],
     color: "#B6CBB7" // Sage
   },
   {
     id: "02",
-    label: "De \"Efficiëntie-slag\"",
-    title: "App & Automatisering",
-    headline: "Slimme software voor jouw processen.",
-    description: "Wij bouwen maatwerk apps die jouw werk makkelijker maken. Van urenregistratie tot slimme boekingssystemen.",
+    label: "De \"Tijdwinst\"",
+    title: "Maatwerk Software",
+    headline: "Software die jouw uren terug geeft.",
+    description: "Doe je elke week dezelfde klus handmatig in Excel? Versturen jullie nog facturen één voor één? We bouwen kleine maatwerk tools die het saaie werk overnemen, zodat jij tijd hebt voor het werk dat geld oplevert.",
     benefits: [
-      "Maatwerk Dashboards",
-      "Systeemkoppelingen",
-      "Gebruiksvriendelijk design",
-      "Schaalbare tech"
+      "Minder handwerk, meer omzet-uren",
+      "Tools die met jouw bestaande systemen werken",
+      "Simpel in gebruik, ook voor je personeel",
+      "Vaste prijs, geen abonnement"
     ],
     color: "#F2EFE9" // Sand
   },
   {
     id: "03",
-    label: "De \"Toekomstbestendige\" Groei",
-    title: "SEO & AI (GEO)",
-    headline: "Gevonden worden door mens en AI.",
-    description: "Wij zorgen dat jouw onderneming bovenaan staat in Google en wordt aanbevolen door AI zoals ChatGPT.",
+    label: "Gevonden Worden",
+    title: "SEO & Google",
+    headline: "Bovenaan in Google als klanten zoeken.",
+    description: "Wij zorgen dat jouw bedrijf bovenaan staat in Google als iemand zoekt naar wat jij doet. Lokaal in Zeeland, of breder als dat nodig is. En als mensen het aan ChatGPT vragen, komt jouw naam ook bovendrijven.",
     benefits: [
-      "GEO: AI-Optimalisatie",
-      "Lokale SEO Dominantie",
-      "Autoriteit & Vertrouwen",
-      "Heldere rapportages"
+      "Vindbaar in Google in jouw regio",
+      "Klaar voor AI-zoekmachines (ChatGPT, Gemini)",
+      "Heldere maandrapportage",
+      "Eerlijke uitleg, geen tovenarij"
     ],
     color: "#E5B7A9" // Clay
   }
@@ -147,7 +147,7 @@ export default function Services() {
             WAT WE DOEN
           </span>
           <h2 className="text-4xl md:text-8xl font-sans font-black tracking-tighter uppercase text-ink leading-[0.85]">
-            DIGITALE <br /> <span className="text-accent italic">VAKMANSCHAP.</span>
+            ONZE <br /> <span className="text-accent italic">DIENSTEN.</span>
           </h2>
         </div>
       </div>

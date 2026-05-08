@@ -26,7 +26,7 @@ export default function Projects() {
           
           <div className="space-y-8">
             <p className="text-2xl md:text-3xl font-sans font-bold text-ink/40 italic">
-              Oeps, hier valt nog niks te zien...
+              We zijn net gestart en bouwen onze eerste sites. Wil je een van de eerste klanten zijn? Daar staat een flinke korting tegenover.
             </p>
             
             <button 

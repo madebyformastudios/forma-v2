@@ -17,7 +17,6 @@ export default function Home() {
       <Process />
       <Projects />
       <FoundingPartner />
-      <TechStack />
       <FAQ />
       <Contact />
     </main>

@@ -7,31 +7,31 @@ import { Plus } from 'lucide-react';
 const faqs = [
   {
     question: "Wat kost dat nou, zo'n FORMA-site?",
-    answer: "Ik hou van duidelijke taal. Voor de bouw van een professionele website werk ik met vaste prijzen die passen bij de startende of lokale ondernemer. De meeste projecten vallen tussen de €750 en €1.950. Hiervoor krijg je een razendsnelle, moderne site die ook op mobiel perfect werkt. Zo weet je vooraf precies waar je aan toe bent."
-  },
-  {
-    question: "Hoe zit het met ingewikkelde functies of apps?",
-    answer: "Zoek je meer dan alleen een website? Denk aan een eigen klantenportaal, een offertesysteem of een maatwerk app voor jouw personeel? Dat noemen we Maatwerk. Omdat dit per bedrijf enorm verschilt, gaat dit altijd op aanvraag. We bespreken jouw wensen en ik maak een offerte op maat die precies aansluit bij jouw processen."
+    answer: "Een standaard zakelijke site (5-7 pagina's, contactformulier, mooi op mobiel, snel in Google) zit bij ons rond de €2.250. Dat is inclusief ontwerp, bouw en een jaar hosting. Geen verborgen kosten achteraf. Heb je nu een van de Founding Partner plekken gepakt, dan betaal je €1.350 voor precies hetzelfde. Daarna gaan we gewoon naar de normale prijs. Webshop of iets specifieks nodig? Dan maken we een offerte op maat."
   },
   {
     question: "Kan ik het niet gewoon zelf doen met Wix of Squarespace?",
-    answer: "Zeker weten, dat kan. Maar als je een vakman bent, ga je ook niet zelf jouw boekhoudsoftware programmeren, toch? Het verschil zit 'm in de snelheid en de uitstraling. Een DHZ-site oogt vaak net niet professioneel en is vaak traag. Mijn sites zijn gebouwd met Next.js; dat vindt Google heerlijk en zorgt ervoor dat jij er direct \"duurder\" uitziet dan de concurrent."
+    answer: "Eerlijk: ja, dat kan. Voor een simpele hobbywebsite is Wix prima. Maar als je site echt klanten moet opleveren, snel moet zijn op mobiel, en goed gevonden moet worden in Google, dan loop je daar tegen grenzen aan. Templates zien er allemaal hetzelfde uit, ze zijn vaak traag, en je betaalt maandelijks zonder dat je echt iets bezit. Wij bouwen iets dat van jou is en bij jouw bedrijf past."
   },
   {
     question: "Hoe snel staat mijn nieuwe site online?",
-    answer: "Ik hou niet van getreuzel. Als jij de teksten en foto’s aanlevert, zorg ik dat de eerste versie voor de meeste web-projecten binnen 2 tot 4 weken staat. Ik heb mijn proces zo ingericht dat ik snel kan schakelen zonder in te leveren op de kwaliteit."
+    answer: "Reken op 3 weken vanaf de start. Soms sneller als je snel feedback geeft, soms iets langer als we wachten op teksten of foto's. We spreken vooraf een datum af en die halen we ook."
+  },
+  {
+    question: "Hoe zit het met ingewikkelde functies of apps?",
+    answer: "Heb je een specifiek idee? Een online boekingssysteem, een ledenportaal, een tool waarmee je werkbonnen automatisch maakt? Stuur een berichtje of bel. We luisteren eerst, dan zeggen we eerlijk of het past en wat het kost. Geen luchtkastelen."
   },
   {
     question: "Heb ik er na de oplevering nog omkijken naar?",
-    answer: "Alleen als je dat zelf wilt. Ik bied service-abonnementen aan waarbij ik de techniek, hosting en kleine updates regel. Zo kun jij doen waar je goed in bent (ondernemen) en zorg ik dat jouw digitale voordeur er strak bij blijft staan. Je zit nergens aan vast, maar het gemak is groot."
+    answer: "Niet als je dat niet wil. Hosting en onderhoud nemen wij over (eerste jaar gratis bij het Founding Partner pakket, daarna €30 per maand). Teksten of foto's aanpassen kun je zelf. We leggen het uit en het is simpeler dan je denkt. Liever dat wij het doen? Stuur een mail, dan regelen we het."
   },
   {
     question: "Wat als mijn bedrijf over twee jaar veel groter is?",
-    answer: "Dat is de kracht van FORMA. Ik bouw geen 'dichtgetimmerd' systeem. Jouw site is de fundering. Wil je later uitbreiden naar een volledige web-app of een reserveringssysteem? Dan bouwen we dat er gewoon bovenop. Je hoeft dus nooit meer helemaal opnieuw te beginnen."
+    answer: "Dan groeit de site mee. We bouwen niet op iets dat over twee jaar verouderd is. Onze sites schalen makkelijk mee. Meer pagina's, een webshop erbij, een afspraaksysteem, dat kan er allemaal aan zonder dat je opnieuw hoeft te beginnen."
   },
   {
     question: "Waarom zou ik voor FORMA kiezen en niet voor een groot bureau?",
-    answer: "Bij een groot bureau betaal je mee aan hun dure kantoorpand en de secretaresse. Bij FORMA praat je direct met de maker. Ik ken de regio, ik snap de Zeeuwse mentaliteit van niet lullen maar poetsen, en ik lever dezelfde kwaliteit als die dure bureaus, maar dan voor een prijs die voor een MKB'er nog leuk is."
+    answer: "Bij een groot bureau ben je een van de honderd klanten en praat je met een accountmanager die het werk doorgeeft aan iemand die jij nooit ziet. Bij ons heb je direct contact met de mensen die jouw site bouwen. Korter lijntje, sneller schakelen, geen vergaderingen om vergaderingen. En: we zitten in Zeeland en kennen het MKB hier. Dat scheelt vertaalwerk."
   }
 ];
 

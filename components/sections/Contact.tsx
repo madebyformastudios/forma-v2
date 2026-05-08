@@ -5,7 +5,7 @@ import { motion } from 'framer-motion';
 import Button from '@/components/ui/Button';
 import { Mail, MapPin } from 'lucide-react';
 
-const serviceOptions = ["WEB DESIGN", "APP DEV", "SEO & GEO", "BRANDING"];
+const serviceOptions = ["WEB DESIGN", "MAATWERK SOFTWARE", "SEO & GOOGLE", "BRANDING"];
 
 export default function Contact() {
   const [selectedServices, setSelectedServices] = useState<string[]>([]);
@@ -59,10 +59,10 @@ export default function Contact() {
                 CONTACT
               </span>
               <h2 className="text-4xl md:text-7xl font-sans font-black tracking-tighter uppercase text-ink leading-[0.85] mb-8">
-                KLAAR OM DE <br /> <span className="text-accent italic">STANDAARD</span> TE ZETTEN?
+                KLAAR OM TE <br /> <span className="text-accent italic">BEGINNEN</span> ?
               </h2>
               <p className="text-lg md:text-xl text-ink/60 font-body leading-relaxed">
-                Een digitale fundering bouw je niet zomaar. Het is de start van iets groters. Laten we samen werken aan een platform dat écht voor jouw onderneming werkt.
+                Stuur een berichtje of mail direct. We plannen een vrijblijvend gesprek, koffie erbij, niks verplicht. Binnen 24 uur reactie, beloofd.
               </p>
             </div>
 
