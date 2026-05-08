@@ -37,14 +37,14 @@ export default function FoundingPartner() {
               <div className="flex flex-col md:flex-row md:items-center gap-4 md:gap-8 pt-4">
                 <div className="flex items-baseline space-x-4">
                   <span className="text-ink/30 font-sans font-bold line-through text-2xl">
-                    €1.350
+                    €2.250
                   </span>
                   <div className="flex flex-col">
                     <span className="text-5xl md:text-6xl font-sans font-black text-ink tracking-tighter">
-                      €675<span className="text-accent">.</span>
+                      €1.350<span className="text-accent">.</span>
                     </span>
                     <span className="text-ink/40 text-[10px] font-sans font-bold uppercase tracking-widest">
-                      excl. BTW (50% KORTING)
+                      excl. BTW (40% KORTING)
                     </span>
                   </div>
                 </div>
