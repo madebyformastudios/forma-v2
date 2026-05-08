@@ -51,7 +51,7 @@ export default function Hero() {
               WIJ BOUWEN WEBSITES VOOR
             </span>
             
-            <div className="h-[1.2em] text-[8vw] sm:text-[8vw] md:text-[7vw] lg:text-[6vw] relative w-full overflow-hidden">
+            <div className="grid place-items-center h-[1.2em] text-[8vw] sm:text-[8vw] md:text-[7vw] lg:text-[6vw] w-full overflow-hidden">
               <AnimatePresence mode="wait" initial={false}>
                 <motion.span
                   key={words[index]}
@@ -64,8 +64,7 @@ export default function Hero() {
                     damping: 25,
                     duration: 0.6
                   }}
-                  style={{ left: "50%", translateX: "-50%" }}
-                  className="text-ink uppercase absolute whitespace-nowrap leading-none px-4"
+                  className="text-ink uppercase whitespace-nowrap leading-none px-4 col-start-1 row-start-1"
                 >
                   {words[index]}<span className="text-accent italic">.</span>
                 </motion.span>
