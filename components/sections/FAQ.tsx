@@ -7,11 +7,11 @@ import { Plus } from 'lucide-react';
 const faqs = [
   {
     question: "Wat kost dat nou, zo'n FORMA-site?",
-    answer: "Een standaard zakelijke site (5-7 pagina's, contactformulier, mooi op mobiel, snel in Google) zit bij ons rond de €2.250. Dat is inclusief ontwerp, bouw en een jaar hosting. Geen verborgen kosten achteraf. Heb je nu een van de Founding Partner plekken gepakt, dan betaal je €1.350 voor precies hetzelfde. Daarna gaan we gewoon naar de normale prijs. Webshop of iets specifieks nodig? Dan maken we een offerte op maat."
+    answer: "Een standaard zakelijke site (5-7 pagina's, contactformulier, mooi op mobiel, snel op Google) zit bij ons rond de €2.250. Dat is inclusief ontwerp, bouw en een jaar hosting. Geen verborgen kosten achteraf. Heb je nu een van de Founding Partner plekken gepakt, dan betaal je €1.350 voor precies hetzelfde. Daarna gaan we gewoon naar de normale prijs. Webshop of iets specifieks nodig? Dan maken we een offerte op maat."
   },
   {
     question: "Kan ik het niet gewoon zelf doen met Wix of Squarespace?",
-    answer: "Eerlijk: ja, dat kan. Voor een simpele hobbywebsite is Wix prima. Maar als je site echt klanten moet opleveren, snel moet zijn op mobiel, en goed gevonden moet worden in Google, dan loop je daar tegen grenzen aan. Templates zien er allemaal hetzelfde uit, ze zijn vaak traag, en je betaalt maandelijks zonder dat je echt iets bezit. Wij bouwen iets dat van jou is en bij jouw bedrijf past."
+    answer: "Eerlijk: ja, dat kan. Voor een simpele hobbywebsite is Wix prima. Maar als je site echt klanten moet opleveren, snel moet zijn op mobiel, en goed gevonden moet worden op Google, dan loop je daar tegen grenzen aan. Templates zien er allemaal hetzelfde uit, ze zijn vaak traag, en je betaalt maandelijks zonder dat je echt iets bezit. Wij bouwen iets dat van jou is en bij jouw bedrijf past."
   },
   {
     question: "Hoe snel staat mijn nieuwe site online?",
