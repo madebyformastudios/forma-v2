@@ -66,7 +66,7 @@ export default function Hero() {
                   }}
                   className="text-ink uppercase whitespace-nowrap leading-none px-4 col-start-1 row-start-1"
                 >
-                  {words[index]}<span className="text-accent italic">.</span>
+                  {words[index]}<span className="text-accent italic inline-block w-0 overflow-visible">.</span>
                 </motion.span>
               </AnimatePresence>
             </div>
