@@ -23,9 +23,9 @@ const buttonVariants = cva(
           "bg-transparent text-ink border-2 border-ink hover:bg-ink hover:text-sand hover:-translate-y-0.5 active:translate-y-0 active:scale-[0.98]",
       },
       size: {
-        default: "px-8 py-3.5",
-        sm: "px-6 py-2.5",
-        lg: "px-12 py-5 text-sm md:text-base",
+        default: "px-6 md:px-8 py-3.5",
+        sm: "px-4 md:px-6 py-2.5",
+        lg: "px-6 md:px-12 py-4 md:py-5 text-xs md:text-sm",
         icon: "h-10 w-10",
       },
     },
@@ -56,7 +56,7 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
         {...props}
       >
         {skewed ? (
-          <span className="inline-block skew-x-10 flex items-center justify-center gap-2 w-full">
+          <span className="inline-flex items-center justify-center gap-2 skew-x-10">
             {children}
           </span>
         ) : (

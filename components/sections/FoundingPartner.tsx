@@ -49,11 +49,11 @@ export default function FoundingPartner() {
             
             {/* Left Pricing Details */}
             <div className="space-y-6">
-              <span className="block text-xs font-semibold tracking-[0.14em] uppercase text-sand/50">
+              <span className="block text-xs font-semibold tracking-[0.14em] uppercase text-sand/50 mb-2">
                 Limited launch — All-in-one pakket
               </span>
               
-              <div className="flex items-baseline gap-4 flex-wrap">
+              <div className="flex items-baseline gap-4 flex-wrap pt-2 sm:pt-4">
                 <span className="text-2xl sm:text-3xl font-bold line-through text-sand/35">
                   €2.250
                 </span>
@@ -62,7 +62,7 @@ export default function FoundingPartner() {
                 </span>
               </div>
 
-              <span className="block text-xs sm:text-sm font-semibold tracking-[0.1em] uppercase text-sand/50">
+              <span className="block text-xs sm:text-sm font-semibold tracking-[0.1em] uppercase text-sand/50 pt-2 sm:pt-4">
                 excl. btw — 40% korting · eerste 3 ondernemers
               </span>
 
