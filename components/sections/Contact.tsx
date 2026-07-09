@@ -3,9 +3,8 @@
 import { useState } from 'react';
 import { motion } from 'framer-motion';
 import Button from '@/components/ui/Button';
-import { Mail, MapPin } from 'lucide-react';
 
-const serviceOptions = ["WEB DESIGN", "MAATWERK SOFTWARE", "SEO & GOOGLE", "BRANDING"];
+const serviceOptions = ["Web design", "Maatwerk software", "SEO & Google", "Branding"];
 
 export default function Contact() {
   const [selectedServices, setSelectedServices] = useState<string[]>([]);
@@ -28,17 +27,21 @@ export default function Contact() {
     e.preventDefault();
     setStatus('loading');
 
-    const res = await fetch('/api/contact', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ ...formState, services: selectedServices }),
-    });
+    try {
+      const res = await fetch('/api/contact', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ ...formState, services: selectedServices }),
+      });
 
-    if (res.ok) {
-      setStatus('success');
-      setFormState({ name: '', email: '', message: '' });
-      setSelectedServices([]);
-    } else {
+      if (res.ok) {
+        setStatus('success');
+        setFormState({ name: '', email: '', message: '' });
+        setSelectedServices([]);
+      } else {
+        setStatus('error');
+      }
+    } catch {
       setStatus('error');
     }
   };
@@ -46,138 +49,151 @@ export default function Contact() {
   return (
     <section 
       id="contact" 
-      data-theme-color="#F2EFE9"
-      className="relative min-h-screen flex items-center py-16 md:py-20 border-t border-dashed border-ink/20"
+      data-theme-color="#17140F"
+      className="bg-ink text-sand py-20 lg:py-28"
     >
-      <div className="max-w-7xl mx-auto px-6 lg:px-12 w-full">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+      <div className="max-w-[1300px] mx-auto px-6 lg:px-11">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-20 items-center">
           
-          {/* Left Side: The Invite */}
-          <div className="space-y-8">
-            <div className="max-w-xl">
-              <span className="text-xs font-sans font-black uppercase tracking-[0.3em] text-accent mb-4 block">
-                CONTACT
-              </span>
-              <h2 className="text-4xl md:text-7xl font-sans font-black tracking-tighter uppercase text-ink leading-[0.85] mb-8">
-                KLAAR OM TE <br /> <span className="text-accent italic">BEGINNEN</span> ?
+          {/* Left Side: Typography */}
+          <div className="space-y-10">
+            <div className="space-y-6">
+              <div className="inline-block bg-accent transform -skew-x-12 px-4 py-1.5">
+                <span className="inline-block skew-x-12 text-xs font-bold tracking-wider text-ink">
+                  Contact
+                </span>
+              </div>
+              <h2 className="font-sans font-black text-4xl sm:text-5xl lg:text-[56px] tracking-tight leading-[0.86] text-sand">
+                Klaar om te<br />beginnen<span className="text-accent">?</span>
               </h2>
-              <p className="text-lg md:text-xl text-ink/60 font-body leading-relaxed">
+              <p className="text-base sm:text-lg lg:text-xl font-body leading-relaxed text-sand/70 max-w-lg">
                 Stuur een berichtje of mail direct. We plannen een vrijblijvend gesprek, koffie erbij, niks verplicht. Binnen 24 uur reactie, beloofd.
               </p>
             </div>
 
-            <div className="space-y-4 pt-8 border-t border-ink/10">
-              <a 
-                href="mailto:info@madebyforma.nl" 
-                className="flex items-center space-x-4 group"
-              >
-                <div className="shrink-0 w-10 h-10 rounded-full border-2 border-ink flex items-center justify-center bg-white group-hover:bg-accent group-hover:text-white transition-all shadow-[2px_2px_0px_0px_#121212]">
-                  <Mail size={18} />
-                </div>
-                <span className="text-sm sm:text-lg md:text-2xl font-sans font-black text-ink group-hover:text-accent transition-colors">
+            <div className="flex flex-col gap-6 border-t border-sand/20 pt-8 font-sans font-bold">
+              <a href="mailto:info@madebyforma.nl" className="flex items-baseline gap-4 group">
+                <span className="text-xs tracking-widest text-sand/40 w-12 flex-shrink-0">MAIL</span>
+                <span className="text-lg sm:text-2xl text-sand group-hover:text-accent transition-colors">
                   info@madebyforma.nl
                 </span>
               </a>
-              <div className="flex items-center space-x-4">
-                <div className="shrink-0 w-10 h-10 rounded-full border-2 border-ink flex items-center justify-center bg-white shadow-[2px_2px_0px_0px_#121212]">
-                  <MapPin size={18} />
-                </div>
-                <span className="text-sm sm:text-lg md:text-2xl font-sans font-black text-ink">
+              <div className="flex items-baseline gap-4">
+                <span className="text-xs tracking-widest text-sand/40 w-12 flex-shrink-0">PLEK</span>
+                <span className="text-lg sm:text-2xl text-sand">
                   Middelburg, Zeeland
                 </span>
               </div>
             </div>
           </div>
 
-          {/* Right Side: The Form */}
-          <div className="relative">
-            {/* Sticker on the form corner */}
-            <div className="absolute -top-4 -right-4 z-20">
-              <motion.div 
-                animate={{ rotate: [-5, 5, -5] }}
-                transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
-                className="bg-accent text-white px-4 py-2 rounded-xl border-2 border-ink shadow-[4px_4px_0px_0px_#121212] font-sans font-black uppercase text-[10px] tracking-widest -rotate-3"
-              >
-                Binnen 24u reactie
-              </motion.div>
-            </div>
+          {/* Right Side: The Form Card */}
+          <div className="relative w-full max-w-[560px] mx-auto lg:mx-0">
+            <div className="bg-sand text-ink p-8 sm:p-12 shadow-2xl relative">
+              <div className="flex items-center justify-between mb-8 flex-wrap gap-4">
+                <span className="font-sans font-black text-lg text-ink">Vraag je project aan</span>
+                <div className="bg-accent transform -skew-x-12 px-3 py-1">
+                  <span className="inline-block skew-x-12 text-[10px] font-bold tracking-wider uppercase text-ink">
+                    Binnen 24u
+                  </span>
+                </div>
+              </div>
 
-            <div className="bg-white/50 backdrop-blur-sm p-8 md:p-10 rounded-[40px] border-2 border-ink shadow-[12px_12px_0px_0px_#121212]">
-              <form onSubmit={handleSubmit} className="space-y-10">
-                {/* Service Chips */}
-                <div className="space-y-6">
-                  <div className="space-y-4">
-                    <label className="text-[10px] font-sans font-black uppercase tracking-[0.3em] text-ink/40 block">Ik ben op zoek naar...</label>
-                    <div className="flex flex-wrap gap-3">
-                      {serviceOptions.map(service => (
+              <form onSubmit={handleSubmit} className="space-y-8">
+                {/* Services selection */}
+                <div className="space-y-3">
+                  <label className="block text-[11px] font-sans font-extrabold uppercase tracking-widest text-ink/40">
+                    Ik ben op zoek naar...
+                  </label>
+                  <div className="flex flex-wrap gap-2.5">
+                    {serviceOptions.map((service) => {
+                      const active = selectedServices.includes(service);
+                      return (
                         <button
                           key={service}
                           type="button"
                           onClick={() => toggleService(service)}
-                          className={`px-6 py-2 rounded-full border-2 border-ink font-sans font-black text-[10px] tracking-widest transition-all
-                            ${selectedServices.includes(service) 
-                              ? 'bg-accent text-white shadow-[4px_4px_0px_0px_#121212] -translate-y-1' 
-                              : 'bg-white text-ink hover:bg-sand'}`}
+                          className={`px-4 py-2 border font-sans font-bold text-xs tracking-wide transition-all cursor-pointer ${
+                            active 
+                              ? 'bg-ink text-sand border-ink' 
+                              : 'bg-transparent text-ink border-ink/30 hover:border-ink'
+                          }`}
                         >
                           {service}
                         </button>
-                      ))}
-                    </div>
+                      );
+                    })}
                   </div>
                 </div>
 
+                {/* Form fields */}
                 <div className="space-y-1">
-                  <label className="text-[10px] font-sans font-black uppercase tracking-[0.3em] text-ink/40">Naam</label>
+                  <label className="block text-[11px] font-sans font-extrabold uppercase tracking-widest text-ink/40">
+                    Naam
+                  </label>
                   <input 
                     type="text" 
                     required
                     placeholder="Wat is jouw naam?"
-                    className="w-full bg-transparent border-b-2 border-ink pb-2 text-lg md:text-xl font-sans font-bold placeholder:text-ink/20 focus:outline-none focus:border-accent transition-colors"
+                    className="w-full bg-transparent border-b border-ink pb-2 text-base font-sans font-bold placeholder:text-ink/20 focus:outline-none focus:border-accent transition-colors"
                     value={formState.name}
                     onChange={(e) => setFormState({...formState, name: e.target.value})}
                   />
                 </div>
 
                 <div className="space-y-1">
-                  <label className="text-[10px] font-sans font-black uppercase tracking-[0.3em] text-ink/40">E-mail</label>
+                  <label className="block text-[11px] font-sans font-extrabold uppercase tracking-widest text-ink/40">
+                    E-mail
+                  </label>
                   <input 
                     type="email" 
                     required
                     placeholder="Wat is jouw e-mailadres?"
-                    className="w-full bg-transparent border-b-2 border-ink pb-2 text-lg md:text-xl font-sans font-bold placeholder:text-ink/20 focus:outline-none focus:border-accent transition-colors"
+                    className="w-full bg-transparent border-b border-ink pb-2 text-base font-sans font-bold placeholder:text-ink/20 focus:outline-none focus:border-accent transition-colors"
                     value={formState.email}
                     onChange={(e) => setFormState({...formState, email: e.target.value})}
                   />
                 </div>
 
                 <div className="space-y-1">
-                  <label className="text-[10px] font-sans font-black uppercase tracking-[0.3em] text-ink/40">Project</label>
+                  <label className="block text-[11px] font-sans font-extrabold uppercase tracking-widest text-ink/40">
+                    Project
+                  </label>
                   <textarea 
                     required
                     rows={2}
                     placeholder="Vertel ons over jouw ambities..."
-                    className="w-full bg-transparent border-b-2 border-ink pb-2 text-lg md:text-xl font-sans font-bold placeholder:text-ink/20 focus:outline-none focus:border-accent transition-colors resize-none"
+                    className="w-full bg-transparent border-b border-ink pb-2 text-base font-sans font-bold placeholder:text-ink/20 focus:outline-none focus:border-accent transition-colors resize-none"
                     value={formState.message}
                     onChange={(e) => setFormState({...formState, message: e.target.value})}
                   />
                 </div>
 
                 {status === 'success' && (
-                  <p className="text-center text-sm font-sans font-black uppercase tracking-widest text-accent">
+                  <p className="text-sm font-sans font-bold uppercase tracking-wider text-accent text-center">
                     Bedankt! We nemen binnen 24 uur contact met je op.
                   </p>
                 )}
                 {status === 'error' && (
-                  <p className="text-center text-sm font-sans font-black uppercase tracking-widest text-red-500">
+                  <p className="text-sm font-sans font-bold uppercase tracking-wider text-red-500 text-center">
                     Er ging iets mis. Probeer het opnieuw.
                   </p>
                 )}
-                <Button
-                  disabled={status === 'loading' || status === 'success'}
-                  className="w-full py-5 md:py-6 text-base md:text-lg shadow-[6px_6px_0px_0px_#121212] hover:shadow-[3px_3px_0px_0px_#121212] active:shadow-none disabled:opacity-50 disabled:cursor-not-allowed"
-                >
-                  {status === 'loading' ? 'VERZENDEN...' : 'VERSTUUR JOUW AANVRAAG'}
-                </Button>
+
+                <div className="pt-2">
+                  <Button
+                    type="submit"
+                    disabled={status === 'loading' || status === 'success'}
+                    variant="primary"
+                    size="lg"
+                    className="w-full"
+                  >
+                    {status === 'loading' ? 'VERZENDEN...' : 'VERSTUUR JOUW AANVRAAG'}
+                  </Button>
+                  <p className="text-center text-[11px] font-medium text-ink/40 mt-3.5">
+                    Geen verplichtingen · reactie binnen 24 uur
+                  </p>
+                </div>
               </form>
             </div>
           </div>

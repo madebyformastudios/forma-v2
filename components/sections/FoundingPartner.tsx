@@ -1,8 +1,6 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { Check, Mail } from 'lucide-react';
-import Link from 'next/link';
 import Button from '@/components/ui/Button';
 
 export default function FoundingPartner() {
@@ -10,103 +8,101 @@ export default function FoundingPartner() {
     "Een snelle, professionele website",
     "Vindbaar op Google in jouw regio",
     "Wij helpen met het schrijven van de teksten",
-    "1 jaar hosting en onderhoud gratis (normaal €30 per maand)"
+    "1 jaar hosting en onderhoud gratis (normaal €30 p/m)"
   ];
 
-  const email = "info@madebyforma.nl";
-  const subject = "Interesse in Founding Partner Pakket - MadeByForma";
-  const mailtoLink = `mailto:${email}?subject=${encodeURIComponent(subject)}`;
-
   return (
-    <section id="founding-offer" className="relative py-24 px-6 bg-sand/50">
-      <div className="max-w-4xl mx-auto">
-        <div className="bg-[#EBE7E0] border-2 border-ink rounded-2xl p-8 md:p-16 shadow-[12px_12px_0px_0px_#121212]">
-          <div className="flex flex-col space-y-12">
+    <section 
+      id="founding-offer" 
+      data-theme-color="#E3B5A4"
+      className="bg-clay py-20 lg:py-28"
+    >
+      <div className="max-w-[1100px] mx-auto px-6 lg:px-11">
+        
+        {/* Intro Grid */}
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-end mb-11">
+          <div>
+            <div className="inline-block bg-ink transform -skew-x-12 px-4 py-1.5 mb-6">
+              <span className="inline-block skew-x-12 text-xs font-bold tracking-wider text-sand">
+                Aanbod
+              </span>
+            </div>
+            <h2 className="font-sans font-black text-4xl sm:text-5xl lg:text-[56px] tracking-tight leading-[0.9] text-ink">
+              Founding Partner.
+            </h2>
+          </div>
+          <p className="text-base sm:text-lg font-body leading-relaxed text-ink/75 max-w-md lg:ml-auto">
+            We zijn net gestart en bouwen onze eerste sites. Wil je een van de eerste klanten zijn? Daar staat een flinke korting tegenover.
+          </p>
+        </div>
+
+        {/* Pricing Card */}
+        <div className="bg-ink text-sand p-8 sm:p-14 relative overflow-visible shadow-2xl">
+          {/* Top-Right Badge Sticker */}
+          <div className="absolute -top-4 right-4 sm:-right-3.5 bg-accent transform -skew-x-12 px-6 py-3 shadow-lg z-10">
+            <span className="inline-block skew-x-12 font-sans font-black text-xs sm:text-sm tracking-wider uppercase text-ink">
+              Nog 3 plekken
+            </span>
+          </div>
+
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-14 items-center">
             
-            {/* Header */}
+            {/* Left Pricing Details */}
             <div className="space-y-6">
-              <div className="inline-block px-4 py-1.5 rounded-full bg-accent text-white font-sans font-black uppercase text-[10px] md:text-xs tracking-widest shadow-[4px_4px_0px_0px_#121212]">
-                LIMITED LAUNCH OFFER
-              </div>
+              <span className="block text-xs font-semibold tracking-[0.14em] uppercase text-sand/50">
+                Limited launch — All-in-one pakket
+              </span>
               
-              <h2 className="text-4xl md:text-6xl font-sans font-black tracking-tighter uppercase text-ink leading-none">
-                Founding Partner <br />
-                <span className="text-accent italic">All-in-One Pakket.</span>
-              </h2>
-
-              <div className="flex flex-col md:flex-row md:items-center gap-4 md:gap-8 pt-4">
-                <div className="flex items-baseline space-x-4">
-                  <span className="text-ink/30 font-sans font-bold line-through text-2xl">
-                    €2.250
-                  </span>
-                  <div className="flex flex-col">
-                    <span className="text-5xl md:text-6xl font-sans font-black text-ink tracking-tighter">
-                      €1.350<span className="text-accent">.</span>
-                    </span>
-                    <span className="text-ink/40 text-[10px] font-sans font-bold uppercase tracking-widest">
-                      excl. BTW (40% KORTING)
-                    </span>
-                  </div>
-                </div>
-                <div className="bg-white border-2 border-ink px-4 py-2 rounded-xl h-fit">
-                  <p className="text-sm font-sans font-bold uppercase text-ink">
-                    Alleen voor de eerste <span className="text-accent">3</span> ondernemers!
-                  </p>
-                </div>
-              </div>
-            </div>
-
-            {/* Features */}
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
-              {benefits.map((benefit, i) => (
-                <div key={i} className="flex items-center space-x-4">
-                  <div className="flex-shrink-0 w-8 h-8 rounded-lg bg-ink flex items-center justify-center">
-                    <Check size={18} className="text-accent" strokeWidth={3} />
-                  </div>
-                  <span className="font-sans font-bold text-ink text-sm md:text-base leading-tight">
-                    {benefit}
-                  </span>
-                </div>
-              ))}
-            </div>
-
-            {/* Scarcity & CTA */}
-            <div className="pt-8 border-t-2 border-ink/5 space-y-8">
-              <div className="flex items-center space-x-4">
-                <motion.div 
-                  animate={{ 
-                    scale: [1, 1.05, 1],
-                    opacity: [0.8, 1, 0.8]
-                  }}
-                  transition={{ 
-                    duration: 2, 
-                    repeat: Infinity, 
-                    ease: "easeInOut" 
-                  }}
-                  className="px-4 py-2 bg-white border-2 border-ink rounded-full flex items-center space-x-2"
-                >
-                  <div className="w-2 h-2 rounded-full bg-accent animate-pulse shrink-0" />
-                  <span className="text-[10px] sm:text-xs font-sans font-black uppercase tracking-widest text-ink whitespace-nowrap">
-                    Beschikbare plekken: 3 van 3
-                  </span>
-                </motion.div>
+              <div className="flex items-baseline gap-4 flex-wrap">
+                <span className="text-2xl sm:text-3xl font-bold line-through text-sand/35">
+                  €2.250
+                </span>
+                <span className="font-sans font-black text-6xl sm:text-[96px] tracking-tight leading-none text-sand flex items-baseline">
+                  €1.350<span className="text-accent">.</span>
+                </span>
               </div>
 
-              <div className="space-y-4">
-                <Link href="#contact" className="block w-full md:w-fit">
-                  <Button className="w-full md:px-12 py-6 text-sm md:text-base flex items-center justify-center space-x-3">
-                    <span>Claim jouw plek</span>
-                    <Mail size={20} className="fill-ink" />
+              <span className="block text-xs sm:text-sm font-semibold tracking-[0.1em] uppercase text-sand/50">
+                excl. btw — 40% korting · eerste 3 ondernemers
+              </span>
+
+              <div className="pt-2 space-y-4">
+                <a href="#contact" className="inline-block w-full sm:w-auto">
+                  <Button variant="primary" size="lg" className="w-full sm:w-auto">
+                    Claim jouw plek
                   </Button>
-                </Link>
-                <p className="text-xs md:text-sm font-sans font-bold text-ink/40 uppercase tracking-widest">
-                  Of stuur direct een mail naar: <a href={mailtoLink} className="text-ink/60 hover:text-accent transition-colors underline decoration-dotted underline-offset-4">{email}</a>
+                </a>
+                <p className="text-[13px] text-sand/50 font-body">
+                  Of mail direct: <a href="mailto:info@madebyforma.nl" className="text-accent hover:underline">info@madebyforma.nl</a>
                 </p>
+              </div>
+            </div>
+
+            {/* Right Checklist */}
+            <div className="lg:border-l lg:border-sand/20 lg:pl-11 space-y-6">
+              <span className="block text-xs font-semibold tracking-[0.14em] uppercase text-sand/40">
+                Dit krijg je
+              </span>
+              <div className="flex flex-col gap-4 font-sans font-bold text-sm sm:text-base">
+                {benefits.map((benefit, i) => (
+                  <div key={i} className="flex gap-3.5 leading-snug items-start">
+                    <span className="w-2.5 h-2.5 rounded-full bg-accent mt-1.5 flex-shrink-0" />
+                    <span>{benefit}</span>
+                  </div>
+                ))}
+              </div>
+
+              <div className="pt-5 border-t border-sand/15 flex items-center gap-2.5">
+                <span className="w-2 h-2 rounded-full bg-accent animate-pulse" />
+                <span className="text-xs font-bold tracking-wider uppercase text-sand/55">
+                  Beschikbare plekken: 3 van 3
+                </span>
               </div>
             </div>
 
           </div>
         </div>
+
       </div>
     </section>
   );

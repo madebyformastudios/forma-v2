@@ -1,14 +1,15 @@
 @import "tailwindcss";
 
 @theme {
-  --color-primary: #121212;
+  --color-primary: #17140F;
   --color-secondary: #2563EB;
-  --color-accent: #F97316;
+  --color-accent: #F1531F;
   --color-surface: #F8FAFC;
-  --color-sand: #F2EFE9;
-  --color-ink: #121212;
-  --color-sage: #B6CBB7;
-  --color-clay: #E5B7A9;
+  --color-sand: #F3EEE4;
+  --color-ink: #17140F;
+  --color-sage: #B9C9B4;
+  --color-clay: #E3B5A4;
+  --color-dark-bg: #211C15;
 
   --font-sans: var(--font-plus-jakarta-sans), ui-sans-serif, system-ui, sans-serif;
   --font-body: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
@@ -30,8 +31,8 @@
   body::before {
     content: "";
     @apply fixed inset-0 z-[-1] opacity-10 pointer-events-none;
-    background-image: linear-gradient(to right, #121212 1px, transparent 1px),
-      linear-gradient(to bottom, #121212 1px, transparent 1px);
+    background-image: linear-gradient(to right, #17140F 1px, transparent 1px),
+      linear-gradient(to bottom, #17140F 1px, transparent 1px);
     background-size: 80px 80px;
   }
 
@@ -43,7 +44,7 @@
   }
 
   h1, h2, h3, h4, h5, h6 {
-    @apply font-sans font-black tracking-tighter uppercase;
+    @apply font-sans font-black tracking-tighter;
   }
 
   @keyframes gradient-x {

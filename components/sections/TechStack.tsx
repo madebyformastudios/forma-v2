@@ -1,93 +1,30 @@
 'use client';
 
-import { motion } from 'framer-motion';
-import { Cpu, Wind, MousePointer2, Cloud, Database, Search } from 'lucide-react';
-
-const techStack = [
-  {
-    name: "Next.js 15",
-    tagline: "VOOR BIZARRE SNELHEID",
-    icon: <Cpu size={32} />
-  },
-  {
-    name: "Tailwind CSS",
-    tagline: "VOOR PIXEL-PERFECT DESIGN",
-    icon: <Wind size={32} />
-  },
-  {
-    name: "Framer Motion",
-    tagline: "VOOR VLOEIENDE INTERACTIE",
-    icon: <MousePointer2 size={32} />
-  },
-  {
-    name: "Vercel",
-    tagline: "VOOR MAXIMALE UP-TIME",
-    icon: <Cloud size={32} />
-  },
-  {
-    name: "Sanity CMS",
-    tagline: "VOOR MOEITELOOS BEHEER",
-    icon: <Database size={32} />
-  },
-  {
-    name: "GEO Ready",
-    tagline: "VOOR AI-ZOEKMACHINES",
-    icon: <Search size={32} />
-  }
+const techItems = [
+  "Next.js 15",
+  "Tailwind CSS",
+  "Framer Motion",
+  "Vercel",
+  "Sanity CMS",
+  "GEO Ready"
 ];
 
 export default function TechStack() {
   return (
     <section 
       id="tech"
-      data-theme-color="#F2EFE9"
-      className="relative py-24 bg-sand/30"
+      data-theme-color="#F3EEE4"
+      className="bg-sand border-b border-ink/12"
     >
-      <div className="max-w-7xl mx-auto px-6 lg:px-12">
-        <div className="max-w-4xl mb-16">
-          <span className="text-xs font-sans font-black uppercase tracking-[0.3em] text-accent mb-4 block">
-            GEREEDSCHAPSKIST
-          </span>
-          <h2 className="text-4xl md:text-6xl font-sans font-black tracking-tighter uppercase text-ink leading-none">
-            ONZE <span className="text-accent italic">TECH STACK.</span>
-          </h2>
-        </div>
-
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 md:gap-6">
-          {techStack.map((tech, index) => (
-            <motion.div
-              key={tech.name}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ 
-                type: "spring",
-                stiffness: 260,
-                damping: 20,
-                delay: index * 0.1 
-              }}
-              whileHover={{ 
-                y: -8,
-                boxShadow: "8px 8px 0px 0px #121212",
-                transition: { type: "spring", stiffness: 400, damping: 10 }
-              }}
-              whileTap={{ 
-                scale: 0.95,
-                y: 0,
-                boxShadow: "2px 2px 0px 0px #121212"
-              }}
-              className="aspect-square bg-white border-2 border-ink rounded-[20px] md:rounded-[24px] p-4 md:p-6 flex flex-col items-center justify-center text-center cursor-default group will-change-transform shadow-[4px_4px_0px_0px_#121212]"
-            >
-              <div className="text-ink group-hover:text-accent group-hover:scale-110 transition-transform duration-300 mb-4">
-                {tech.icon}
-              </div>
-              <h3 className="font-sans font-black text-sm md:text-base uppercase tracking-tight text-ink mb-1">
-                {tech.name}
-              </h3>
-              <p className="text-[8px] md:text-[10px] font-sans font-bold text-slate-500 uppercase tracking-widest leading-tight">
-                {tech.tagline}
-              </p>
-            </motion.div>
+      <div className="max-w-[1300px] mx-auto px-6 lg:px-11 py-7 flex items-center justify-between flex-wrap gap-5">
+        <span className="text-xs font-semibold tracking-widest uppercase text-ink/45">
+          Gebouwd met gereedschap dat werkt
+        </span>
+        <div className="flex gap-6 sm:gap-9 flex-wrap text-sm font-bold text-ink/60">
+          {techItems.map((tech) => (
+            <span key={tech} className="hover:text-accent transition-colors duration-200 cursor-default">
+              {tech}
+            </span>
           ))}
         </div>
       </div>

@@ -54,66 +54,80 @@ export default function FAQ() {
   return (
     <section 
       id="faq" 
-      data-theme-color="#F2EFE9"
-      className="relative py-32 overflow-hidden"
+      data-theme-color="#F3EEE4"
+      className="bg-sand text-ink py-20 lg:py-28"
     >
-      <div className="max-w-7xl mx-auto px-6 lg:px-12">
-        <div className="max-w-4xl mb-20">
-          <span className="text-xs font-sans font-black uppercase tracking-[0.3em] text-accent mb-4 block">
-            VRAGEN?
-          </span>
-          <h2 className="text-5xl md:text-8xl font-sans font-black tracking-tighter uppercase text-ink leading-[0.85]">
-            VEELGESTELDE <br /> <span className="text-accent italic">VRAGEN.</span>
-          </h2>
-        </div>
+      <div className="max-w-[1300px] mx-auto px-6 lg:px-11">
+        <div className="grid grid-cols-1 lg:grid-cols-[400px_1fr] gap-12 lg:gap-16 items-start">
+          
+          {/* Left Column Sticky Header */}
+          <div className="lg:sticky lg:top-28 space-y-6">
+            <div className="inline-block bg-sage transform -skew-x-12 px-4 py-1.5">
+              <span className="inline-block skew-x-12 text-xs font-bold tracking-wider text-ink">
+                Vragen?
+              </span>
+            </div>
+            <h2 className="font-sans font-black text-4xl sm:text-5xl lg:text-[56px] tracking-tight leading-[0.9] text-ink">
+              Alles wat je<br />wilt weten.
+            </h2>
+            <p className="text-sm sm:text-base font-body leading-relaxed text-ink/60">
+              Staat je vraag er niet bij?{' '}
+              <a href="#contact" className="text-accent font-semibold hover:underline">
+                Stuur ons een berichtje →
+              </a>
+            </p>
+          </div>
 
-        <div className="border-t border-ink/10">
-          {faqs.map((faq, index) => {
-            const isHovered = hoveredIndex === index;
-            const isClicked = clickedIndex === index;
-            const isOpen = isHovered || isClicked;
+          {/* Right Column Accordion */}
+          <div className="border-t border-ink">
+            {faqs.map((faq, index) => {
+              const isHovered = hoveredIndex === index;
+              const isClicked = clickedIndex === index;
+              const isOpen = isHovered || isClicked;
 
-            return (
-              <div 
-                key={index}
-                onMouseEnter={() => handleMouseEnter(index)}
-                onMouseLeave={handleMouseLeave}
-                className={`border-b border-ink/10 transition-colors duration-500 ${isOpen ? 'bg-sand' : 'bg-transparent'}`}
-              >
-                <button
-                  onClick={() => setClickedIndex(isClicked ? null : index)}
-                  className="w-full px-4 md:px-8 py-8 md:py-12 flex items-center justify-between text-left group"
+              return (
+                <div 
+                  key={index}
+                  onMouseEnter={() => handleMouseEnter(index)}
+                  onMouseLeave={handleMouseLeave}
+                  className="border-b border-ink/15 transition-colors duration-300"
                 >
-                  <span className="text-xl md:text-2xl font-sans font-black uppercase tracking-tight text-ink pr-8">
-                    {faq.question}
-                  </span>
-                  <motion.div
-                    animate={{ rotate: isOpen ? 45 : 0 }}
-                    transition={{ duration: 0.4, ease: [0.16, 1, 0.3, 1] }}
-                    className="flex-shrink-0"
+                  <button
+                    onClick={() => setClickedIndex(isClicked ? null : index)}
+                    className="w-full py-6 sm:py-8 flex items-center justify-between text-left group cursor-pointer"
                   >
-                    <Plus size={32} className={`transition-colors duration-300 ${isOpen ? 'text-accent' : 'text-ink'}`} />
-                  </motion.div>
-                </button>
-                
-                <AnimatePresence initial={false}>
-                  {isOpen && (
+                    <span className="text-lg sm:text-xl font-sans font-bold tracking-tight text-ink pr-6">
+                      {faq.question}
+                    </span>
                     <motion.div
-                      initial={{ height: 0, opacity: 0 }}
-                      animate={{ height: "auto", opacity: 1 }}
-                      exit={{ height: 0, opacity: 0 }}
-                      transition={{ duration: 0.4, ease: "circOut" }}
-                      className="overflow-hidden"
+                      animate={{ rotate: isOpen ? 45 : 0 }}
+                      transition={{ duration: 0.4, ease: [0.16, 1, 0.3, 1] }}
+                      className="flex-shrink-0 text-accent"
                     >
-                      <div className="px-4 md:px-8 pb-12 text-slate-600 text-lg md:text-xl font-body leading-relaxed max-w-3xl">
-                        {faq.answer}
-                      </div>
+                      <Plus size={28} />
                     </motion.div>
-                  )}
-                </AnimatePresence>
-              </div>
-            );
-          })}
+                  </button>
+                  
+                  <AnimatePresence initial={false}>
+                    {isOpen && (
+                      <motion.div
+                        initial={{ height: 0, opacity: 0 }}
+                        animate={{ height: "auto", opacity: 1 }}
+                        exit={{ height: 0, opacity: 0 }}
+                        transition={{ duration: 0.35, ease: "circOut" }}
+                        className="overflow-hidden"
+                      >
+                        <div className="pb-8 text-ink/65 text-sm sm:text-base font-body leading-relaxed max-w-[640px]">
+                          {faq.answer}
+                        </div>
+                      </motion.div>
+                    )}
+                  </AnimatePresence>
+                </div>
+              );
+            })}
+          </div>
+
         </div>
       </div>
     </section>

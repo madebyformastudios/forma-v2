@@ -2,7 +2,6 @@ import Hero from "@/components/sections/Hero";
 import Ticker from "@/components/sections/Ticker";
 import Services from "@/components/sections/Services";
 import Process from "@/components/sections/Process";
-import Projects from "@/components/sections/Projects";
 import FoundingPartner from "@/components/sections/FoundingPartner";
 import TechStack from "@/components/sections/TechStack";
 import FAQ from "@/components/sections/FAQ";
@@ -15,8 +14,8 @@ export default function Home() {
       <Ticker />
       <Services />
       <Process />
-      <Projects />
       <FoundingPartner />
+      <TechStack />
       <FAQ />
       <Contact />
     </main>

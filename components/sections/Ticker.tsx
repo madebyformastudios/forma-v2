@@ -2,48 +2,42 @@
 
 import { motion } from 'framer-motion';
 
-const items = [
-  "SNEL ONLINE",
-  "MAATWERK",
-  "GEEN GEDOE",
-  "ZEEUWSE NUCHTERHEID",
-  "DUIDELIJKE TAAL",
-  "EIGEN TEKSTEN AANPASSEN",
-  "MKB FOCUS",
+const tickerItems = [
+  "Snel online",
+  "Maatwerk",
+  "Geen gedoe",
+  "Zeeuwse nuchterheid",
+  "Duidelijke taal",
+  "MKB focus"
 ];
 
 export default function Ticker() {
-  // Triple the items to ensure seamless looping
-  const tickerItems = [...items, ...items, ...items];
+  // Duplicate items multiple times to fill viewport width for infinite loop
+  const duplicatedItems = [...tickerItems, ...tickerItems, ...tickerItems, ...tickerItems];
 
   return (
     <section 
-      data-theme-color="#121212"
-      className="relative z-10 h-16 md:h-20 bg-ink border-y border-ink/10 flex items-center overflow-hidden"
+      data-theme-color="#17140F"
+      className="bg-ink text-sand py-5 md:py-6 border-y border-ink/10 relative z-10 overflow-hidden"
     >
-      <motion.div 
-        className="flex whitespace-nowrap"
-        animate={{
-          x: [0, -1000], // Adjust based on content width if needed, but linear/repeat handles it
-        }}
-        transition={{
-          x: {
+      <div className="flex whitespace-nowrap overflow-hidden">
+        <motion.div 
+          className="flex items-center gap-12 text-sm md:text-base font-sans font-black tracking-tight"
+          animate={{ x: ["0%", "-50%"] }}
+          transition={{
             repeat: Infinity,
-            repeatType: "loop",
-            duration: 30,
             ease: "linear",
-          },
-        }}
-      >
-        {tickerItems.map((item, idx) => (
-          <div key={idx} className="flex items-center">
-            <span className="text-white font-sans font-black uppercase text-[10px] md:text-xs tracking-[0.3em] px-8">
-              {item}
+            duration: 25,
+          }}
+        >
+          {duplicatedItems.map((item, idx) => (
+            <span key={idx} className="flex items-center gap-12">
+              <span>{item}</span>
+              <span className="w-2.5 h-2.5 rounded-full bg-accent shrink-0" />
             </span>
-            <span className="text-accent text-lg">•</span>
-          </div>
-        ))}
-      </motion.div>
+          ))}
+        </motion.div>
+      </div>
     </section>
   );
 }
