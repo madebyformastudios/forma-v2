@@ -81,6 +81,10 @@ export default function Footer() {
             <span>© 2026 FORMA — Gebouwd met Next.js en passie</span>
             <span className="hidden sm:inline">·</span>
             <span>Gemaakt in Zeeland</span>
+            <span className="hidden sm:inline">·</span>
+            <span>KVK 42134975</span>
+            <span className="hidden sm:inline">·</span>
+            <span>BTW NL005524219B34</span>
           </div>
 
           <button 

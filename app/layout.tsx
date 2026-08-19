@@ -83,6 +83,12 @@ export default function RootLayout({
     "name": "FORMA",
     "image": "https://madebyforma.nl/og-image.jpg",
     "email": "info@madebyforma.nl",
+    "vatID": "NL005524219B34",
+    "identifier": {
+      "@type": "PropertyValue",
+      "name": "KVK",
+      "value": "42134975"
+    },
     "address": {
       "@type": "PostalAddress",
       "addressLocality": "Middelburg",

@@ -30,6 +30,13 @@ export default function PrivacyContent() {
 
           <div className="grid gap-12 pt-12 border-t border-ink/10">
             <section className="space-y-4">
+              <h2 className="text-2xl font-sans font-black uppercase tracking-tight text-ink">0. Wie Zijn Wij</h2>
+              <p className="text-lg text-ink/70 font-body leading-relaxed">
+                FORMA is ingeschreven bij de Kamer van Koophandel onder KVK-nummer 42134975, BTW-nummer NL005524219B34.
+              </p>
+            </section>
+
+            <section className="space-y-4">
               <h2 className="text-2xl font-sans font-black uppercase tracking-tight text-ink">1. Contact & Koffie</h2>
               <p className="text-lg text-ink/70 font-body leading-relaxed">
                 Als je ons contactformulier invult, vragen we om jouw naam, e-mail en projectdetails. Deze gegevens gebruiken we puur om contact met je op te nemen voor die eerste bak koffie en om een gericht voorstel te doen. We slaan deze gegevens niet op in een vage marketingdatabase en we verkopen ze helemaal niet door.
