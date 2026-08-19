@@ -1,6 +1,8 @@
 'use client';
 
-import { motion } from 'framer-motion';
+import { useState } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
+import { ArrowRight, Check } from 'lucide-react';
 import Button from '@/components/ui/Button';
 
 interface PackageTier {
@@ -84,14 +86,30 @@ const recurringServices = [
 ];
 
 export default function Pricing() {
+  const [selectedPackage, setSelectedPackage] = useState<string | null>(null);
+
+  const handleSelect = (id: string) => {
+    setSelectedPackage((prev) => (prev === id ? null : id));
+  };
+
+  const handleCtaClick = (pkg: PackageTier) => {
+    setSelectedPackage(pkg.id);
+    try {
+      sessionStorage.setItem('forma_selected_service', 'Web design');
+      window.dispatchEvent(new Event('forma:service-selected'));
+    } catch {
+      // sessionStorage unavailable, anchor navigation still works
+    }
+  };
+
   return (
-    <section 
-      id="pricing" 
+    <section
+      id="pricing"
       data-theme-color="#E3B5A4"
       className="bg-clay py-20 lg:py-28"
     >
       <div className="max-w-[1300px] mx-auto px-6 lg:px-11">
-        
+
         {/* Intro Grid */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-end mb-14 lg:mb-16">
           <div>
@@ -110,9 +128,10 @@ export default function Pricing() {
         </div>
 
         {/* 3 Packages Grid */}
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 items-stretch mb-20 lg:mb-24">
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 items-stretch mb-20 lg:mb-24 pt-2 lg:pt-4">
           {packages.map((pkg, index) => {
             const isFlagship = pkg.isFlagship;
+            const isSelected = selectedPackage === pkg.id;
 
             return (
               <motion.div
@@ -121,20 +140,48 @@ export default function Pricing() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, margin: '-50px' }}
                 transition={{ duration: 0.5, delay: index * 0.12 }}
-                className={`relative flex flex-col justify-between p-8 sm:p-10 transition-transform duration-300 ${
+                whileHover={isFlagship ? { y: -2, scale: 1.01 } : { y: -6 }}
+                onClick={() => handleSelect(pkg.id)}
+                role="button"
+                tabIndex={0}
+                onKeyDown={(e) => {
+                  if (e.key === 'Enter' || e.key === ' ') {
+                    e.preventDefault();
+                    handleSelect(pkg.id);
+                  }
+                }}
+                className={`relative flex flex-col justify-between p-8 sm:p-10 cursor-pointer transition-[transform,box-shadow,border-color] duration-300 outline-none ${
                   isFlagship
-                    ? 'bg-ink text-sand shadow-2xl lg:-translate-y-3 z-10'
-                    : 'bg-sand text-ink border-2 border-ink/20 shadow-md'
-                }`}
+                    ? 'bg-accent text-ink shadow-2xl lg:-translate-y-3 z-10'
+                    : 'bg-sand text-ink border-2 border-ink/20 shadow-md hover:border-ink/40'
+                } ${isSelected ? 'ring-2 ring-ink ring-offset-2 ring-offset-clay' : ''}`}
               >
                 {/* Flagship Badge */}
                 {isFlagship && (
-                  <div className="absolute -top-4 right-6 bg-accent transform -skew-x-12 px-4 py-1.5 shadow-md">
-                    <span className="inline-block skew-x-12 font-sans font-black text-xs tracking-wider uppercase text-ink">
+                  <div className="absolute -top-4 right-6 bg-ink transform -skew-x-12 px-4 py-1.5 shadow-md">
+                    <span className="inline-block skew-x-12 font-sans font-black text-xs tracking-wider uppercase text-sand">
                       {pkg.badge}
                     </span>
                   </div>
                 )}
+
+                {/* Selected Indicator */}
+                <AnimatePresence>
+                  {isSelected && (
+                    <motion.div
+                      initial={{ opacity: 0, scale: 0.7 }}
+                      animate={{ opacity: 1, scale: 1 }}
+                      exit={{ opacity: 0, scale: 0.7 }}
+                      transition={{ duration: 0.25, ease: 'circOut' }}
+                      className="absolute -top-4 left-6 flex items-center gap-1.5 transform -skew-x-12 px-3 py-1.5 shadow-md bg-ink"
+                    >
+                      <span className="flex items-center gap-1.5 skew-x-12 font-sans font-black text-xs tracking-wider uppercase text-sand">
+                        <Check size={13} strokeWidth={3} />
+                        Geselecteerd
+                      </span>
+                    </motion.div>
+                  )}
+                </AnimatePresence>
 
                 <div>
                   {/* Header & Title */}
@@ -142,50 +189,38 @@ export default function Pricing() {
                     <h3 className="font-sans font-black text-3xl tracking-tight leading-none mb-2">
                       {pkg.name}
                     </h3>
-                    <p className={`text-sm font-body leading-relaxed min-h-[48px] ${
-                      isFlagship ? 'text-sand/75' : 'text-ink/70'
-                    }`}>
+                    <p className="text-sm font-body leading-relaxed min-h-[72px] text-ink/70">
                       {pkg.description}
                     </p>
                   </div>
 
                   {/* Price */}
-                  <div className={`pb-6 mb-6 border-b ${
-                    isFlagship ? 'border-sand/15' : 'border-ink/15'
-                  }`}>
+                  <div className="pb-6 mb-6 border-b border-ink/15">
                     <div className="flex items-baseline gap-2 flex-wrap">
                       <span className="font-sans font-black text-4xl sm:text-5xl tracking-tight">
                         {pkg.price}
                       </span>
                       {pkg.priceSub && (
-                        <span className={`text-xs font-semibold uppercase tracking-wider ${
-                          isFlagship ? 'text-sand/50' : 'text-ink/50'
-                        }`}>
+                        <span className="text-xs font-semibold uppercase tracking-wider text-ink/50">
                           {pkg.priceSub}
                         </span>
                       )}
                     </div>
-                    <span className={`block text-xs font-semibold tracking-wide mt-2 ${
-                      isFlagship ? 'text-accent' : 'text-ink/65'
-                    }`}>
+                    <span className="block text-xs font-semibold tracking-wide mt-2 text-ink/65">
                       {pkg.maintenance}
                     </span>
                   </div>
 
                   {/* Bullets */}
                   <div className="space-y-3.5 mb-8">
-                    <span className={`block text-xs font-bold tracking-widest uppercase ${
-                      isFlagship ? 'text-sand/45' : 'text-ink/45'
-                    }`}>
+                    <span className="block text-xs font-bold tracking-widest uppercase text-ink/45">
                       Wat is inbegrepen
                     </span>
                     <ul className="space-y-3 font-sans font-bold text-sm">
                       {pkg.features.map((feature, fIdx) => (
                         <li key={fIdx} className="flex gap-3 items-start leading-snug">
-                          <span className={`w-2 h-2 rounded-full mt-1.5 flex-shrink-0 ${
-                            isFlagship ? 'bg-accent' : 'bg-ink'
-                          }`} />
-                          <span className={isFlagship ? 'text-sand/90' : 'text-ink/90'}>
+                          <span className="w-2 h-2 rounded-full mt-1.5 flex-shrink-0 bg-ink" />
+                          <span className="text-ink/90">
                             {feature}
                           </span>
                         </li>
@@ -196,9 +231,16 @@ export default function Pricing() {
 
                 {/* CTA Button */}
                 <div className="pt-2">
-                  <a href="#contact" className="inline-block w-full">
+                  <a
+                    href="#contact"
+                    className="inline-block w-full"
+                    onClick={(e) => {
+                      e.stopPropagation();
+                      handleCtaClick(pkg);
+                    }}
+                  >
                     <Button
-                      variant={isFlagship ? 'primary' : 'outline'}
+                      variant={isFlagship ? 'dark' : 'outline'}
                       size="lg"
                       className="w-full"
                     >
@@ -235,7 +277,8 @@ export default function Pricing() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.4, delay: index * 0.1 }}
-                className="bg-sand/90 border border-ink/15 p-8 flex flex-col justify-between shadow-sm hover:shadow-md transition-shadow"
+                whileHover={{ y: -4 }}
+                className="bg-sand/90 border border-ink/15 p-8 flex flex-col justify-between shadow-sm hover:shadow-md hover:border-ink/30 transition-[box-shadow,border-color,transform] duration-300"
               >
                 <div>
                   <div className="flex items-center justify-between gap-4 mb-4">
@@ -255,11 +298,11 @@ export default function Pricing() {
                 </div>
 
                 <div className="pt-6 mt-6 border-t border-ink/10">
-                  <a
-                    href="#contact"
-                    className="inline-flex items-center gap-2 font-sans font-bold text-xs uppercase tracking-wider text-ink hover:text-accent transition-colors"
-                  >
-                    Vraag naar de mogelijkheden →
+                  <a href="#contact" className="inline-block group">
+                    <Button variant="outline" size="sm">
+                      Vraag naar de mogelijkheden
+                      <ArrowRight size={15} className="transition-transform duration-200 group-hover:translate-x-1" />
+                    </Button>
                   </a>
                 </div>
               </motion.div>

@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import Button from '@/components/ui/Button';
 
@@ -8,6 +8,26 @@ const serviceOptions = ["Web design", "Maatwerk software", "SEO & Google", "Bran
 
 export default function Contact() {
   const [selectedServices, setSelectedServices] = useState<string[]>([]);
+
+  useEffect(() => {
+    const applyPreselection = () => {
+      try {
+        const preselected = sessionStorage.getItem('forma_selected_service');
+        if (preselected && serviceOptions.includes(preselected)) {
+          setSelectedServices((prev) =>
+            prev.includes(preselected) ? prev : [...prev, preselected]
+          );
+        }
+        sessionStorage.removeItem('forma_selected_service');
+      } catch {
+        // sessionStorage unavailable, skip preselection
+      }
+    };
+
+    applyPreselection();
+    window.addEventListener('forma:service-selected', applyPreselection);
+    return () => window.removeEventListener('forma:service-selected', applyPreselection);
+  }, []);
   const [formState, setFormState] = useState({
     name: '',
     email: '',
