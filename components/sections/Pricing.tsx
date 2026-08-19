@@ -152,7 +152,7 @@ export default function Pricing() {
                 }}
                 className={`relative flex flex-col justify-between p-8 sm:p-10 cursor-pointer transition-[transform,box-shadow,border-color] duration-300 outline-none ${
                   isFlagship
-                    ? 'bg-accent text-ink shadow-2xl lg:-translate-y-3 z-10'
+                    ? 'bg-sage text-ink shadow-2xl lg:-translate-y-3 z-10'
                     : 'bg-sand text-ink border-2 border-ink/20 shadow-md hover:border-ink/40'
                 } ${isSelected ? 'ring-2 ring-ink ring-offset-2 ring-offset-clay' : ''}`}
               >
@@ -206,7 +206,9 @@ export default function Pricing() {
                         </span>
                       )}
                     </div>
-                    <span className="block text-xs font-semibold tracking-wide mt-2 text-ink/65">
+                    <span className={`block text-xs font-semibold tracking-wide mt-2 ${
+                      isFlagship ? 'text-accent' : 'text-ink/65'
+                    }`}>
                       {pkg.maintenance}
                     </span>
                   </div>
@@ -219,7 +221,9 @@ export default function Pricing() {
                     <ul className="space-y-3 font-sans font-bold text-sm">
                       {pkg.features.map((feature, fIdx) => (
                         <li key={fIdx} className="flex gap-3 items-start leading-snug">
-                          <span className="w-2 h-2 rounded-full mt-1.5 flex-shrink-0 bg-ink" />
+                          <span className={`w-2 h-2 rounded-full mt-1.5 flex-shrink-0 ${
+                            isFlagship ? 'bg-accent' : 'bg-ink'
+                          }`} />
                           <span className="text-ink/90">
                             {feature}
                           </span>
@@ -240,7 +244,7 @@ export default function Pricing() {
                     }}
                   >
                     <Button
-                      variant={isFlagship ? 'dark' : 'outline'}
+                      variant={isFlagship ? 'primary' : 'outline'}
                       size="lg"
                       className="w-full"
                     >
