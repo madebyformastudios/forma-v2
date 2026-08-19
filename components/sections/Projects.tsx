@@ -4,8 +4,8 @@ import { motion } from 'framer-motion';
 import { ArrowDown } from 'lucide-react';
 
 export default function Projects() {
-  const scrollToFounding = () => {
-    const element = document.getElementById('founding-offer');
+  const scrollToPricing = () => {
+    const element = document.getElementById('pricing');
     element?.scrollIntoView({ behavior: 'smooth' });
   };
 
@@ -26,15 +26,15 @@ export default function Projects() {
           
           <div className="space-y-8">
             <p className="text-xl sm:text-2xl lg:text-3xl font-sans font-extrabold text-ink/40 italic leading-relaxed">
-              We zijn net gestart en bouwen onze eerste sites. Wil je een van de eerste klanten zijn? Daar staat een flinke korting tegenover.
+              We bouwen doordachte, razendsnelle websites die resultaat opleveren voor ambitieuze ondernemers.
             </p>
             
             <button 
-              onClick={scrollToFounding}
+              onClick={scrollToPricing}
               className="group flex items-center space-x-4 text-ink hover:text-accent transition-colors duration-300 cursor-pointer text-left"
             >
               <span className="text-sm font-sans font-black uppercase tracking-widest border-b-2 border-current pb-1">
-                Bekijk ons tijdelijke aanbod hieronder
+                Bekijk onze pakketten hieronder
               </span>
               <div className="w-10 h-10 rounded-full border-2 border-current flex items-center justify-center group-hover:translate-y-1 transition-transform">
                 <ArrowDown size={20} />

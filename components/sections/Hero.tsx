@@ -85,7 +85,7 @@ export default function Hero() {
               </div>
               <div className="flex items-center gap-3.5 border-t border-sand/15 pt-4">
                 <span className="w-2.5 h-2.5 rounded-full bg-accent flex-shrink-0" />
-                <span className="text-sand text-sm sm:text-base">Nog 3 Founding plekken vrij</span>
+                <span className="text-sand text-sm sm:text-base">Drie heldere pakketten</span>
               </div>
             </div>
           </div>

@@ -9,7 +9,7 @@ import Button from '@/components/ui/Button';
 const navItems = [
   { name: 'Diensten', href: '#services' },
   { name: 'Werkwijze', href: '#process' },
-  { name: 'Aanbod', href: '#founding-offer' },
+  { name: 'Pakketten', href: '#pricing' },
   { name: 'Vragen', href: '#faq' },
 ];
 

@@ -6,7 +6,7 @@ import { ArrowUp } from 'lucide-react';
 const menuItems = [
   { name: 'Diensten', href: '#services' },
   { name: 'Werkwijze', href: '#process' },
-  { name: 'Aanbod', href: '#founding-offer' },
+  { name: 'Pakketten', href: '#pricing' },
   { name: 'Vragen', href: '#faq' },
 ];
 

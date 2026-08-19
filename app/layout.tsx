@@ -119,7 +119,7 @@ export default function RootLayout({
         "name": "Wat kost dat nou, zo'n FORMA-site?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Een standaard zakelijke site (5-7 pagina's, contactformulier, mooi op mobiel, snel op Google) zit bij ons rond de €2.250. Dat is inclusief ontwerp, bouw en een jaar hosting. Geen verborgen kosten achteraf. Heb je nu een van de Founding Partner plekken gepakt, dan betaal je €1.350 voor precies hetzelfde. Daarna gaan we gewoon naar de normale prijs. Webshop of iets specifieks nodig? Dan maken we een offerte op maat."
+          "text": "We werken met drie vaste, heldere pakketten: Start (€995 excl. btw voor een strakke site tot 5 pagina's), Groei (€1.950 excl. btw voor een volwaardige maatwerk website inclusief copywriting en SEO) en Op maat (vanaf €3.500 voor complexe wensen, branding of software). Geen verrassingen achteraf: je weet vooraf exact waar je aan toe bent."
         }
       },
       {
@@ -135,7 +135,7 @@ export default function RootLayout({
         "name": "Hoe snel staat mijn nieuwe site online?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Reken op 3 weken vanaf de start. Soms sneller als je snel feedback geeft, soms iets langer als we wachten op teksten of foto's. We spreken vooraf een datum af en die halen we ook."
+          "text": "Reken op 1 tot 3 weken, afhankelijk van het gekozen pakket (Start: 1-2 weken, Groei: 3 weken). Soms sneller als je snel feedback geeft. We spreken vooraf een datum af en die halen we ook."
         }
       },
       {
@@ -151,7 +151,7 @@ export default function RootLayout({
         "name": "Heb ik er na de oplevering nog omkijken naar?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Niet als je dat niet wil. Hosting en onderhoud nemen wij over (eerste jaar gratis bij het Founding Partner pakket, daarna €30 per maand). Teksten of foto's aanpassen kun je zelf. We leggen het uit en het is simpeler dan je denkt. Liever dat wij het doen? Stuur een mail, dan regelen we het."
+          "text": "Niet als je dat niet wil. Hosting en technisch onderhoud nemen wij uit handen (vanaf €35 per maand). Teksten of foto's aanpassen kun je eenvoudig zelf. We leggen het uit en het is simpeler dan je denkt. Liever dat wij het doen? Stuur een mail, dan regelen we het."
         }
       },
       {
