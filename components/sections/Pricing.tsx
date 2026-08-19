@@ -9,6 +9,7 @@ interface PackageTier {
   id: string;
   name: string;
   badge?: string;
+  pricePrefix?: string;
   price: string;
   priceSub: string;
   maintenance: string;
@@ -56,7 +57,8 @@ const packages: PackageTier[] = [
   {
     id: 'op-maat',
     name: 'Op maat',
-    price: 'vanaf €3.500',
+    pricePrefix: 'vanaf',
+    price: '€3.500',
     priceSub: '',
     maintenance: 'Prijs op offerte, + €69/mnd of maatwerk',
     description: 'Voor ondernemers die naast een website ook branding of maatwerk software nodig hebben.',
@@ -195,8 +197,13 @@ export default function Pricing() {
                   </div>
 
                   {/* Price */}
-                  <div className="pb-6 mb-6 border-b border-ink/15">
+                  <div className="pb-6 mb-6 border-b border-ink/15 min-h-[104px]">
                     <div className="flex items-baseline gap-2 flex-wrap">
+                      {pkg.pricePrefix && (
+                        <span className="text-base sm:text-lg font-bold text-ink/60">
+                          {pkg.pricePrefix}
+                        </span>
+                      )}
                       <span className="font-sans font-black text-4xl sm:text-5xl tracking-tight">
                         {pkg.price}
                       </span>
