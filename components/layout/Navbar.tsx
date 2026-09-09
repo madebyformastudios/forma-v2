@@ -25,6 +25,13 @@ export default function Navbar() {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+  useEffect(() => {
+    document.body.style.overflow = isOpen ? 'hidden' : '';
+    return () => {
+      document.body.style.overflow = '';
+    };
+  }, [isOpen]);
+
   return (
     <nav className={`sticky top-0 w-full z-50 transition-colors duration-300 border-b ${
       scrolled ? 'bg-sand/90 backdrop-blur-md border-ink/12' : 'bg-sand border-ink/10'
@@ -59,7 +66,7 @@ export default function Navbar() {
             </Link>
           </div>
 
-          <div className="md:hidden">
+          <div className="md:hidden relative z-[60]">
             <button
               onClick={() => setIsOpen(!isOpen)}
               className="text-ink p-2 focus:outline-none"
@@ -73,32 +80,45 @@ export default function Navbar() {
       <AnimatePresence>
         {isOpen && (
           <motion.div
-            initial={{ opacity: 0, y: -10 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -10 }}
-            className="md:hidden absolute top-[84px] left-0 w-full bg-sand/98 backdrop-blur-xl border-b border-ink/10 px-6 py-10 shadow-2xl"
+            initial={{ clipPath: 'circle(0% at calc(100% - 40px) 42px)' }}
+            animate={{ clipPath: 'circle(150% at calc(100% - 40px) 42px)' }}
+            exit={{ clipPath: 'circle(0% at calc(100% - 40px) 42px)' }}
+            transition={{ duration: 0.5, ease: [0.65, 0, 0.35, 1] }}
+            className="md:hidden fixed inset-0 top-0 w-full h-[100dvh] bg-sand flex flex-col px-6 pt-[104px] pb-10"
           >
-            <div className="flex flex-col space-y-8">
-              {navItems.map((item) => (
-                <Link
+            <div className="flex flex-col justify-center flex-1 space-y-6">
+              {navItems.map((item, i) => (
+                <motion.div
                   key={item.name}
-                  href={item.href}
-                  onClick={() => setIsOpen(false)}
-                  className="text-2xl font-sans font-black tracking-tighter text-ink"
+                  initial={{ opacity: 0, y: 24 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ delay: 0.15 + i * 0.06, duration: 0.4, ease: 'easeOut' }}
                 >
-                  {item.name}
-                </Link>
+                  <Link
+                    href={item.href}
+                    onClick={() => setIsOpen(false)}
+                    className="text-4xl font-sans font-black tracking-tighter text-ink"
+                  >
+                    {item.name}
+                  </Link>
+                </motion.div>
               ))}
+            </div>
+            <motion.div
+              initial={{ opacity: 0, y: 24 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.15 + navItems.length * 0.06, duration: 0.4, ease: 'easeOut' }}
+            >
               <Link
                 href="#contact"
                 onClick={() => setIsOpen(false)}
-                className="w-full"
+                className="w-full block"
               >
                 <Button variant="dark" className="w-full py-4 text-sm">
                   Plan een gesprek
                 </Button>
               </Link>
-            </div>
+            </motion.div>
           </motion.div>
         )}
       </AnimatePresence>
