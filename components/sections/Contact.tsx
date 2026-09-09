@@ -98,6 +98,12 @@ export default function Contact() {
                   info@madebyforma.nl
                 </span>
               </a>
+              <a href="tel:+31626102661" className="flex items-baseline gap-4 group">
+                <span className="text-xs tracking-widest text-sand/40 w-12 flex-shrink-0">TEL</span>
+                <span className="text-lg sm:text-2xl text-sand group-hover:text-accent transition-colors">
+                  +31 6 26102661
+                </span>
+              </a>
               <div className="flex items-baseline gap-4">
                 <span className="text-xs tracking-widest text-sand/40 w-12 flex-shrink-0">PLEK</span>
                 <span className="text-lg sm:text-2xl text-sand">
