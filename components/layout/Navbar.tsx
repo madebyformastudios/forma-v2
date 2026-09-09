@@ -92,13 +92,13 @@ export default function Navbar() {
       <AnimatePresence>
         {isOpen && (
           <motion.div
-            initial={{ clipPath: 'circle(0% at calc(100% - 40px) 42px)' }}
-            animate={{ clipPath: 'circle(150% at calc(100% - 40px) 42px)' }}
-            exit={{ clipPath: 'circle(0% at calc(100% - 40px) 42px)' }}
+            initial={{ clipPath: 'circle(0% at calc(100% - 40px) -42px)' }}
+            animate={{ clipPath: 'circle(150% at calc(100% - 40px) -42px)' }}
+            exit={{ clipPath: 'circle(0% at calc(100% - 40px) -42px)' }}
             transition={{ duration: 0.5, ease: [0.65, 0, 0.35, 1] }}
-            className="md:hidden fixed inset-0 top-0 w-full h-[100dvh] bg-sand flex flex-col px-6 pt-[104px] pb-10"
+            className="md:hidden fixed top-[84px] left-0 w-full h-[calc(100dvh-84px)] bg-sand flex flex-col px-6 pt-4 pb-10"
           >
-            <div className="flex flex-col justify-center flex-1 space-y-6">
+            <div className="flex flex-col justify-center flex-1 space-y-10">
               {navItems.map((item, i) => (
                 <motion.div
                   key={item.name}
