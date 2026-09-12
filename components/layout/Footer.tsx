@@ -18,7 +18,7 @@ export default function Footer() {
   return (
     <footer className="bg-sand text-ink pt-16 pb-8 border-t border-ink/10">
       <div className="max-w-7xl mx-auto px-6 lg:px-12">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 pb-14 border-b border-ink/15">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 pb-14 border-b border-ink/15">
           {/* Logo & Info */}
           <div className="space-y-6">
             <Link href="/" className="flex items-baseline group">
@@ -51,15 +51,6 @@ export default function Footer() {
               <Link href="/privacy" className="text-ink/40 hover:text-accent transition-colors">
                 Privacy & Data
               </Link>
-            </div>
-          </div>
-
-          {/* Social Links */}
-          <div>
-            <span className="block text-[11px] font-sans font-extrabold uppercase tracking-widest text-accent mb-[18px]">Socials</span>
-            <div className="flex flex-col gap-3 text-sm font-semibold">
-              <a href="#" className="text-ink hover:text-accent transition-colors">Instagram</a>
-              <a href="#" className="text-ink hover:text-accent transition-colors">LinkedIn</a>
             </div>
           </div>
 
