@@ -21,7 +21,7 @@ export default function TechStack() {
       className="bg-sand border-b border-ink/12 py-6 overflow-hidden"
     >
       <div className="max-w-[1300px] mx-auto px-6 lg:px-11 flex flex-col md:flex-row items-center gap-6 md:gap-10">
-        <span className="text-xs font-semibold tracking-widest uppercase text-ink/45 shrink-0 select-none">
+        <span className="text-xs font-semibold tracking-widest uppercase text-ink/60 shrink-0 select-none">
           Gebouwd met gereedschap dat werkt
         </span>
         <div className="w-full overflow-hidden whitespace-nowrap flex items-center">

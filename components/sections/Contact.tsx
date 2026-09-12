@@ -93,19 +93,19 @@ export default function Contact() {
 
             <div className="flex flex-col gap-6 border-t border-sand/20 pt-8 font-sans font-bold">
               <a href="mailto:info@madebyforma.nl" className="flex items-baseline gap-4 group">
-                <span className="text-xs tracking-widest text-sand/40 w-12 flex-shrink-0">MAIL</span>
+                <span className="text-xs tracking-widest text-sand/50 w-12 flex-shrink-0">MAIL</span>
                 <span className="text-lg sm:text-2xl text-sand group-hover:text-accent transition-colors">
                   info@madebyforma.nl
                 </span>
               </a>
               <a href="tel:+31626102661" className="flex items-baseline gap-4 group">
-                <span className="text-xs tracking-widest text-sand/40 w-12 flex-shrink-0">TEL</span>
+                <span className="text-xs tracking-widest text-sand/50 w-12 flex-shrink-0">TEL</span>
                 <span className="text-lg sm:text-2xl text-sand group-hover:text-accent transition-colors">
                   +31 6 26102661
                 </span>
               </a>
               <div className="flex items-baseline gap-4">
-                <span className="text-xs tracking-widest text-sand/40 w-12 flex-shrink-0">PLEK</span>
+                <span className="text-xs tracking-widest text-sand/50 w-12 flex-shrink-0">PLEK</span>
                 <span className="text-lg sm:text-2xl text-sand">
                   Middelburg, Zeeland
                 </span>
@@ -128,7 +128,7 @@ export default function Contact() {
               <form onSubmit={handleSubmit} className="space-y-8">
                 {/* Services selection */}
                 <div className="space-y-3">
-                  <label className="block text-[11px] font-sans font-extrabold uppercase tracking-widest text-ink/40">
+                  <label className="block text-[11px] font-sans font-extrabold uppercase tracking-widest text-ink/60">
                     Ik ben op zoek naar...
                   </label>
                   <div className="flex flex-wrap gap-2.5">
@@ -154,7 +154,7 @@ export default function Contact() {
 
                 {/* Form fields */}
                 <div className="space-y-1">
-                  <label className="block text-[11px] font-sans font-extrabold uppercase tracking-widest text-ink/40">
+                  <label className="block text-[11px] font-sans font-extrabold uppercase tracking-widest text-ink/60">
                     Naam
                   </label>
                   <input 
@@ -168,7 +168,7 @@ export default function Contact() {
                 </div>
 
                 <div className="space-y-1">
-                  <label className="block text-[11px] font-sans font-extrabold uppercase tracking-widest text-ink/40">
+                  <label className="block text-[11px] font-sans font-extrabold uppercase tracking-widest text-ink/60">
                     E-mail
                   </label>
                   <input 
@@ -182,7 +182,7 @@ export default function Contact() {
                 </div>
 
                 <div className="space-y-1">
-                  <label className="block text-[11px] font-sans font-extrabold uppercase tracking-widest text-ink/40">
+                  <label className="block text-[11px] font-sans font-extrabold uppercase tracking-widest text-ink/60">
                     Project
                   </label>
                   <textarea 
@@ -216,7 +216,7 @@ export default function Contact() {
                   >
                     {status === 'loading' ? 'VERZENDEN...' : 'VERSTUUR JOUW AANVRAAG'}
                   </Button>
-                  <p className="text-center text-[11px] font-medium text-ink/40 mt-3.5">
+                  <p className="text-center text-[11px] font-medium text-ink/60 mt-3.5">
                     Geen verplichtingen · reactie binnen 24 uur
                   </p>
                 </div>

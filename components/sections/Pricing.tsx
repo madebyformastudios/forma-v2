@@ -208,7 +208,7 @@ export default function Pricing() {
                         {pkg.price}
                       </span>
                       {pkg.priceSub && (
-                        <span className="text-xs font-semibold uppercase tracking-wider text-ink/50">
+                        <span className="text-xs font-semibold uppercase tracking-wider text-ink/60">
                           {pkg.priceSub}
                         </span>
                       )}
@@ -222,7 +222,7 @@ export default function Pricing() {
 
                   {/* Bullets */}
                   <div className="space-y-3.5 mb-8">
-                    <span className="block text-xs font-bold tracking-widest uppercase text-ink/45">
+                    <span className="block text-xs font-bold tracking-widest uppercase text-ink/60">
                       Wat is inbegrepen
                     </span>
                     <ul className="space-y-3 font-sans font-bold text-sm">

@@ -35,7 +35,7 @@ export default function Footer() {
             </div>
             <div>
               <p className="text-lg font-sans font-extrabold uppercase">Middelburg, Zeeland</p>
-              <p className="text-sm text-ink/50 font-body">Werkend voor heel Nederland</p>
+              <p className="text-sm text-ink/60 font-body">Werkend voor heel Nederland</p>
             </div>
           </div>
 
@@ -48,7 +48,7 @@ export default function Footer() {
                   {item.name}
                 </Link>
               ))}
-              <Link href="/privacy" className="text-ink/40 hover:text-accent transition-colors">
+              <Link href="/privacy" className="text-ink/60 hover:text-accent transition-colors">
                 Privacy & Data
               </Link>
             </div>
@@ -68,7 +68,7 @@ export default function Footer() {
 
         {/* Legal & Copyright bar */}
         <div className="flex items-center justify-between pt-6 flex-wrap gap-4">
-          <div className="flex items-center gap-5 text-[11px] font-semibold tracking-wider text-ink/45 uppercase">
+          <div className="flex items-center gap-5 text-[11px] font-semibold tracking-wider text-ink/60 uppercase">
             <span>© 2026 FORMA — Gebouwd met Next.js en passie</span>
             <span className="hidden sm:inline">·</span>
             <span>Gemaakt in Zeeland</span>

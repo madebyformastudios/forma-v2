@@ -25,7 +25,7 @@ export default function Projects() {
           </h2>
           
           <div className="space-y-8">
-            <p className="text-xl sm:text-2xl lg:text-3xl font-sans font-extrabold text-ink/40 italic leading-relaxed">
+            <p className="text-xl sm:text-2xl lg:text-3xl font-sans font-extrabold text-ink/50 italic leading-relaxed">
               We bouwen doordachte, razendsnelle websites die resultaat opleveren voor ambitieuze ondernemers.
             </p>
             

@@ -68,7 +68,7 @@ export default function Services() {
 
               {/* Title & Headline */}
               <div>
-                <span className="block text-xs font-semibold tracking-[0.12em] text-sand/45 mb-3">
+                <span className="block text-xs font-semibold tracking-[0.12em] text-sand/50 mb-3">
                   {service.label}
                 </span>
                 <h3 className="font-sans font-black text-2xl lg:text-[28px] tracking-tight text-sand leading-tight mb-3">
