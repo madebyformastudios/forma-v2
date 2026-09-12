@@ -1,4 +1,5 @@
 import type { Metadata, Viewport } from "next";
+import Script from "next/script";
 import { Plus_Jakarta_Sans, Inter } from "next/font/google";
 import "@/app/globals.css";
 import Navbar from "@/components/layout/Navbar";
@@ -187,6 +188,18 @@ export default function RootLayout({
         />
       </head>
       <body className="font-body antialiased bg-sand text-ink selection:bg-accent selection:text-white">
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=G-N04K962TL9"
+          strategy="afterInteractive"
+        />
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-N04K962TL9');
+          `}
+        </Script>
         <ThemeColorManager />
         <Navbar />
         {children}
