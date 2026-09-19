@@ -51,6 +51,13 @@ export default function Footer() {
               <Link href="/privacy" className="text-ink/60 hover:text-accent transition-colors">
                 Privacy & Data
               </Link>
+              <button
+                type="button"
+                data-cc="show-preferencesModal"
+                className="text-left text-ink/60 hover:text-accent transition-colors cursor-pointer"
+              >
+                Cookie-instellingen
+              </button>
             </div>
           </div>
 

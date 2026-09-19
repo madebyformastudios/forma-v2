@@ -1,11 +1,13 @@
 import type { Metadata, Viewport } from "next";
 import Script from "next/script";
 import { Plus_Jakarta_Sans, Inter } from "next/font/google";
+import "vanilla-cookieconsent/dist/cookieconsent.css";
 import "@/app/globals.css";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
 import ThemeColorManager from "@/components/layout/ThemeColorManager";
 import WhatsAppWidget from "@/components/layout/WhatsAppWidget";
+import CookieConsentManager from "@/components/layout/CookieConsent";
 import { SITE_URL } from "@/lib/site";
 
 const plusJakartaSans = Plus_Jakarta_Sans({
@@ -123,16 +125,18 @@ export default function RootLayout({
         />
       </head>
       <body className="font-body antialiased bg-sand text-ink selection:bg-accent selection:text-white">
-        <Script
-          src="https://www.googletagmanager.com/gtag/js?id=G-N04K962TL9"
-          strategy="lazyOnload"
-        />
-        <Script id="google-analytics" strategy="lazyOnload">
+        {/* Consent Mode v2 defaults. gtag.js itself is loaded by CookieConsentManager after opt-in. */}
+        <Script id="consent-mode-defaults" strategy="beforeInteractive">
           {`
             window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-            gtag('config', 'G-N04K962TL9');
+            window.gtag = window.gtag || function gtag(){window.dataLayer.push(arguments);};
+            window.gtag('consent', 'default', {
+              analytics_storage: 'denied',
+              ad_storage: 'denied',
+              ad_user_data: 'denied',
+              ad_personalization: 'denied',
+              wait_for_update: 500
+            });
           `}
         </Script>
         <ThemeColorManager />
@@ -140,6 +144,7 @@ export default function RootLayout({
         {children}
         <Footer />
         <WhatsAppWidget />
+        <CookieConsentManager />
       </body>
     </html>
   );

@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
+import Link from 'next/link';
 import Button from '@/components/ui/Button';
 
 const serviceOptions = ["Web design", "Maatwerk software", "SEO & Google", "Branding"];
@@ -218,6 +219,10 @@ export default function Contact() {
                   </Button>
                   <p className="text-center text-[11px] font-medium text-ink/60 mt-3.5">
                     Geen verplichtingen · reactie binnen 24 uur
+                  </p>
+                  <p className="text-center text-[11px] font-medium text-ink/60 mt-2">
+                    We gebruiken je gegevens alleen om op je aanvraag te reageren. Lees ons{' '}
+                    <Link href="/privacy" className="underline hover:text-accent transition-colors">privacybeleid</Link>.
                   </p>
                 </div>
               </form>
