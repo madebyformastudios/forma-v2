@@ -1,4 +1,12 @@
-import type { FaqItem } from '@/content/types';
+import type { ContentSection, FaqItem } from '@/content/types';
+
+export const homeAbout: ContentSection = {
+  heading: 'Waarom bedrijven in Zeeland voor FORMA kiezen',
+  paragraphs: [
+    'Bij FORMA werk je met de mensen die je site ook echt bouwen. Geen accountmanager die het werk doorzet naar een team dat je nooit spreekt: één aanspreekpunt vanaf het eerste gesprek tot ruim na de livegang. We zitten zelf in Middelburg en werken voor ondernemers in de hele provincie, van Zeeuws-Vlaanderen tot Schouwen-Duiveland.',
+    'We bouwen met moderne techniek in plaats van een stapel WordPress-plugins of een abonnement bij een sitebouwer. Dat betekent een site die snel laadt, weinig onderhoud nodig heeft en gewoon van jou is. Je krijgt vooraf een vaste prijs en een duidelijke planning, en achteraf geen rekening die oploopt.',
+  ],
+};
 
 export const homeFaq: FaqItem[] = [
   {

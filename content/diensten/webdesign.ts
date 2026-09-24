@@ -19,7 +19,7 @@ export const webdesign: ServicePageContent = {
     'Ontwerp op maat, geen template',
   ],
   intro: [
-    'Je website is vaak het eerste wat een nieuwe klant van je ziet. Iemand hoort je naam op een verjaardag, zoekt je op en beslist binnen een paar seconden of hij belt of verder klikt. Een trage site, een menu dat op de telefoon niet werkt of teksten die al jaren niet kloppen, kosten je dus klanten zonder dat je het merkt.',
+    'FORMA is een webdesignstudio uit Middelburg die websites op maat bouwt voor MKB-bedrijven in heel Zeeland, voor een vaste prijs vanaf €995 en online binnen 1 tot 3 weken. Je website is vaak het eerste wat een nieuwe klant van je ziet. Iemand hoort je naam op een verjaardag, zoekt je op en beslist binnen een paar seconden of hij belt of verder klikt. Een trage site, een menu dat op de telefoon niet werkt of teksten die al jaren niet kloppen, kosten je dus klanten zonder dat je het merkt.',
     'Bij FORMA laat je een website maken die dat oplost. We ontwerpen hem op maat, bouwen hem met moderne techniek en schrijven de teksten samen met jou. Je betaalt een vaste prijs en weet vooraf wanneer hij online staat. Geen template van de plank, geen uurtje-factuurtje en geen vakjargon.',
   ],
   sections: [

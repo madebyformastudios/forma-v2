@@ -7,7 +7,8 @@ import TechStack from "@/components/sections/TechStack";
 import FAQ from "@/components/sections/FAQ";
 import Contact from "@/components/sections/Contact";
 import JsonLd from "@/components/ui/JsonLd";
-import { homeFaq } from "@/content/home";
+import ContentSections from "@/components/pages/ContentSections";
+import { homeAbout, homeFaq } from "@/content/home";
 import { buildMetadata } from "@/lib/seo";
 import { faqSchema, localBusinessSchema, websiteSchema } from "@/lib/schema";
 
@@ -25,6 +26,7 @@ export default function Home() {
       <Hero />
       <Ticker />
       <Services />
+      <ContentSections sections={[homeAbout]} />
       <Process />
       <Pricing />
       <TechStack />

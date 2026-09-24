@@ -51,6 +51,7 @@ export const maatwerkSoftware: ServicePageContent = {
       heading: 'Is het de moeite waard voor mijn bedrijf?',
       paragraphs: [
         'Een eerlijke vuistregel: als een taak elke week terugkomt, uit vaste stappen bestaat en nu met de hand gebeurt, is het vaak de moeite waard om naar automatisering te kijken. Tel op hoeveel uur er per maand in gaat en wat die uren je kosten. Dan zie je snel of een tool zichzelf terugverdient.',
+        'Een rekenvoorbeeld: kost een taak je 5 uur per week en reken je met €40 per uur, dan is dat €800 per maand aan tijd. Een tool van €2.500 die dat werk overneemt, verdient zich dan binnen ongeveer 3 maanden terug. Bij minder uren of een lager uurtarief duurt dat langer, dus reken het gerust na met je eigen cijfers.',
         'Soms is het antwoord dat je geen maatwerk nodig hebt. Bestaat er al een pakket dat precies doet wat je zoekt, dan zeggen we dat. Dan helpen we je hooguit met het inrichten of koppelen ervan.',
       ],
     },
@@ -68,7 +69,13 @@ export const maatwerkSoftware: ServicePageContent = {
       heading: 'Wat kost maatwerk software?',
       paragraphs: [
         'Maatwerk projecten beginnen vanaf €2.500. Na een kort intakegesprek krijg je een offerte met een vaste projectprijs, dus geen open eind met uren. Waar de prijs uitkomt, hangt af van het aantal schermen, gebruikers en koppelingen.',
-        'Na de oplevering betaal je geen licentie per gebruiker. Wel zijn er kosten voor hosting en onderhoud, net als bij een website. Die spreken we vooraf met je af, zodat je weet waar je aan toe bent.',
+        'Na de oplevering betaal je geen licentie per gebruiker. Wel zijn er kosten voor hosting en onderhoud, net als bij een website. Die spreken we vooraf met je af, zodat je weet waar je aan toe bent. De broncode is van jou: je zit niet vast aan ons of aan een abonnement om de tool te blijven gebruiken.',
+      ],
+    },
+    {
+      heading: 'Hoe lang duurt het om een tool te bouwen?',
+      paragraphs: [
+        'Een enkele automatisering of koppeling staat meestal binnen 2 tot 4 weken live. Een tool met meerdere schermen, gebruikersrollen of koppelingen naar meerdere systemen kost vaker 6 tot 10 weken. In het voorstel na de kennismaking krijg je een planning die op jouw project is toegespitst, dus dit zijn richttijden, geen belofte vooraf.',
       ],
     },
     {

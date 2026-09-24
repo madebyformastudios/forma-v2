@@ -28,8 +28,8 @@ const services = [
     id: "03",
     label: "Gevonden Worden",
     title: "SEO & Google",
-    headline: "Bovenaan op Google als klanten zoeken.",
-    description: "Wij zorgen dat jouw bedrijf bovenaan staat op Google als iemand zoekt naar wat jij doet. Lokaal in Zeeland, of breder als dat nodig is. En als mensen het aan ChatGPT vragen, komt jouw naam ook bovendrijven.",
+    headline: "Gevonden worden op Google als klanten zoeken.",
+    description: "We zorgen dat je site en je Google Bedrijfsprofiel een sterke kandidaat zijn als iemand zoekt naar wat jij doet. Lokaal in Zeeland, of breder als dat nodig is. Dezelfde technische basis helpt ook als mensen het aan ChatGPT vragen.",
     href: "/seo",
     linkLabel: "Alles over SEO en lokale vindbaarheid",
     tags: ["Lokaal vindbaar", "Klaar voor AI-zoekmachines", "Heldere maandrapportage", "Geen tovenarij"]
