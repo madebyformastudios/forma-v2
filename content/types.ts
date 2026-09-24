@@ -48,6 +48,14 @@ export interface ServicePageContent {
   areas: LinkBlock;
   faqHeading: string;
   faq: FaqItem[];
+  offers?: OfferItem[];
+}
+
+export interface OfferItem {
+  name: string;
+  description: string;
+  price: number;
+  priceValidUntil?: string;
 }
 
 export interface ExampleItem {

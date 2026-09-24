@@ -1,4 +1,4 @@
-import type { FaqItem } from '@/content/types';
+import type { FaqItem, OfferItem } from '@/content/types';
 import { BUSINESS, SITE_URL } from '@/lib/site';
 
 export interface Crumb {
@@ -41,16 +41,32 @@ export function localBusinessSchema() {
   };
 }
 
+function offerCatalogSchema(serviceName: string, offers: OfferItem[]) {
+  return {
+    '@type': 'OfferCatalog',
+    name: serviceName,
+    itemListElement: offers.map((offer) => ({
+      '@type': 'Offer',
+      itemOffered: { '@type': 'Service', name: offer.name, description: offer.description },
+      price: offer.price,
+      priceCurrency: 'EUR',
+      ...(offer.priceValidUntil ? { priceValidUntil: offer.priceValidUntil } : {}),
+    })),
+  };
+}
+
 export function serviceSchema({
   name,
   description,
   path,
   areaServed,
+  offers,
 }: {
   name: string;
   description: string;
   path: string;
   areaServed?: { type: 'City' | 'AdministrativeArea'; name: string };
+  offers?: OfferItem[];
 }) {
   return {
     '@context': 'https://schema.org',
@@ -63,6 +79,7 @@ export function serviceSchema({
     areaServed: areaServed
       ? { '@type': areaServed.type, name: areaServed.name }
       : { '@type': 'AdministrativeArea', name: 'Zeeland' },
+    ...(offers && offers.length > 0 ? { hasOfferCatalog: offerCatalogSchema(name, offers) } : {}),
   };
 }
 
@@ -75,6 +92,18 @@ export function faqSchema(items: FaqItem[]) {
       name: item.question,
       acceptedAnswer: { '@type': 'Answer', text: item.answer },
     })),
+  };
+}
+
+export function websiteSchema() {
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'WebSite',
+    '@id': `${SITE_URL}/#website`,
+    name: BUSINESS.name,
+    url: SITE_URL,
+    publisher: { '@id': BUSINESS_ID },
+    inLanguage: 'nl-NL',
   };
 }
 

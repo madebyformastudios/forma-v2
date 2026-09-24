@@ -116,6 +116,26 @@ export const webdesign: ServicePageContent = {
       },
     ],
   },
+  offers: [
+    {
+      name: 'Start',
+      description: "Strakke website tot 5 pagina's, gebouwd op Next.js, online binnen 1-2 weken.",
+      price: 995,
+      priceValidUntil: '2026-12-31',
+    },
+    {
+      name: 'Groei',
+      description: 'Volledig maatwerk design tot 10 pagina\'s, met hulp bij copywriting en een uitgebreide SEO-basis.',
+      price: 1950,
+      priceValidUntil: '2026-12-31',
+    },
+    {
+      name: 'Op maat',
+      description: 'Maatwerk design plus branding/huisstijl en eventueel een koppeling met maatwerk software.',
+      price: 3500,
+      priceValidUntil: '2026-12-31',
+    },
+  ],
   faqHeading: 'Vragen over een website laten maken.',
   faq: [
     {

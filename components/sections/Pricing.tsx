@@ -121,7 +121,7 @@ export default function Pricing() {
               </span>
             </div>
             <h2 className="font-sans font-black text-4xl sm:text-5xl lg:text-[56px] tracking-tight leading-[0.9] text-ink">
-              Duidelijke pakketten,<br />geen verrassingen.
+              Duidelijke pakketten, <br />geen verrassingen.
             </h2>
           </div>
           <p className="text-base sm:text-lg font-body leading-relaxed text-ink/80 max-w-md lg:ml-auto">

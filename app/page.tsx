@@ -9,7 +9,7 @@ import Contact from "@/components/sections/Contact";
 import JsonLd from "@/components/ui/JsonLd";
 import { homeFaq } from "@/content/home";
 import { buildMetadata } from "@/lib/seo";
-import { faqSchema, localBusinessSchema } from "@/lib/schema";
+import { faqSchema, localBusinessSchema, websiteSchema } from "@/lib/schema";
 
 export const metadata = buildMetadata({
   title: "FORMA | Webdesign, Maatwerk Software & SEO in Zeeland",
@@ -21,7 +21,7 @@ export const metadata = buildMetadata({
 export default function Home() {
   return (
     <main>
-      <JsonLd data={[localBusinessSchema(), faqSchema(homeFaq)]} />
+      <JsonLd data={[localBusinessSchema(), websiteSchema(), faqSchema(homeFaq)]} />
       <Hero />
       <Ticker />
       <Services />

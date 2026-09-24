@@ -26,7 +26,12 @@ export default function ServicePageLayout({ content }: ServicePageLayoutProps) {
     <main>
       <JsonLd
         data={[
-          serviceSchema({ name: content.serviceName, description: content.serviceDescription, path: content.path }),
+          serviceSchema({
+            name: content.serviceName,
+            description: content.serviceDescription,
+            path: content.path,
+            offers: content.offers,
+          }),
           faqSchema(content.faq),
           breadcrumbSchema(crumbs),
         ]}

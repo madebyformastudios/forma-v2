@@ -46,7 +46,7 @@ export default function FAQ({ items = homeFaq, heading }: FAQProps) {
             <h2 className="font-sans font-black text-4xl sm:text-5xl lg:text-[56px] tracking-tight leading-[0.9] text-ink">
               {heading ?? (
                 <>
-                  Alles wat je<br />wilt weten.
+                  Alles wat je <br />wilt weten.
                 </>
               )}
             </h2>

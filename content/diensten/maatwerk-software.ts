@@ -119,6 +119,14 @@ export const maatwerkSoftware: ServicePageContent = {
       },
     ],
   },
+  offers: [
+    {
+      name: 'Maatwerk software',
+      description: 'Vast projecttarief na een kort intakegesprek, voor tools die tijd besparen in je bedrijf.',
+      price: 2500,
+      priceValidUntil: '2026-12-31',
+    },
+  ],
   faqHeading: 'Vragen over maatwerk software.',
   faq: [
     {

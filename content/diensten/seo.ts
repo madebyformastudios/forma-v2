@@ -121,6 +121,14 @@ export const seo: ServicePageContent = {
       },
     ],
   },
+  offers: [
+    {
+      name: 'SEO & Google',
+      description: 'Doorlopende optimalisatie voor Google, met maandelijkse rapportage over je vindbaarheid.',
+      price: 175,
+      priceValidUntil: '2026-12-31',
+    },
+  ],
   faqHeading: 'Vragen over SEO.',
   faq: [
     {

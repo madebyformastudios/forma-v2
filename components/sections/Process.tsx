@@ -46,7 +46,7 @@ export default function Process() {
               </span>
             </div>
             <h2 className="font-sans font-black text-4xl sm:text-5xl lg:text-[56px] tracking-tight leading-[0.92] text-ink">
-              Van eerste bak<br />koffie tot succes.
+              Van eerste bak <br />koffie tot succes.
             </h2>
           </div>
           <p className="text-base sm:text-lg lg:text-xl font-body leading-relaxed text-ink/65 max-w-md lg:ml-auto">

@@ -53,7 +53,7 @@ export default function Services() {
             </span>
           </div>
           <h2 className="font-sans font-black text-4xl sm:text-5xl lg:text-[56px] tracking-tight leading-[0.92] text-sand">
-            Drie manieren<br />om te groeien.
+            Drie manieren <br />om te groeien.
           </h2>
         </div>
 

@@ -85,7 +85,7 @@ export default function Contact() {
                 </span>
               </div>
               <h2 className="font-sans font-black text-4xl sm:text-5xl lg:text-[56px] tracking-tight leading-[0.86] text-sand">
-                Klaar om te<br />beginnen<span className="text-accent">?</span>
+                Klaar om te <br />beginnen<span className="text-accent">?</span>
               </h2>
               <p className="text-base sm:text-lg lg:text-xl font-body leading-relaxed text-sand/70 max-w-lg">
                 Stuur een berichtje of mail direct. We plannen een vrijblijvend gesprek, koffie erbij, niks verplicht. Binnen 24 uur reactie, beloofd.
