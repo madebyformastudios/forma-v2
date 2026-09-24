@@ -1,13 +1,12 @@
 import type { Metadata, Viewport } from "next";
 import Script from "next/script";
 import { Plus_Jakarta_Sans, Inter } from "next/font/google";
-import "vanilla-cookieconsent/dist/cookieconsent.css";
 import "@/app/globals.css";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
 import ThemeColorManager from "@/components/layout/ThemeColorManager";
 import WhatsAppWidget from "@/components/layout/WhatsAppWidget";
-import CookieConsentManager from "@/components/layout/CookieConsent";
+import CookieConsentLoader from "@/components/layout/CookieConsentLoader";
 import { SITE_URL } from "@/lib/site";
 
 const plusJakartaSans = Plus_Jakarta_Sans({
@@ -74,7 +73,7 @@ export default function RootLayout({
         {children}
         <Footer />
         <WhatsAppWidget />
-        <CookieConsentManager />
+        <CookieConsentLoader />
       </body>
     </html>
   );
