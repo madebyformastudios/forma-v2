@@ -7,6 +7,8 @@ const GA_ID = 'G-N04K962TL9';
 const GA_DISABLE_KEY = `ga-disable-${GA_ID}` as const;
 // 13 months, the maximum lifetime EU regulators accept for analytics cookies.
 const GA_COOKIE_MAX_AGE = 60 * 60 * 24 * 395;
+// Lets the hero land first; the banner only appears for visitors without a stored choice.
+const BANNER_DELAY_MS = 1500;
 
 declare global {
   interface Window {
@@ -57,13 +59,16 @@ function applyConsent() {
 
 export default function CookieConsentManager() {
   useEffect(() => {
+    let showTimer: number | undefined;
+
     CookieConsent.run({
       revision: 1,
+      autoShow: false,
       cookie: { name: 'forma_consent', expiresAfterDays: 182 },
       guiOptions: {
         consentModal: {
           layout: 'box inline',
-          position: 'bottom left',
+          position: 'bottom right',
           equalWeightButtons: true,
           flipButtons: false,
         },
@@ -156,7 +161,13 @@ export default function CookieConsentManager() {
           },
         },
       },
+    }).then(() => {
+      if (!CookieConsent.validConsent()) {
+        showTimer = window.setTimeout(() => CookieConsent.show(), BANNER_DELAY_MS);
+      }
     });
+
+    return () => window.clearTimeout(showTimer);
   }, []);
 
   return null;

@@ -1,5 +1,6 @@
 'use client';
 
+import Link from 'next/link';
 import { motion } from 'framer-motion';
 
 const services = [
@@ -9,6 +10,8 @@ const services = [
     title: "Webdesign & Branding",
     headline: "Een website die voor jou werkt, niet andersom.",
     description: "Een website die er strak uitziet, snel laadt, en bezoekers omtovert tot klanten. Geen template van de plank. Wij bouwen iets dat past bij jouw bedrijf.",
+    href: "/webdesign",
+    linkLabel: "Alles over een website laten maken",
     tags: ["Ontwerp op maat", "Laadt in <2 sec", "Mobile-first", "Logo & huisstijl (optioneel)"]
   },
   {
@@ -17,6 +20,8 @@ const services = [
     title: "Maatwerk Software",
     headline: "Software die jouw uren terug geeft.",
     description: "Doe je elke week dezelfde klus handmatig in Excel? Versturen jullie nog facturen één voor één? We bouwen kleine maatwerk tools die het saaie werk overnemen, zodat jij tijd hebt voor het werk dat geld oplevert.",
+    href: "/maatwerk-software",
+    linkLabel: "Alles over maatwerk software en automatisering",
     tags: ["Minder handwerk", "Werkt met je systemen", "Simpel voor je personeel", "Vaste prijs, geen abonnement"]
   },
   {
@@ -25,6 +30,8 @@ const services = [
     title: "SEO & Google",
     headline: "Bovenaan op Google als klanten zoeken.",
     description: "Wij zorgen dat jouw bedrijf bovenaan staat op Google als iemand zoekt naar wat jij doet. Lokaal in Zeeland, of breder als dat nodig is. En als mensen het aan ChatGPT vragen, komt jouw naam ook bovendrijven.",
+    href: "/seo",
+    linkLabel: "Alles over SEO en lokale vindbaarheid",
     tags: ["Lokaal vindbaar", "Klaar voor AI-zoekmachines", "Heldere maandrapportage", "Geen tovenarij"]
   }
 ];
@@ -94,6 +101,12 @@ export default function Services() {
                     </span>
                   ))}
                 </div>
+                <Link
+                  href={service.href}
+                  className="inline-block mt-7 text-sm sm:text-base font-sans font-bold text-sand hover:text-accent border-b-2 border-accent pb-0.5 transition-colors"
+                >
+                  {service.linkLabel} →
+                </Link>
               </div>
             </motion.div>
           ))}

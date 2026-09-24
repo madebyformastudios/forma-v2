@@ -1,41 +1,17 @@
 'use client';
 
 import { useState } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+import { motion } from 'framer-motion';
 import { Plus } from 'lucide-react';
+import type { FaqItem } from '@/content/types';
+import { homeFaq } from '@/content/home';
 
-const faqs = [
-  {
-    question: "Wat kost dat nou, zo'n FORMA-site?",
-    answer: "We werken met drie vaste, heldere pakketten: Start (€995 excl. btw voor een strakke site tot 5 pagina's), Groei (€1.950 excl. btw voor een volwaardige maatwerk website inclusief copywriting en SEO) en Op maat (vanaf €3.500 voor complexe wensen, branding of software). Geen verrassingen achteraf: je weet vooraf exact waar je aan toe bent."
-  },
-  {
-    question: "Kan ik het niet gewoon zelf doen met Wix of Squarespace?",
-    answer: "Eerlijk: ja, dat kan. Voor een simpele hobbywebsite is Wix prima. Maar als je site echt klanten moet opleveren, snel moet zijn op mobiel, en goed gevonden moet worden op Google, dan loop je daar tegen grenzen aan. Templates zien er allemaal hetzelfde uit, ze zijn vaak traag, en je betaalt maandelijks zonder dat je echt iets bezit. Wij bouwen iets dat van jou is en bij jouw bedrijf past."
-  },
-  {
-    question: "Hoe snel staat mijn nieuwe site online?",
-    answer: "Reken op 1 tot 3 weken, afhankelijk van het gekozen pakket (Start: 1-2 weken, Groei: 3 weken). Soms sneller als je snel feedback geeft. We spreken vooraf een datum af en die halen we ook."
-  },
-  {
-    question: "Hoe zit het met ingewikkelde functies of apps?",
-    answer: "Heb je een specifiek idee? Een online boekingssysteem, een ledenportaal, een tool waarmee je werkbonnen automatisch maakt? Stuur een berichtje of bel. We luisteren eerst, dan zeggen we eerlijk of het past en wat het kost. Geen luchtkastelen."
-  },
-  {
-    question: "Heb ik er na de oplevering nog omkijken naar?",
-    answer: "Niet als je dat niet wil. Hosting en technisch onderhoud nemen wij uit handen (vanaf €35 per maand). Teksten of foto's aanpassen kun je eenvoudig zelf. We leggen het uit en het is simpeler dan je denkt. Liever dat wij het doen? Stuur een mail, dan regelen we het."
-  },
-  {
-    question: "Wat als mijn bedrijf over twee jaar veel groter is?",
-    answer: "Dan groeit de site mee. We bouwen niet op iets dat over twee jaar verouderd is. Onze sites schalen makkelijk mee. Meer pagina's, een webshop erbij, een afspraaksysteem, dat kan er allemaal aan zonder dat je opnieuw hoeft te beginnen."
-  },
-  {
-    question: "Waarom zou ik voor FORMA kiezen en niet voor een groot bureau?",
-    answer: "Bij een groot bureau ben je een van de honderd klanten en praat je met een accountmanager die het werk doorgeeft aan iemand die jij nooit ziet. Bij ons heb je direct contact met de mensen die jouw site bouwen. Korter lijntje, sneller schakelen, geen vergaderingen om vergaderingen. En: we zitten in Zeeland en kennen het MKB hier. Dat scheelt vertaalwerk."
-  }
-];
+interface FAQProps {
+  items?: FaqItem[];
+  heading?: string;
+}
 
-export default function FAQ() {
+export default function FAQ({ items = homeFaq, heading }: FAQProps) {
   const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
   const [clickedIndex, setClickedIndex] = useState<number | null>(null);
 
@@ -68,7 +44,11 @@ export default function FAQ() {
               </span>
             </div>
             <h2 className="font-sans font-black text-4xl sm:text-5xl lg:text-[56px] tracking-tight leading-[0.9] text-ink">
-              Alles wat je<br />wilt weten.
+              {heading ?? (
+                <>
+                  Alles wat je<br />wilt weten.
+                </>
+              )}
             </h2>
             <p className="text-sm sm:text-base font-body leading-relaxed text-ink/60">
               Staat je vraag er niet bij?{' '}
@@ -80,7 +60,7 @@ export default function FAQ() {
 
           {/* Right Column Accordion */}
           <div className="border-t border-ink">
-            {faqs.map((faq, index) => {
+            {items.map((faq, index) => {
               const isHovered = hoveredIndex === index;
               const isClicked = clickedIndex === index;
               const isOpen = isHovered || isClicked;
@@ -94,6 +74,8 @@ export default function FAQ() {
                 >
                   <button
                     onClick={() => setClickedIndex(isClicked ? null : index)}
+                    aria-expanded={isOpen}
+                    aria-controls={`faq-answer-${index}`}
                     className="w-full py-6 sm:py-8 flex items-center justify-between text-left group cursor-pointer"
                   >
                     <span className="text-lg sm:text-xl font-sans font-bold tracking-tight text-ink pr-6">
@@ -108,21 +90,18 @@ export default function FAQ() {
                     </motion.div>
                   </button>
                   
-                  <AnimatePresence initial={false}>
-                    {isOpen && (
-                      <motion.div
-                        initial={{ height: 0, opacity: 0 }}
-                        animate={{ height: "auto", opacity: 1 }}
-                        exit={{ height: 0, opacity: 0 }}
-                        transition={{ duration: 0.35, ease: "circOut" }}
-                        className="overflow-hidden"
-                      >
-                        <div className="pb-8 text-ink/65 text-sm sm:text-base font-body leading-relaxed max-w-[640px]">
-                          {faq.answer}
-                        </div>
-                      </motion.div>
-                    )}
-                  </AnimatePresence>
+                  <motion.div
+                    id={`faq-answer-${index}`}
+                    initial={false}
+                    animate={{ height: isOpen ? 'auto' : 0, opacity: isOpen ? 1 : 0 }}
+                    transition={{ duration: 0.35, ease: "circOut" }}
+                    className="overflow-hidden"
+                    aria-hidden={!isOpen}
+                  >
+                    <div className="pb-8 text-ink/65 text-sm sm:text-base font-body leading-relaxed max-w-[640px]">
+                      {faq.answer}
+                    </div>
+                  </motion.div>
                 </div>
               );
             })}

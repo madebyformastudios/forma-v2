@@ -1,5 +1,13 @@
 import type { Metadata } from "next";
 import PrivacyContent from "@/components/sections/PrivacyContent";
+import Breadcrumbs from "@/components/pages/Breadcrumbs";
+import JsonLd from "@/components/ui/JsonLd";
+import { breadcrumbSchema, type Crumb } from "@/lib/schema";
+
+const crumbs: Crumb[] = [
+  { name: "Home", path: "/" },
+  { name: "Privacybeleid", path: "/privacy" },
+];
 
 export const metadata: Metadata = {
   title: "Privacybeleid",
@@ -14,5 +22,10 @@ export const metadata: Metadata = {
 };
 
 export default function PrivacyPage() {
-  return <PrivacyContent />;
+  return (
+    <>
+      <JsonLd data={breadcrumbSchema(crumbs)} />
+      <PrivacyContent breadcrumbs={<Breadcrumbs crumbs={crumbs} />} />
+    </>
+  );
 }

@@ -24,48 +24,18 @@ const inter = Inter({
 
 export const metadata: Metadata = {
   title: {
-    default: "FORMA | Websites voor MKB Zeeland — Snel, Mooi, Geen Gedoe",
+    default: "FORMA | Webdesign in Zeeland",
     template: "%s | FORMA",
   },
-  description: "Wij bouwen snelle, mooie websites voor ondernemers in Zeeland. Geen vage praat, vaste prijs, binnen 3 weken online. Vraag een gesprek aan.",
-  keywords: [
-    "webdesign Zeeland",
-    "website laten maken Zeeland",
-    "webdesign Middelburg",
-    "website MKB Zeeland",
-    "maatwerk website Zeeland",
-    "SEO Zeeland",
-    "webdesign bureau Zeeland",
-    "website bouwen Zeeland",
-  ],
+  description: "FORMA bouwt snelle websites, maatwerk software en SEO voor MKB in Zeeland. Vaste prijs, geen vakjargon.",
   metadataBase: new URL(SITE_URL),
-  alternates: {
-    canonical: "/",
-  },
   verification: {
     google: "TGK-dEIPovps_mTX7E8eUrBVlhs3lB4KzMAb2j40Tb8",
   },
   openGraph: {
-    title: "FORMA | Websites voor MKB Zeeland — Snel, Mooi, Geen Gedoe",
-    description: "Wij bouwen snelle, mooie websites voor ondernemers in Zeeland. Geen vage praat, vaste prijs, binnen 3 weken online. Vraag een gesprek aan.",
-    url: SITE_URL,
     siteName: "FORMA",
     locale: "nl_NL",
     type: "website",
-    images: [
-      {
-        url: "/og-image.jpg",
-        width: 1200,
-        height: 630,
-        alt: "FORMA - Premium Webdesign & Development Zeeland",
-      },
-    ],
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: "FORMA | Websites voor MKB Zeeland — Snel, Mooi, Geen Gedoe",
-    description: "Wij bouwen snelle, mooie websites voor ondernemers in Zeeland. Geen vage praat, vaste prijs, binnen 3 weken online. Vraag een gesprek aan.",
-    images: ["/og-image.jpg"],
   },
   robots: {
     index: true,
@@ -82,48 +52,8 @@ export default function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
-  const jsonLd = {
-    "@context": "https://schema.org",
-    "@type": ["LocalBusiness", "ProfessionalService"],
-    "name": "FORMA",
-    "image": `${SITE_URL}/og-image.jpg`,
-    "email": "info@madebyforma.nl",
-    "telephone": "+31626102661",
-    "vatID": "NL005524219B34",
-    "identifier": {
-      "@type": "PropertyValue",
-      "name": "KVK",
-      "value": "42134975"
-    },
-    "address": {
-      "@type": "PostalAddress",
-      "addressLocality": "Middelburg",
-      "addressRegion": "Zeeland",
-      "addressCountry": "NL"
-    },
-    "geo": {
-      "@type": "GeoCoordinates",
-      "latitude": 51.4989,
-      "longitude": 3.6147
-    },
-    "areaServed": {
-      "@type": "State",
-      "name": "Zeeland"
-    },
-    "description": "Wij bouwen snelle, mooie websites voor ondernemers in Zeeland. Geen vage praat, vaste prijs, binnen 3 weken online. Vraag een gesprek aan.",
-    "priceRange": "€€",
-    "serviceType": ["Webdesign", "Webdevelopment", "SEO", "Maatwerk Software"],
-    "url": SITE_URL
-  };
-
   return (
     <html lang="nl" className={`${plusJakartaSans.variable} ${inter.variable}`}>
-      <head>
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
-        />
-      </head>
       <body className="font-body antialiased bg-sand text-ink selection:bg-accent selection:text-white">
         {/* Consent Mode v2 defaults. gtag.js itself is loaded by CookieConsentManager after opt-in. */}
         <Script id="consent-mode-defaults" strategy="beforeInteractive">

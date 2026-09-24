@@ -1,5 +1,6 @@
 'use client';
 
+import type { ReactNode } from 'react';
 import { motion } from 'framer-motion';
 
 const cardClass = 'bg-white/50 p-6 rounded-2xl border-2 border-ink shadow-[4px_4px_0px_0px_#121212]';
@@ -30,13 +31,14 @@ const rights = [
   ['Toestemming intrekken', 'op elk moment, zonder dat dit gevolgen heeft voor eerdere verwerking.'],
 ];
 
-export default function PrivacyContent() {
+export default function PrivacyContent({ breadcrumbs }: { breadcrumbs?: ReactNode }) {
   return (
     <main
       data-theme-color="#F2EFE9"
       className="min-h-screen bg-sand pt-40 pb-24 overflow-x-hidden"
     >
       <div className="max-w-4xl mx-auto px-6 lg:px-12">
+        {breadcrumbs && <div className="mb-10">{breadcrumbs}</div>}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}

@@ -159,3 +159,9 @@
 #cc-main a {
   text-decoration-color: var(--color-accent);
 }
+
+@media (max-width: 640px) {
+  #cc-main .cm__desc {
+    font-size: 0.8125rem;
+  }
+}
