@@ -41,7 +41,17 @@ export function localBusinessSchema() {
   };
 }
 
-export function serviceSchema({ name, description, path }: { name: string; description: string; path: string }) {
+export function serviceSchema({
+  name,
+  description,
+  path,
+  areaServed,
+}: {
+  name: string;
+  description: string;
+  path: string;
+  areaServed?: { type: 'City' | 'AdministrativeArea'; name: string };
+}) {
   return {
     '@context': 'https://schema.org',
     '@type': 'Service',
@@ -50,7 +60,9 @@ export function serviceSchema({ name, description, path }: { name: string; descr
     url: absolute(path),
     serviceType: name,
     provider: { '@id': BUSINESS_ID, '@type': 'ProfessionalService', name: BUSINESS.name, url: SITE_URL },
-    areaServed: { '@type': 'AdministrativeArea', name: 'Zeeland' },
+    areaServed: areaServed
+      ? { '@type': areaServed.type, name: areaServed.name }
+      : { '@type': 'AdministrativeArea', name: 'Zeeland' },
   };
 }
 

@@ -5,7 +5,7 @@ export const contact = {
   path: '/contact',
   breadcrumbLabel: 'Contact',
   lastModified: '2026-09-24',
-  metaTitle: 'Contact opnemen met FORMA | Webdesign Middelburg',
+  metaTitle: 'Contact opnemen met FORMA | Webdesignstudio in Zeeland',
   metaDescription: `Neem contact op met FORMA, webdesignstudio in Middelburg. Bel ${BUSINESS.phoneDisplay} of mail ${BUSINESS.email}. Reactie binnen 24 uur.`,
   eyebrow: 'Contact',
   h1: 'Contact opnemen met FORMA',

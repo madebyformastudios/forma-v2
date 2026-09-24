@@ -12,7 +12,7 @@ import { buildMetadata } from "@/lib/seo";
 import { faqSchema, localBusinessSchema } from "@/lib/schema";
 
 export const metadata = buildMetadata({
-  title: "Webdesign Middelburg | Websites voor MKB in Zeeland",
+  title: "FORMA | Webdesign, Maatwerk Software & SEO in Zeeland",
   description:
     "FORMA bouwt snelle websites, maatwerk software en SEO voor MKB in Middelburg en heel Zeeland. Vaste prijs, geen vakjargon, binnen 3 weken online.",
   path: "/",

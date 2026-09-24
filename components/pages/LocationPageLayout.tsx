@@ -11,7 +11,7 @@ import FAQ from '@/components/sections/FAQ';
 import Contact from '@/components/sections/Contact';
 import Breadcrumbs from '@/components/pages/Breadcrumbs';
 import JsonLd from '@/components/ui/JsonLd';
-import { breadcrumbSchema, faqSchema, type Crumb } from '@/lib/schema';
+import { breadcrumbSchema, faqSchema, serviceSchema, type Crumb } from '@/lib/schema';
 
 interface LocationPageLayoutProps {
   content: LocationPageContent;
@@ -26,7 +26,18 @@ export default function LocationPageLayout({ content }: LocationPageLayoutProps)
 
   return (
     <main>
-      <JsonLd data={[faqSchema(content.faq), breadcrumbSchema(crumbs)]} />
+      <JsonLd
+        data={[
+          serviceSchema({
+            name: `Webdesign ${content.place}`,
+            description: content.metaDescription,
+            path: content.path,
+            areaServed: { type: 'City', name: content.place },
+          }),
+          faqSchema(content.faq),
+          breadcrumbSchema(crumbs),
+        ]}
+      />
       <PageHero
         breadcrumbs={<Breadcrumbs crumbs={crumbs} />}
         eyebrow={content.eyebrow}

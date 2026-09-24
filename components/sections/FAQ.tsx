@@ -96,7 +96,6 @@ export default function FAQ({ items = homeFaq, heading }: FAQProps) {
                     animate={{ height: isOpen ? 'auto' : 0, opacity: isOpen ? 1 : 0 }}
                     transition={{ duration: 0.35, ease: "circOut" }}
                     className="overflow-hidden"
-                    aria-hidden={!isOpen}
                   >
                     <div className="pb-8 text-ink/65 text-sm sm:text-base font-body leading-relaxed max-w-[640px]">
                       {faq.answer}
